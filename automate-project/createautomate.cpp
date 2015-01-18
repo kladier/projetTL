@@ -67,6 +67,7 @@ void CreateAutomate::ajoutEtat(bool ini, bool fina){
 }
 
 //
+
 void CreateAutomate::afficherAutomate(){
 
     QTextBrowser* m = new QTextBrowser(this);
