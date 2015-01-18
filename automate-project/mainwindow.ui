@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>675</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Images.qrc">
+    <normaloff>:/new/prefix1/myAppIco.ico</normaloff>:/new/prefix1/myAppIco.ico</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="TopLayout">
+        <item>
+         <widget class="QPushButton" name="boutonPrec">
+          <property name="toolTip">
+           <string>Voir l'étape précedente</string>
+          </property>
+          <property name="text">
+           <string>Précédent</string>
+          </property>
+          <property name="icon">
+           <iconset resource="Images.qrc">
+            <normaloff>:/new/prefix1/Images/back.png</normaloff>:/new/prefix1/Images/back.png</iconset>
+          </property>
+          <property name="shortcut">
+           <string>Left</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="boutonSuiv">
+          <property name="toolTip">
+           <string>Voir l'étape suivante</string>
+          </property>
+          <property name="text">
+           <string>Suivant</string>
+          </property>
+          <property name="icon">
+           <iconset resource="Images.qrc">
+            <normaloff>:/new/prefix1/Images/next.png</normaloff>:/new/prefix1/Images/next.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="shortcut">
+           <string>Right</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="MiddleLayout">
+        <item>
+         <widget class="QScrollArea" name="scrollArea_3">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="widgetResizable">
+           <bool>false</bool>
+          </property>
+          <widget class="QWidget" name="vue1">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>322</width>
+             <height>69</height>
+            </rect>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="scrollArea_2">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="widgetResizable">
+           <bool>false</bool>
+          </property>
+          <widget class="QWidget" name="vue2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>321</width>
+             <height>69</height>
+            </rect>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="LowerLayout">
+        <item>
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="widgetResizable">
+           <bool>false</bool>
+          </property>
+          <widget class="QWidget" name="vueTomate">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>651</width>
+             <height>284</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="label">
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>675</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionOuvrir"/>
+    <addaction name="separator"/>
+    <addaction name="actionNew"/>
+    <addaction name="separator"/>
+    <addaction name="actionFermer"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuFichier"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOuvrir"/>
+   <addaction name="actionClean"/>
+   <addaction name="actionInfo"/>
+   <addaction name="separator"/>
+   <addaction name="actionFaireProduit"/>
+   <addaction name="actionTest"/>
+   <addaction name="actionDeterminiser"/>
+   <addaction name="actionStandardiser"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+  </widget>
+  <action name="actionFermer">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/suppr.png</normaloff>:/new/prefix1/Images/suppr.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fermer</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/nouveau.png</normaloff>:/new/prefix1/Images/nouveau.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nouveau</string>
+   </property>
+   <property name="toolTip">
+    <string>Créer un automate</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionFaireProduit">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/produit.png</normaloff>:/new/prefix1/Images/produit.png</iconset>
+   </property>
+   <property name="text">
+    <string>FaireProduit</string>
+   </property>
+   <property name="toolTip">
+    <string>Faire le produit de deux automates</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionOuvrir">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/home.png</normaloff>:/new/prefix1/Images/home.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ouvrir</string>
+   </property>
+   <property name="toolTip">
+    <string>Ouvrir un automate</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionVoir">
+   <property name="text">
+    <string>voir</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/icon.jpg</normaloff>:/new/prefix1/Images/icon.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Test</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionClean">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/clean.png</normaloff>:/new/prefix1/Images/clean.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clean</string>
+   </property>
+   <property name="toolTip">
+    <string>Nettoyer l'interface</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/info.png</normaloff>:/new/prefix1/Images/info.png</iconset>
+   </property>
+   <property name="text">
+    <string>Info</string>
+   </property>
+  </action>
+  <action name="actionDeterminiser">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/determin.png</normaloff>:/new/prefix1/Images/determin.png</iconset>
+   </property>
+   <property name="text">
+    <string>Determiniser</string>
+   </property>
+   <property name="toolTip">
+    <string>Determiniser L'automate</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionStandardiser">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/standardiser.jpg</normaloff>:/new/prefix1/Images/standardiser.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>standardiser</string>
+   </property>
+   <property name="toolTip">
+    <string>Standardise un automate</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionStandardiser</sender>
+   <signal>triggered()</signal>
+   <receiver>actionStandardiser</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

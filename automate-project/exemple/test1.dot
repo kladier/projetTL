@@ -1,0 +1,10 @@
+digraph a { 
+F0[shape=point] ;
+F0->0 ;
+0->0 [label="1"] ;
+0->1 [label="1"] ;
+1[peripheries=2] ;
+1->1 [label="1"] ;
+1->0 [label="2"] ;
+
+ }
