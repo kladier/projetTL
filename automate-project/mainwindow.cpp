@@ -35,8 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionInfo,SIGNAL(triggered()),this,SLOT(info()));
     connect(ui->actionDeterminiser,SIGNAL(triggered()),this,SLOT(getDetermin()));
     connect(ui->actionFaireProduit,SIGNAL(triggered()),this, SLOT(getProduit()));
-    //connect(ui->actionStandardiser,SIGNAL(triggered()),this, SLOT(getStandard()));
-
+    connect(ui->actionStandardiser,SIGNAL(triggered()),this,SLOT(getStandard()));
 
     adjust();
 
@@ -81,7 +80,7 @@ void MainWindow::startLayouting(){
 }
 
 void MainWindow::getStandard() {
-    printf("Hello World\n");
+
 }
 
 void MainWindow::openFile(){
@@ -103,6 +102,7 @@ void MainWindow::openFile(){
     lireDot();
     startLayouting();
     ui->actionFaireProduit->setVisible(true);
+    ui->actionStandardiser->setVisible(true);
     maVue->show();
     adjust();
     ui->actionDeterminiser->setVisible(true);
@@ -112,6 +112,8 @@ void MainWindow::getProduit(){
     //On recupère l'automate dont on veut le produit.
     dotFileNameB.clear();
     QFileDialog tempFen;
+
+    lireDot();
 
     dotFileNameB = tempFen.getOpenFileName(this, tr( "Ouvrir un fichier DOT " ),QString(),"*.dot");
 

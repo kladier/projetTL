@@ -81,13 +81,21 @@ public:
         actionNew->setObjectName(QString::fromUtf8("actionNew"));
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/new/prefix1/Images/nouveau.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionNew->setIcon(icon2);
+        actionNew->setIcon(
+        actionStandardiser = new QAction(MainWindow);
+        actionStandardiser->setObjectName(QString::fromUtf8("actionStandardiser"));
+        QIcon icon11;
+        icon11.addFile(QString::fromUtf8(":/new/prefix1/Images/standardiser.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionStandardiser->setIcon(icon11);
+        
+        
         actionFaireProduit = new QAction(MainWindow);
         actionFaireProduit->setObjectName(QString::fromUtf8("actionFaireProduit"));
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/new/prefix1/Images/produit.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionFaireProduit->setIcon(icon3);
         actionFaireProduit->setVisible(false);
+        
         actionOuvrir = new QAction(MainWindow);
         actionOuvrir->setObjectName(QString::fromUtf8("actionOuvrir"));
         QIcon icon4;

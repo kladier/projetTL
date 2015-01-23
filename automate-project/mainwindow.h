@@ -53,10 +53,10 @@ public slots:
     void getDetermin();
     void getSuivant();
     void getPrecedent();
+    void getStandard();
     void resetUi();
     void test();
     void info();
-    void getStandard();
 };
 
 #endif // MAINWINDOW_H
