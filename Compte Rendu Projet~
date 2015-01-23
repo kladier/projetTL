@@ -1,0 +1,40 @@
+Standardisation : 
+Un automate standard est un automate fini non d ́eterministe tel que :
+– il y a un seul ́etat initial;
+– l’ ́etat initial n’est l’ ́etat d’arriv ́ee d’aucune transi
+tion.
+
+Rendre un automate standard : (diapo 40 de Cours2TL_13.pdf)
+Soit A=(S, S0, R, S’) un automate non standard avec
+(s, a, s0)  R.
+On construit A’ =(S {q}, {q}, R’, S’’) où
+1. q est un nouvel état
+2. Q est un état initial
+3. S’’ = S’ si s0 S0, s0 n’est pas final
+S’’ = S’ {q} sinon
+4. R’ = R  {(q,a,s) | s0 S0, a V. (s0, a, s)  R}
+
+Pour la standardisation :
+	- faire une fonction isStandard() qui vérifie qu'un automate n'est pas déjà standard,
+	- standardiser l'automate s'il n'est pas déjà standard
+	- (optionnelle) : supprimer les états inaccessibles
+
+
+Cahier des charges :
+
+Bonsoir,
+A l'issue de cette semaine, il semblerait que le passage de QT4 à QT5  soit réalisé avec succès.
+Voici l'analyse de l'existant et des besoins que nous avons résumé ici :
+Analyse des besoins : 
+- une version à jour (QT5) - OK
+- multi-plateforme (Unix, Windows) - OK
+- évolutif (ajout de futur fonctionnalité faciles, plus de documentations, prise en main facile des sources etc)
+- au moins 2 nouveaux algorithmes pas à pas (lesquels ? minimisation, standardisation)
+Analyse de l'existant :
+Le  projet 2010 semble bien fait, bien que peu documenté. Un gros  avantage est qu'il est multi-plateforme. Par contre : QT4.
+Le projet 2013 a le gros désavantage de ne plus être multi-plateforme (Windows seulement)
+Nous avons donc pris la décision de partir du projet 2010 et avons commencé à étudier plus précisement la structure du code, ainsi que la manière utilisée pour implémenter les algorithmes déjà existants.
+Nous allons commencer à nous attaquer au développement du programme et voir les moyens d'implémenter les algorithmes demandés.
+Bonne soirée, 
+Kevin Ladier, Pierre Coursier
+
