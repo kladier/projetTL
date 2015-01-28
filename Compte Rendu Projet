@@ -19,6 +19,12 @@ Pour la standardisation :
 	- standardiser l'automate s'il n'est pas déjà standard
 	- (optionnelle) : supprimer les états inaccessibles
 
+Comment faire ?
+Dans mainwindow.cpp, dans la fonction getStandard() :
+Afficher l'automate en haut a gauche
+Trouver la bonne structure pair<> vector<> a faire
+Faire une fonction dans automate.cpp qui s'appelle standardise() et qui renvoit la structure approprié (voir ligne au-dessus)
+Rajouter un attribut a mainwindow.h (justement la structure)
 
 Cahier des charges :
 

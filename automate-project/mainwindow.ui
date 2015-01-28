@@ -20,7 +20,7 @@
    <string>MainWindow</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../../../../test/automate-project/Images.qrc">
+   <iconset resource="Images.qrc">
     <normaloff>:/new/prefix1/myAppIco.ico</normaloff>:/new/prefix1/myAppIco.ico</iconset>
   </property>
   <property name="autoFillBackground">
@@ -41,7 +41,7 @@
            <string>Précédent</string>
           </property>
           <property name="icon">
-           <iconset resource="../../../../test/automate-project/Images.qrc">
+           <iconset resource="Images.qrc">
             <normaloff>:/new/prefix1/Images/back.png</normaloff>:/new/prefix1/Images/back.png</iconset>
           </property>
           <property name="shortcut">
@@ -58,7 +58,7 @@
            <string>Suivant</string>
           </property>
           <property name="icon">
-           <iconset resource="../../../../test/automate-project/Images.qrc">
+           <iconset resource="Images.qrc">
             <normaloff>:/new/prefix1/Images/next.png</normaloff>:/new/prefix1/Images/next.png</iconset>
           </property>
           <property name="iconSize">
@@ -197,6 +197,7 @@
     <addaction name="separator"/>
     <addaction name="actionNew"/>
     <addaction name="separator"/>
+    <addaction name="actionStandardiser"/>
     <addaction name="actionFermer"/>
     <addaction name="separator"/>
    </widget>
@@ -231,7 +232,7 @@
   </widget>
   <action name="actionFermer">
    <property name="icon">
-    <iconset resource="../../../../test/automate-project/Images.qrc">
+    <iconset resource="Images.qrc">
      <normaloff>:/new/prefix1/Images/suppr.png</normaloff>:/new/prefix1/Images/suppr.png</iconset>
    </property>
    <property name="text">
@@ -243,7 +244,7 @@
   </action>
   <action name="actionNew">
    <property name="icon">
-    <iconset resource="../../../../test/automate-project/Images.qrc">
+    <iconset resource="Images.qrc">
      <normaloff>:/new/prefix1/Images/nouveau.png</normaloff>:/new/prefix1/Images/nouveau.png</iconset>
    </property>
    <property name="text">
@@ -258,7 +259,7 @@
   </action>
   <action name="actionFaireProduit">
    <property name="icon">
-    <iconset resource="../../../../test/automate-project/Images.qrc">
+    <iconset resource="Images.qrc">
      <normaloff>:/new/prefix1/Images/produit.png</normaloff>:/new/prefix1/Images/produit.png</iconset>
    </property>
    <property name="text">
@@ -273,7 +274,7 @@
   </action>
   <action name="actionOuvrir">
    <property name="icon">
-    <iconset resource="../../../../test/automate-project/Images.qrc">
+    <iconset resource="Images.qrc">
      <normaloff>:/new/prefix1/Images/home.png</normaloff>:/new/prefix1/Images/home.png</iconset>
    </property>
    <property name="text">
@@ -293,7 +294,7 @@
   </action>
   <action name="actionTest">
    <property name="icon">
-    <iconset resource="../../../../test/automate-project/Images.qrc">
+    <iconset resource="Images.qrc">
      <normaloff>:/new/prefix1/Images/icon.jpg</normaloff>:/new/prefix1/Images/icon.jpg</iconset>
    </property>
    <property name="text">
@@ -305,7 +306,7 @@
   </action>
   <action name="actionClean">
    <property name="icon">
-    <iconset resource="../../../../test/automate-project/Images.qrc">
+    <iconset resource="Images.qrc">
      <normaloff>:/new/prefix1/Images/clean.png</normaloff>:/new/prefix1/Images/clean.png</iconset>
    </property>
    <property name="text">
@@ -317,7 +318,7 @@
   </action>
   <action name="actionInfo">
    <property name="icon">
-    <iconset resource="../../../../test/automate-project/Images.qrc">
+    <iconset resource="Images.qrc">
      <normaloff>:/new/prefix1/Images/info.png</normaloff>:/new/prefix1/Images/info.png</iconset>
    </property>
    <property name="text">
@@ -326,7 +327,7 @@
   </action>
   <action name="actionDeterminiser">
    <property name="icon">
-    <iconset resource="../../../../test/automate-project/Images.qrc">
+    <iconset resource="Images.qrc">
      <normaloff>:/new/prefix1/Images/determin.png</normaloff>:/new/prefix1/Images/determin.png</iconset>
    </property>
    <property name="text">
@@ -341,17 +342,17 @@
   </action>
   <action name="actionStandardiser">
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="../../../../test/automate-project/Images.qrc">
+    <iconset resource="Images.qrc">
      <normaloff>:/new/prefix1/Images/standardiser.jpg</normaloff>:/new/prefix1/Images/standardiser.jpg</iconset>
    </property>
    <property name="text">
     <string>Standardiser</string>
    </property>
    <property name="visible">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
   </action>
  </widget>

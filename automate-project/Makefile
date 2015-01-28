@@ -341,21 +341,21 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_Images.cpp
 qrc_Images.cpp: Images.qrc \
 		myAppIco.ico \
-		Images/back.png \
-		Images/nouveau.png \
-		Images/clean.png \
-		Images/info.png \
-		Images/save.png \
-		Images/suppr.png \
-		Images/home.png \
-		Images/Ajouter.jpg \
-		Images/determin.png \
-		Images/standardiser.jpg \
-		Images/supprimer.jpg \
 		Images/icon.jpg \
-		Images/produit.png \
+		Images/clean.png \
+		Images/supprimer.jpg \
+		Images/next.png \
+		Images/suppr.png \
+		Images/nouveau.png \
+		Images/determin.png \
+		Images/back.png \
+		Images/info.png \
+		Images/standardiser.jpg \
+		Images/Ajouter.jpg \
 		Images/button.jpg \
-		Images/next.png
+		Images/save.png \
+		Images/home.png \
+		Images/produit.png
 	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name Images Images.qrc -o qrc_Images.cpp
 
 compiler_moc_header_make_all: moc_transition.cpp moc_mainwindow.cpp moc_etatright.cpp moc_etatleft.cpp moc_createautomate.cpp moc_choixpointe.cpp

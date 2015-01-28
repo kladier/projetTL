@@ -118,11 +118,11 @@ public:
         actionDeterminiser->setVisible(false);
         actionStandardiser = new QAction(MainWindow);
         actionStandardiser->setObjectName(QStringLiteral("actionStandardiser"));
-        actionStandardiser->setEnabled(false);
+        actionStandardiser->setEnabled(true);
         QIcon icon9;
         icon9.addFile(QStringLiteral(":/new/prefix1/Images/standardiser.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionStandardiser->setIcon(icon9);
-        actionStandardiser->setVisible(false);
+        actionStandardiser->setVisible(true);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         horizontalLayout = new QHBoxLayout(centralWidget);
@@ -232,6 +232,7 @@ public:
         menuFichier->addSeparator();
         menuFichier->addAction(actionNew);
         menuFichier->addSeparator();
+        menuFichier->addAction(actionStandardiser);
         menuFichier->addAction(actionFermer);
         menuFichier->addSeparator();
         toolBar_2->addAction(actionNew);
@@ -244,7 +245,6 @@ public:
         toolBar_2->addAction(actionStandardiser);
 
         retranslateUi(MainWindow);
-        QObject::connect(actionStandardiser, SIGNAL(triggered()), actionStandardiser, SLOT(trigger()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi

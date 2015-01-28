@@ -41,8 +41,9 @@ private:
     QString dotFileNameB;
     Automate a;
     Automate B;
-    vector<Automate> monVector;
-    vector <  pair< Automate , string > > monDeterminisme;
+    vector<Automate> monVector; //utiliser pour le produit
+    vector <  pair< Automate , string > > monDeterminisme; //utiliser pour le determinisme
+    vector <  pair< Automate , string > > monVectorStandard; //Utiliser pour la standardisation
     unsigned int actuel;
     void adjust();
 

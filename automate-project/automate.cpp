@@ -165,6 +165,13 @@ string Automate::toDot(){
     return out;
 }
 
+//A FAIRE
+//on remplit un vecteur d'automates, chaque élément correspondant à un automate
+//quand le vecteur est lu (avec le bouton suivant), cela correspond à une étape dans l'ui
+vector <  pair< Automate , string > > Automate::standardise() {
+
+}
+
 //en développement
 vector<Automate> Automate::produit(Automate A){
    vector<Automate> produit;

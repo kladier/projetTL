@@ -24,6 +24,8 @@ public:
     vector<Automate> produit(Automate);
     vector<int> getAlpha();
     vector <  pair< Automate , string > > determinise();
+    vector <  pair< Automate , string > > standardise();
+
 
 
 private:

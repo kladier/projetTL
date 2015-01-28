@@ -37,6 +37,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionFaireProduit,SIGNAL(triggered()),this, SLOT(getProduit()));
     connect(ui->actionStandardiser,SIGNAL(triggered()),this,SLOT(getStandard()));
 
+
     adjust();
 
 }
@@ -81,6 +82,65 @@ void MainWindow::startLayouting(){
 
 void MainWindow::getStandard() {
 
+    //On affiche ensuite l'automate superieur.
+
+    QProcess ProcessT;
+    QStringList procargs;
+    ProcessT.close();
+
+    QFile tmp("./tmp.dot");
+    tmp.open(QFile::WriteOnly);
+
+    QTextStream out(&tmp);
+    out << QString().fromStdString(a.toDot());
+    tmp.close();
+
+    procargs.push_back("-Tsvg");
+    procargs.push_back("./tmp.dot");
+
+    ProcessT.start("dot",procargs);
+    ProcessT.waitForFinished();
+
+    maVue1->load(ProcessT.readAll());
+
+
+    //On affiche ensuite la partie graphique du bas
+    actuel = 0;
+    monVectorStandard=a.standardise();
+
+    ProcessT.close();
+
+    QFile tmp3("./tmp.dot");
+    tmp3.open(QFile::WriteOnly);
+
+    QTextStream out3(&tmp3);
+    out3 << QString().fromStdString(monVectorStandard[actuel].toDot());
+    tmp3.close();
+
+    ProcessT.start("dot",procargs);
+    ProcessT.waitForFinished();
+
+    maVue->load(ProcessT.readAll());
+
+    ui->boutonPrec->show();
+    ui->boutonSuiv->show();
+    ui->scrollArea_2->show();
+    ui->scrollArea_3->show();
+    maVue1->show();
+    maVue2->show();
+    maVue->show();
+    //Ensuite , on met le commentaire à droite.
+    ui->label->clear();
+    ui->label->insertPlainText("L'automate résultat du produit a une taille de m*n (m taille du premier automate, n taille du second).\n");
+    ui->label->insertPlainText("On nomme chaque état de la façon suivante: etat p du premier automate, etat q du second automate.\n");
+    ui->label->insertPlainText("Ensuite, une transition existe entre p1,q1 et p2,q2 si et seulement si");
+    ui->label->insertPlainText(" il existe une transition entre p1  et p2  par i dans le premier automate ET une transition entre q1 et q2 par i également dans le second automate.\n");
+    ui->label->insertPlainText("Enfin, un état est initial si les état p et q sont initiaux. De même pour les états finaux.");
+    ui->label->show();
+    ui->actionFaireProduit->setVisible(true);
+    ui->actionDeterminiser->setVisible(true);
+    ui->actionStandardiser->setVisible(false);
+    adjust();
 }
 
 void MainWindow::openFile(){
@@ -196,6 +256,8 @@ void MainWindow::getProduit(){
     ui->label->show();
     ui->actionFaireProduit->setVisible(false);
     ui->actionDeterminiser->setVisible(true);
+    ui->actionStandardiser->setVisible(true);
+
     adjust();
 }
 
@@ -371,15 +433,25 @@ bool MainWindow::lireDotB(){
 }
 
 void MainWindow::getSuivant(){
+    //cas du produit
     if(monVector.empty()==false){
         if(actuel<monVector.size()-1){
             actuel++;
         }
     }
+    //cas de la standardisation
+    else if (monVectorStandard.empty()== false) {
+        if(actuel<monVectorStandard.size()-1){
+            actuel++;
+        }
+    }
+    //cas du determinisme
     else{
         if(actuel<monDeterminisme.size()-1){
-            actuel++;        }
+            actuel++;
+        }
     }
+
     QProcess ProcessT;
     QStringList procargs;
     ProcessT.close();
@@ -388,10 +460,17 @@ void MainWindow::getSuivant(){
     tmp.open(QFile::WriteOnly);
 
     QTextStream out(&tmp);
+
+    //cas du produit
     if (monVector.empty()== false){
         out << QString().fromStdString(monVector[actuel].toDot());
     }
-    else{
+    //cas de la standardisation
+    else if (monVectorStandard.empty()== false) {
+        out << QString().fromStdString(monVectorStandard[actuel].toDot());
+    }
+    //cas du determinisme
+    else {
         out << QString().fromStdString(monDeterminisme[actuel].first.toDot());
         ui->label->clear();
         for(unsigned int j = 0;j<=actuel;j++){
@@ -549,8 +628,11 @@ void MainWindow::getDetermin(){
     maVue1->load(ProcessT.readAll());
     ui->scrollArea_3->show();
     maVue1->show();
+
     //on recupere le vecteur de determinisme
     monDeterminisme = a.determinise();
+
+
     //On affiche le premier element en bas
 
     ProcessT.close();
@@ -569,6 +651,8 @@ void MainWindow::getDetermin(){
     maVue->show();
     ui->boutonPrec->show();
     ui->boutonSuiv->show();
+
+
     //On affiche ensuite l'aide à droite
     ui->label->clear();
     ui->label->show();
