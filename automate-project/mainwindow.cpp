@@ -81,9 +81,15 @@ void MainWindow::startLayouting(){
 }
 
 void MainWindow::getStandard() {
+    resetUi();
+    ui->actionFaireProduit->setVisible(true);
+    ui->actionDeterminiser->setVisible(true);
 
-    //On affiche ensuite l'automate superieur.
+    //On netoi l'eventuel vecteur de produit
+    monVector.clear();
+    actuel = 0;
 
+    //On affiche l'automate a dans la vue superieur.
     QProcess ProcessT;
     QStringList procargs;
     ProcessT.close();
@@ -102,45 +108,40 @@ void MainWindow::getStandard() {
     ProcessT.waitForFinished();
 
     maVue1->load(ProcessT.readAll());
+    ui->scrollArea_3->show();
+    maVue1->show();
+
+    //on recupere le vecteur de determinisme
+    monVectorStandard = a.standardise();
 
 
-    //On affiche ensuite la partie graphique du bas
-    actuel = 0;
-    monVectorStandard=a.standardise();
+    //On affiche le premier element en bas
 
     ProcessT.close();
 
-    QFile tmp3("./tmp.dot");
-    tmp3.open(QFile::WriteOnly);
+    QFile tmp2("./tmp.dot");
+    tmp2.open(QFile::WriteOnly);
 
-    QTextStream out3(&tmp3);
-    out3 << QString().fromStdString(monVectorStandard[actuel].toDot());
-    tmp3.close();
+    QTextStream out2(&tmp2);
+    out2 << QString().fromStdString(monVectorStandard[0].first.toDot());
+    tmp2.close();
 
     ProcessT.start("dot",procargs);
     ProcessT.waitForFinished();
 
     maVue->load(ProcessT.readAll());
-
+    maVue->show();
     ui->boutonPrec->show();
     ui->boutonSuiv->show();
-    ui->scrollArea_2->show();
-    ui->scrollArea_3->show();
-    maVue1->show();
-    maVue2->show();
-    maVue->show();
-    //Ensuite , on met le commentaire à droite.
+
+
+    //On affiche ensuite l'aide à droite
     ui->label->clear();
-    ui->label->insertPlainText("L'automate résultat du produit a une taille de m*n (m taille du premier automate, n taille du second).\n");
-    ui->label->insertPlainText("On nomme chaque état de la façon suivante: etat p du premier automate, etat q du second automate.\n");
-    ui->label->insertPlainText("Ensuite, une transition existe entre p1,q1 et p2,q2 si et seulement si");
-    ui->label->insertPlainText(" il existe une transition entre p1  et p2  par i dans le premier automate ET une transition entre q1 et q2 par i également dans le second automate.\n");
-    ui->label->insertPlainText("Enfin, un état est initial si les état p et q sont initiaux. De même pour les états finaux.");
     ui->label->show();
-    ui->actionFaireProduit->setVisible(true);
-    ui->actionDeterminiser->setVisible(true);
-    ui->actionStandardiser->setVisible(false);
+    string texte = monVectorStandard[actuel].second;
+    ui->label->insertPlainText(QString().fromStdString(texte));
     adjust();
+
 }
 
 void MainWindow::openFile(){
@@ -379,7 +380,6 @@ bool MainWindow::lireDotB(){
                     //Si il n'est pas null
                     if(!MotPrec.isNull()){
                         int Etat;
-                        bool initial;
                         //Et si son premier char est un int
 
                         if(MotPrec.at(0).digitValue()!=-1){
@@ -392,8 +392,6 @@ bool MainWindow::lireDotB(){
                             Etat = MotPrec.at(MotPrec.size()-1).digitValue();
                             b.ajoutEtat(Etat);
                             b.getEtat(Etat)->setInitial(true);
-                            initial = true;
-
                         }
                         //Puis si il est final
                         if(MotPrec.contains("peripheries")){
@@ -467,7 +465,15 @@ void MainWindow::getSuivant(){
     }
     //cas de la standardisation
     else if (monVectorStandard.empty()== false) {
-        out << QString().fromStdString(monVectorStandard[actuel].toDot());
+        out << QString().fromStdString(monVectorStandard[actuel].first.toDot());
+        ui->label->clear();
+        for(unsigned int j = 0;j<=actuel;j++){
+            QString texte;
+            string texte2 = monVectorStandard[j].second;
+            QTextStream(&texte)<<"\n--ETAPE "<<(j+1)<<"--\n";
+            ui->label->insertPlainText(texte);
+            ui->label->insertPlainText(QString().fromStdString(texte2));
+        }
     }
     //cas du determinisme
     else {
@@ -604,8 +610,9 @@ void MainWindow::info(){
 void MainWindow::getDetermin(){
     resetUi();
     ui->actionFaireProduit->setVisible(true);
-    //On netoi l'eventuel vecteur de produit
+    //On netoi l'eventuel vecteur de produit et celui de standardisation
     monVector.clear();
+    monVectorStandard.clear();
     actuel = 0;
     //On affiche l'automate a dans la vue superieur.
     QProcess ProcessT;

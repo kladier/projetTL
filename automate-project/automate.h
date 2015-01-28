@@ -14,8 +14,10 @@ public:
     Automate();
     Automate(const Automate&);
     ~Automate();
+
     void ajoutEtat(etat);
     bool isDeterministe();
+    bool isStandard();
     etat* getEtat(int);
     vector<etat> getEtats();
     void ajoutTransition(etat,etat,int);

@@ -44,6 +44,39 @@ bool Automate::isDeterministe(){
 return true;
 }
 
+
+
+bool Automate::isStandard() {
+    //on vérifie déjà qu'il n'y a qu'un seul état initial
+    int comptEtatInit=0, numEtatInit;
+
+    vector<etat>::iterator it;
+    for( it=etats.begin() ; it!=etats.end() ; it++){
+        if (it->isInitial()) {
+            comptEtatInit++;
+            numEtatInit=(*it).numero;
+        }
+    }
+
+    if (comptEtatInit!=1) {
+        return false;
+    }
+
+    //on vérifie ensuite qu'aucune transition n'arrive à l'état initial
+    //pour cela, on vérifie toutes les transitions de chaque états.
+    for (it=etats.begin();it!=etats.end();it++) {
+         multimap<int,etat> tempTrans=(*it).getTransitions();
+        multimap<int,etat>::iterator it2;
+        for (it2=tempTrans.begin();it2!=tempTrans.end();it2++) {
+            if (it2->second.numero==numEtatInit) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+
 etat* Automate::getEtat(int number){
     vector<etat>::iterator it;
     for ( it=etats.begin() ; it != etats.end(); it++ ){
@@ -169,7 +202,25 @@ string Automate::toDot(){
 //on remplit un vecteur d'automates, chaque élément correspondant à un automate
 //quand le vecteur est lu (avec le bouton suivant), cela correspond à une étape dans l'ui
 vector <  pair< Automate , string > > Automate::standardise() {
+    vector <  pair< Automate , string > > res;
+    Automate *temp = new Automate;
+    etat *e = new etat(0,false,false);
+    temp->ajoutEtat(*e);
 
+    string resStandard;
+
+    if (isStandard()) {
+        resStandard="\n L'automate est standard, la standardisation est donc terminée.";
+    }
+    else {
+        resStandard="\n L'automate n'est pas standard, nous allons donc le standardiser.";
+    }
+
+
+    res.push_back(pair< Automate , string >(*temp,"Un automate standard est un automate fini non deterministe tel que : \n 1) il y a un seul etat initial, \n 2) l'etat initial n'est l'etat d'arrivee d'aucune transition. \n\n ETAPE 1 \n On verifie que l'automate ne soit pas deja standard"+resStandard));
+
+
+    return res;
 }
 
 //en développement
