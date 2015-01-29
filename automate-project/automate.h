@@ -5,6 +5,8 @@
 #include <list>
 #include <map>
 #include <string>
+#include <cstdio>
+
 #include "etat.h"
 using namespace std;
 
@@ -22,17 +24,19 @@ public:
     vector<etat> getEtats();
     void ajoutTransition(etat,etat,int);
     void supprimeEtat(etat);
+    void supprimeEtat(etat, Automate * a);
+    void supprimerEtatsNonAccessibles(Automate * a);
     string toDot();
     vector<Automate> produit(Automate);
     vector<int> getAlpha();
     vector <  pair< Automate , string > > determinise();
     vector <  pair< Automate , string > > standardise();
 
-
+ vector<etat> etats;
 
 private:
 
-    vector<etat> etats;
+
 };
 
 bool equal(list<etat> &l1 ,list<etat> &l2);

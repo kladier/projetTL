@@ -111,36 +111,50 @@ void MainWindow::getStandard() {
     ui->scrollArea_3->show();
     maVue1->show();
 
-    //on recupere le vecteur de determinisme
-    monVectorStandard = a.standardise();
+    //on recupere le vecteur de standardisation
+    string resStandard="Un automate standard est un automate fini non deterministe tel que : \n 1) il y a un seul etat initial, \n 2) l'etat initial n'est l'etat d'arrivee d'aucune transition. \n\n ETAPE 1 \n On verifie que l'automate ne soit pas deja standard";
+
+    if (a.isStandard()) {
+        resStandard=resStandard+"\n L'automate est standard, la standardisation est donc terminée.";
+
+        ui->label->clear();
+        ui->label->show();
+        ui->label->insertPlainText(QString().fromStdString(resStandard));
+        adjust();
+    }
+    else {
+        resStandard=resStandard+"\n L'automate n'est pas standard, nous allons donc le standardiser.";
+        monVectorStandard = a.standardise();
 
 
-    //On affiche le premier element en bas
+        //On affiche le premier element en bas
 
-    ProcessT.close();
+        ProcessT.close();
 
-    QFile tmp2("./tmp.dot");
-    tmp2.open(QFile::WriteOnly);
+        QFile tmp2("./tmp.dot");
+        tmp2.open(QFile::WriteOnly);
 
-    QTextStream out2(&tmp2);
-    out2 << QString().fromStdString(monVectorStandard[0].first.toDot());
-    tmp2.close();
+        QTextStream out2(&tmp2);
+        out2 << QString().fromStdString(monVectorStandard[0].first.toDot());
+        tmp2.close();
 
-    ProcessT.start("dot",procargs);
-    ProcessT.waitForFinished();
+        ProcessT.start("dot",procargs);
+        ProcessT.waitForFinished();
 
-    maVue->load(ProcessT.readAll());
-    maVue->show();
-    ui->boutonPrec->show();
-    ui->boutonSuiv->show();
+        maVue->load(ProcessT.readAll());
+        maVue->show();
+        ui->boutonPrec->show();
+        ui->boutonSuiv->show();
 
 
-    //On affiche ensuite l'aide à droite
-    ui->label->clear();
-    ui->label->show();
-    string texte = monVectorStandard[actuel].second;
-    ui->label->insertPlainText(QString().fromStdString(texte));
-    adjust();
+        //On affiche ensuite l'aide à droite
+        ui->label->clear();
+        ui->label->show();
+        string texte = resStandard+monVectorStandard[actuel].second;
+        ui->label->insertPlainText(QString().fromStdString(texte));
+        adjust();
+    }
+
 
 }
 
