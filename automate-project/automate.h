@@ -6,6 +6,8 @@
 #include <map>
 #include <string>
 #include <cstdio>
+#include <iostream>
+#include <algorithm>
 
 #include "etat.h"
 using namespace std;
@@ -18,6 +20,7 @@ public:
     ~Automate();
 
     void ajoutEtat(etat);
+    vector<int> getTabTransitions();
     bool isDeterministe();
     bool isStandard();
     etat* getEtat(int);
@@ -31,6 +34,8 @@ public:
     vector<int> getAlpha();
     vector <  pair< Automate , string > > determinise();
     vector <  pair< Automate , string > > standardise();
+    vector <  pair< Automate , string > > minimise();
+
 
  vector<etat> etats;
 

@@ -17,5 +17,6 @@
         <file>Images/info.png</file>
         <file>myAppIco.ico</file>
         <file>Images/standardiser.jpg</file>
+        <file>Images/minimiser.jpg</file>
     </qresource>
 </RCC>

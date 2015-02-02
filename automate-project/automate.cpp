@@ -276,7 +276,65 @@ string convertIntToString(int i) {
     return numstr;
 }
 
-//A FAIRE
+
+vector<int> Automate::getTabTransitions() {
+    vector<int> res;
+    vector<etat>::iterator it;
+    for( it=etats.begin() ; it!=etats.end() ; it++){
+        multimap<int,etat> tempTrans=(*it).getTransitions();
+        multimap<int,etat>::iterator it2;
+        for (it2=tempTrans.begin();it2!=tempTrans.end();it2++) {
+            if ((std::find(res.begin(),res.end(),it2->first))==res.end()) {
+                res.push_back(it2->first);
+            }
+        }
+    }
+
+    return res;
+}
+
+vector <  pair< Automate , string > > Automate::minimise() {
+    vector <  pair< Automate , string > > res;
+    Automate *temp = new Automate;
+
+
+    //On s'occupe des 2 premières lignes
+    string tableau, commentaire="Avant de minimiser, il faut d'abord construire un tableau de minimisation.\n";
+    tableau="            |";
+    vector<etat>::iterator it;
+    for( it=etats.begin() ; it!=etats.end() ; it++){
+        tableau=tableau+"  "+it->getName()+"  |";
+    }
+    tableau=tableau+"\nBilan 0 |";
+    for( it=etats.begin() ; it!=etats.end() ; it++){
+        if (it->isFinal()) {
+            tableau=tableau+"  II   |";
+        }
+        else {
+            tableau=tableau+"  I   |";
+        }
+    }
+    commentaire=commentaire+"\n"+tableau+"\nSur la première ligne, chaque numéro correspond à un état.\nLe bilan 0 est simple, on attribue I à tout les états non finaux et II à tout les etats finaux.\n";
+    res.push_back(pair< Automate , string >(*temp,commentaire));
+
+    //on s'occupe de la premiere série de ligne en 1 , en 2 etc
+    commentaire="\n";
+    tableau=tableau+"\n";
+
+    //
+  /*  vector<int> tabTransition=getTabTransitions();
+    vector<int>::iterator it3;
+    for( it3=tabTransition.begin() ; it3!=tabTransition.end() ; it3++){
+        tableau=tableau+"En "+convertIntToString(*it3)+"       |";
+        for (it=)
+    }*/
+    //PB DE CONCEPTION, IL FAUT UN TAB INT DU TAB DE MINIMISATION
+    res.push_back(pair< Automate , string >(*temp,commentaire));
+
+    return res;
+
+}
+
 //on remplit un vecteur d'automates, chaque élément correspondant à un automate
 //quand le vecteur est lu (avec le bouton suivant), cela correspond à une étape dans l'ui
 //numEtatCurr correspond au numéro de l'état suivant à ajouter
@@ -519,7 +577,7 @@ vector <  pair< Automate , string > > Automate::determinise(){
  multimap< int , etat >::iterator it_trans;
  map<int , list < etat> >::iterator it_det;
 
- unsigned int i,j,k=0,m,l;
+ unsigned int i,j,k=0,m;
  bool init_isFinal=false ,existe=false, isEtatInit=false;
 
  //recherce des états initiaux pour créer le premier états
@@ -576,7 +634,6 @@ vector <  pair< Automate , string > > Automate::determinise(){
 
              for(m=0;m<trans.size();m++){//on parcoure la liste des trans pour l'etat k;
 
-                 l=0;
                  if(it_trans->first == alpha[i] && it_trans->second.estDansList(list_etat)==false ){
 
                         list_etat.push_back(*(this->getEtat(it_trans->second.numero)));
@@ -653,8 +710,6 @@ vector <  pair< Automate , string > > Automate::determinise(){
 
 
 bool equal(list<etat> &l1 ,list<etat> &l2) {
-    unsigned j;
-
     list<etat>::iterator it1;
 
     if(l1.size()!=l2.size()){
@@ -664,8 +719,6 @@ bool equal(list<etat> &l1 ,list<etat> &l2) {
     {
         it1=l1.begin();
         while(it1!=l1.end()){
-
-            j=0;
 
             if(it1->estDansList(l2)==false){
 

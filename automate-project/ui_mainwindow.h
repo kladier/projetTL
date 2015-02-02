@@ -41,6 +41,7 @@ public:
     QAction *actionInfo;
     QAction *actionDeterminiser;
     QAction *actionStandardiser;
+    QAction *actionMinimiser;
     QWidget *centralWidget;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout;
@@ -123,6 +124,11 @@ public:
         icon9.addFile(QStringLiteral(":/new/prefix1/Images/standardiser.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionStandardiser->setIcon(icon9);
         actionStandardiser->setVisible(true);
+        actionMinimiser = new QAction(MainWindow);
+        actionMinimiser->setObjectName(QStringLiteral("actionMinimiser"));
+        QIcon icon10;
+        icon10.addFile(QStringLiteral(":/new/prefix1/Images/minimiser.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionMinimiser->setIcon(icon10);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         horizontalLayout = new QHBoxLayout(centralWidget);
@@ -137,17 +143,17 @@ public:
         TopLayout->setObjectName(QStringLiteral("TopLayout"));
         boutonPrec = new QPushButton(centralWidget);
         boutonPrec->setObjectName(QStringLiteral("boutonPrec"));
-        QIcon icon10;
-        icon10.addFile(QStringLiteral(":/new/prefix1/Images/back.png"), QSize(), QIcon::Normal, QIcon::Off);
-        boutonPrec->setIcon(icon10);
+        QIcon icon11;
+        icon11.addFile(QStringLiteral(":/new/prefix1/Images/back.png"), QSize(), QIcon::Normal, QIcon::Off);
+        boutonPrec->setIcon(icon11);
 
         TopLayout->addWidget(boutonPrec);
 
         boutonSuiv = new QPushButton(centralWidget);
         boutonSuiv->setObjectName(QStringLiteral("boutonSuiv"));
-        QIcon icon11;
-        icon11.addFile(QStringLiteral(":/new/prefix1/Images/next.png"), QSize(), QIcon::Normal, QIcon::Off);
-        boutonSuiv->setIcon(icon11);
+        QIcon icon12;
+        icon12.addFile(QStringLiteral(":/new/prefix1/Images/next.png"), QSize(), QIcon::Normal, QIcon::Off);
+        boutonSuiv->setIcon(icon12);
         boutonSuiv->setIconSize(QSize(16, 16));
 
         TopLayout->addWidget(boutonSuiv);
@@ -243,6 +249,7 @@ public:
         toolBar_2->addAction(actionTest);
         toolBar_2->addAction(actionDeterminiser);
         toolBar_2->addAction(actionStandardiser);
+        toolBar_2->addAction(actionMinimiser);
 
         retranslateUi(MainWindow);
 
@@ -280,6 +287,10 @@ public:
         actionDeterminiser->setToolTip(QApplication::translate("MainWindow", "Determiniser L'automate", 0));
 #endif // QT_NO_TOOLTIP
         actionStandardiser->setText(QApplication::translate("MainWindow", "Standardiser", 0));
+        actionMinimiser->setText(QApplication::translate("MainWindow", "Minimiser", 0));
+#ifndef QT_NO_TOOLTIP
+        actionMinimiser->setToolTip(QApplication::translate("MainWindow", "Minimiser l'automate", 0));
+#endif // QT_NO_TOOLTIP
 #ifndef QT_NO_TOOLTIP
         boutonPrec->setToolTip(QApplication::translate("MainWindow", "Voir l'\303\251tape pr\303\251cedente", 0));
 #endif // QT_NO_TOOLTIP

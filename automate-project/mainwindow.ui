@@ -221,6 +221,7 @@
    <addaction name="actionTest"/>
    <addaction name="actionDeterminiser"/>
    <addaction name="actionStandardiser"/>
+   <addaction name="actionMinimiser"/>
   </widget>
   <widget class="QStatusBar" name="statusBar">
    <property name="toolTip">
@@ -353,6 +354,18 @@
    </property>
    <property name="visible">
     <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionMinimiser">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/new/prefix1/Images/minimiser.jpg</normaloff>:/new/prefix1/Images/minimiser.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Minimiser</string>
+   </property>
+   <property name="toolTip">
+    <string>Minimiser l'automate</string>
    </property>
   </action>
  </widget>

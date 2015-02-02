@@ -36,6 +36,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionDeterminiser,SIGNAL(triggered()),this,SLOT(getDetermin()));
     connect(ui->actionFaireProduit,SIGNAL(triggered()),this, SLOT(getProduit()));
     connect(ui->actionStandardiser,SIGNAL(triggered()),this,SLOT(getStandard()));
+    connect(ui->actionMinimiser,SIGNAL(triggered()),this,SLOT(getMinimisation()));
+
 
 
     adjust();
@@ -78,6 +80,70 @@ void MainWindow::startLayouting(){
         adjust();
 
     }
+}
+
+void MainWindow::getMinimisation() {
+    resetUi();
+    ui->actionFaireProduit->setVisible(true);
+    ui->actionDeterminiser->setVisible(true);
+
+    //On netoi l'eventuel vecteur de produit
+    monVector.clear();
+    monVectorStandard.clear();
+    actuel = 0;
+
+    //On affiche l'automate a dans la vue superieur.
+    QProcess ProcessT;
+    QStringList procargs;
+    ProcessT.close();
+
+    QFile tmp("./tmp.dot");
+    tmp.open(QFile::WriteOnly);
+
+    QTextStream out(&tmp);
+    out << QString().fromStdString(a.toDot());
+    tmp.close();
+
+    procargs.push_back("-Tsvg");
+    procargs.push_back("./tmp.dot");
+
+    ProcessT.start("dot",procargs);
+    ProcessT.waitForFinished();
+
+    maVue1->load(ProcessT.readAll());
+    ui->scrollArea_3->show();
+    maVue1->show();
+
+    //on recupere le vecteur de standardisation
+
+        monVectorMinimise  = a.minimise();
+
+        //On affiche le premier element en bas
+
+        ProcessT.close();
+
+        QFile tmp2("./tmp.dot");
+        tmp2.open(QFile::WriteOnly);
+
+        QTextStream out2(&tmp2);
+        out2 << QString().fromStdString(monVectorMinimise[0].first.toDot());
+        tmp2.close();
+
+        ProcessT.start("dot",procargs);
+        ProcessT.waitForFinished();
+
+        maVue->load(ProcessT.readAll());
+        maVue->show();
+        ui->boutonPrec->show();
+        ui->boutonSuiv->show();
+
+
+        //On affiche ensuite l'aide à droite
+        ui->label->clear();
+        ui->label->show();
+        ui->label->insertPlainText(QString().fromStdString("Hello World"));
+        adjust();
+
 }
 
 void MainWindow::getStandard() {
@@ -457,6 +523,12 @@ void MainWindow::getSuivant(){
             actuel++;
         }
     }
+    //cas de la minimisation
+    else if (monVectorMinimise.empty()== false) {
+        if(actuel<monVectorMinimise.size()-1){
+            actuel++;
+        }
+    }
     //cas du determinisme
     else{
         if(actuel<monDeterminisme.size()-1){
@@ -484,6 +556,18 @@ void MainWindow::getSuivant(){
         for(unsigned int j = 0;j<=actuel;j++){
             QString texte;
             string texte2 = monVectorStandard[j].second;
+            QTextStream(&texte)<<"\n--ETAPE "<<(j+1)<<"--\n";
+            ui->label->insertPlainText(texte);
+            ui->label->insertPlainText(QString().fromStdString(texte2));
+        }
+    }
+    //cas de la minimisation
+    else if (monVectorMinimise.empty()== false) {
+        out << QString().fromStdString(monVectorMinimise[actuel].first.toDot());
+        ui->label->clear();
+        for(unsigned int j = 0;j<=actuel;j++){
+            QString texte;
+            string texte2 = monVectorMinimise[j].second;
             QTextStream(&texte)<<"\n--ETAPE "<<(j+1)<<"--\n";
             ui->label->insertPlainText(texte);
             ui->label->insertPlainText(QString().fromStdString(texte2));

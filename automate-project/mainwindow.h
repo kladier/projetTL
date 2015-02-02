@@ -44,6 +44,8 @@ private:
     vector<Automate> monVector; //utiliser pour le produit
     vector <  pair< Automate , string > > monDeterminisme; //utiliser pour le determinisme
     vector <  pair< Automate , string > > monVectorStandard; //Utiliser pour la standardisation
+    vector <  pair< Automate , string > > monVectorMinimise; //Utiliser pour la minimisation
+
     unsigned int actuel;
     void adjust();
 
@@ -55,6 +57,7 @@ public slots:
     void getSuivant();
     void getPrecedent();
     void getStandard();
+    void getMinimisation();
     void resetUi();
     void test();
     void info();
