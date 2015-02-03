@@ -27,6 +27,7 @@ public:
     vector<etat> getEtats();
     void ajoutTransition(etat,etat,int);
     void supprimeEtat(etat);
+    int cible_transition(int etatDepart, int etiq);
     void supprimeEtat(etat, Automate * a);
     void supprimerEtatsNonAccessibles(Automate * a);
     string toDot();

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'transition.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.6
+** Created by: Qt User Interface Compiler version 5.2.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,15 +10,15 @@
 #define UI_TRANSITION_H
 
 #include <QtCore/QVariant>
-#include <QAction>
-#include <QApplication>
-#include <QButtonGroup>
-#include <QHBoxLayout>
-#include <QHeaderView>
-#include <QLabel>
-#include <QPushButton>
-#include <QSpacerItem>
-#include <QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -33,12 +33,12 @@ public:
     void setupUi(QWidget *Transition)
     {
         if (Transition->objectName().isEmpty())
-            Transition->setObjectName(QString::fromUtf8("Transition"));
+            Transition->setObjectName(QStringLiteral("Transition"));
         Transition->resize(400, 64);
         horizontalLayout = new QHBoxLayout(Transition);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         label = new QLabel(Transition);
-        label->setObjectName(QString::fromUtf8("label"));
+        label->setObjectName(QStringLiteral("label"));
 
         horizontalLayout->addWidget(label);
 
@@ -47,9 +47,9 @@ public:
         horizontalLayout->addItem(horizontalSpacer);
 
         supress = new QPushButton(Transition);
-        supress->setObjectName(QString::fromUtf8("supress"));
+        supress->setObjectName(QStringLiteral("supress"));
         QIcon icon;
-        icon.addFile(QString::fromUtf8(":/new/prefix1/Images/supprimer.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/new/prefix1/Images/supprimer.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         supress->setIcon(icon);
 
         horizontalLayout->addWidget(supress);
@@ -65,8 +65,8 @@ public:
 
     void retranslateUi(QWidget *Transition)
     {
-        Transition->setWindowTitle(QApplication::translate("Transition", "Form", 0, -1));
-        label->setText(QApplication::translate("Transition", "TextLabel", 0, -1));
+        Transition->setWindowTitle(QApplication::translate("Transition", "Form", 0));
+        label->setText(QApplication::translate("Transition", "TextLabel", 0));
         supress->setText(QString());
     } // retranslateUi
 

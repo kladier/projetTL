@@ -9,7 +9,7 @@ Transition::Transition(int to,int voc,QWidget *parent) :
     cible = to;
     vocab = voc;
 
-    ui->label->setText("vers l'état "+QString().setNum(cible)+" par le chiffre "+QString().setNum(vocab));
+    ui->label->setText("vers l'Ã©tat "+QString().setNum(cible)+" par le chiffre "+QString().setNum(vocab));
     connect(ui->supress,SIGNAL(clicked()),this,SLOT(getOff()));
 }
 

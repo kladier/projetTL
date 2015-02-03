@@ -2,15 +2,16 @@ QT += svg
 QT += widgets
 
 
-HEADERS += transition.h \
+HEADERS += \
     mainwindow.h \
     etatright.h \
     etatleft.h \
     etat.h \
     createautomate.h \
     choixpointe.h \
-    automate.h
-SOURCES += transition.cpp \
+    automate.h \
+    transition.h
+SOURCES += \
     mainwindow.cpp \
     main.cpp \
     etatright.cpp \
@@ -18,12 +19,14 @@ SOURCES += transition.cpp \
     etat.cpp \
     createautomate.cpp \
     choixpointe.cpp \
-    automate.cpp
-FORMS += transition.ui \
+    automate.cpp \
+    transition.cpp
+FORMS += \
     mainwindow.ui \
     etatright.ui \
     etatleft.ui \
     createautomate.ui \
     choixpointe.ui
+    transition.ui
 RESOURCES += Images.qrc
 RC_FILE = myApp.rc

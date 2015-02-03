@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'choixpointe.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.6
+** Created by: Qt User Interface Compiler version 5.2.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,18 +10,18 @@
 #define UI_CHOIXPOINTE_H
 
 #include <QtCore/QVariant>
-#include <QAction>
-#include <QApplication>
-#include <QButtonGroup>
-#include <QComboBox>
-#include <QFrame>
-#include <QHBoxLayout>
-#include <QHeaderView>
-#include <QLabel>
-#include <QLineEdit>
-#include <QPushButton>
-#include <QVBoxLayout>
-#include <QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -40,40 +40,40 @@ public:
     void setupUi(QWidget *choixPointe)
     {
         if (choixPointe->objectName().isEmpty())
-            choixPointe->setObjectName(QString::fromUtf8("choixPointe"));
+            choixPointe->setObjectName(QStringLiteral("choixPointe"));
         choixPointe->resize(400, 300);
         verticalLayout_2 = new QVBoxLayout(choixPointe);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         Widget = new QFrame(choixPointe);
-        Widget->setObjectName(QString::fromUtf8("Widget"));
+        Widget->setObjectName(QStringLiteral("Widget"));
         Widget->setFrameShape(QFrame::StyledPanel);
         Widget->setFrameShadow(QFrame::Sunken);
         horizontalLayout = new QHBoxLayout(Widget);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         label_3 = new QLabel(Widget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setObjectName(QStringLiteral("label_3"));
 
         horizontalLayout->addWidget(label_3);
 
         lesChoix = new QComboBox(Widget);
-        lesChoix->setObjectName(QString::fromUtf8("lesChoix"));
+        lesChoix->setObjectName(QStringLiteral("lesChoix"));
 
         horizontalLayout->addWidget(lesChoix);
 
         label_4 = new QLabel(Widget);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setObjectName(QStringLiteral("label_4"));
 
         horizontalLayout->addWidget(label_4);
 
         lineEdit = new QLineEdit(Widget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
 
         horizontalLayout->addWidget(lineEdit);
 
         pushButton = new QPushButton(Widget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setObjectName(QStringLiteral("pushButton"));
         QIcon icon;
-        icon.addFile(QString::fromUtf8(":/new/prefix1/Images/Ajouter.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/new/prefix1/Images/Ajouter.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton->setIcon(icon);
 
         horizontalLayout->addWidget(pushButton);
@@ -89,9 +89,9 @@ public:
 
     void retranslateUi(QWidget *choixPointe)
     {
-        choixPointe->setWindowTitle(QApplication::translate("choixPointe", "Form", 0, -1));
-        label_3->setText(QApplication::translate("choixPointe", "Vers l'\303\251tat", 0, -1));
-        label_4->setText(QApplication::translate("choixPointe", "Par le chiffre", 0, -1));
+        choixPointe->setWindowTitle(QApplication::translate("choixPointe", "Form", 0));
+        label_3->setText(QApplication::translate("choixPointe", "Vers l'\303\251tat", 0));
+        label_4->setText(QApplication::translate("choixPointe", "Par le chiffre", 0));
         pushButton->setText(QString());
     } // retranslateUi
 

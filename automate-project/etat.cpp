@@ -132,6 +132,7 @@ bool etat::find_transition(int etiq, etat e){
      return trouve;
  }
 
+
 bool etat::estDansList(list<etat> liste){
 
     list<etat>::iterator it;

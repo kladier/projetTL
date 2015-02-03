@@ -45,23 +45,22 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = transition.cpp \
-		mainwindow.cpp \
+SOURCES       = mainwindow.cpp \
 		main.cpp \
 		etatright.cpp \
 		etatleft.cpp \
 		etat.cpp \
 		createautomate.cpp \
 		choixpointe.cpp \
-		automate.cpp qrc_Images.cpp \
-		moc_transition.cpp \
+		automate.cpp \
+		transition.cpp qrc_Images.cpp \
 		moc_mainwindow.cpp \
 		moc_etatright.cpp \
 		moc_etatleft.cpp \
 		moc_createautomate.cpp \
-		moc_choixpointe.cpp
-OBJECTS       = transition.o \
-		mainwindow.o \
+		moc_choixpointe.cpp \
+		moc_transition.cpp
+OBJECTS       = mainwindow.o \
 		main.o \
 		etatright.o \
 		etatleft.o \
@@ -69,13 +68,14 @@ OBJECTS       = transition.o \
 		createautomate.o \
 		choixpointe.o \
 		automate.o \
+		transition.o \
 		qrc_Images.o \
-		moc_transition.o \
 		moc_mainwindow.o \
 		moc_etatright.o \
 		moc_etatleft.o \
 		moc_createautomate.o \
-		moc_choixpointe.o
+		moc_choixpointe.o \
+		moc_transition.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -169,7 +169,7 @@ first: all
 
 all: Makefile $(TARGET)
 
-$(TARGET): ui_transition.h ui_mainwindow.h ui_etatright.h ui_etatleft.h ui_createautomate.h ui_choixpointe.h $(OBJECTS)  
+$(TARGET): ui_mainwindow.h ui_etatright.h ui_etatleft.h ui_createautomate.h ui_choixpointe.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 	{ test -n "$(DESTDIR)" && DESTDIR="$(DESTDIR)" || DESTDIR=.; } && test $$(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $$DESTDIR" -ex quit '$(TARGET)' && test -f $(TARGET).gdb-index && objcopy --add-section '.gdb_index=$(TARGET).gdb-index' --set-section-flags '.gdb_index=readonly' '$(TARGET)' '$(TARGET)' && rm -f $(TARGET).gdb-index || true
 
@@ -315,7 +315,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .tmp/autoroute1.0.0 || mkdir -p .tmp/autoroute1.0.0
-	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/autoroute1.0.0/ && $(COPY_FILE) --parents Images.qrc .tmp/autoroute1.0.0/ && $(COPY_FILE) --parents transition.h mainwindow.h etatright.h etatleft.h etat.h createautomate.h choixpointe.h automate.h .tmp/autoroute1.0.0/ && $(COPY_FILE) --parents transition.cpp mainwindow.cpp main.cpp etatright.cpp etatleft.cpp etat.cpp createautomate.cpp choixpointe.cpp automate.cpp .tmp/autoroute1.0.0/ && $(COPY_FILE) --parents transition.ui mainwindow.ui etatright.ui etatleft.ui createautomate.ui choixpointe.ui .tmp/autoroute1.0.0/ && (cd `dirname .tmp/autoroute1.0.0` && $(TAR) autoroute1.0.0.tar autoroute1.0.0 && $(COMPRESS) autoroute1.0.0.tar) && $(MOVE) `dirname .tmp/autoroute1.0.0`/autoroute1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/autoroute1.0.0
+	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/autoroute1.0.0/ && $(COPY_FILE) --parents Images.qrc .tmp/autoroute1.0.0/ && $(COPY_FILE) --parents mainwindow.h etatright.h etatleft.h etat.h createautomate.h choixpointe.h automate.h transition.h .tmp/autoroute1.0.0/ && $(COPY_FILE) --parents mainwindow.cpp main.cpp etatright.cpp etatleft.cpp etat.cpp createautomate.cpp choixpointe.cpp automate.cpp transition.cpp .tmp/autoroute1.0.0/ && $(COPY_FILE) --parents mainwindow.ui etatright.ui etatleft.ui createautomate.ui choixpointe.ui .tmp/autoroute1.0.0/ && (cd `dirname .tmp/autoroute1.0.0` && $(TAR) autoroute1.0.0.tar autoroute1.0.0 && $(COMPRESS) autoroute1.0.0.tar) && $(MOVE) `dirname .tmp/autoroute1.0.0`/autoroute1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/autoroute1.0.0
 
 
 clean:compiler_clean 
@@ -341,138 +341,27 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_Images.cpp
 qrc_Images.cpp: Images.qrc \
 		myAppIco.ico \
-		Images/icon.jpg \
-		Images/button.jpg \
-		Images/next.png \
-		Images/supprimer.jpg \
-		Images/Ajouter.jpg \
-		Images/back.png \
-		Images/determin.png \
-		Images/clean.png \
-		Images/suppr.png \
-		Images/produit.png \
 		Images/info.png \
+		Images/standardiser.jpg \
 		Images/save.png \
 		Images/home.png \
-		Images/standardiser.jpg \
+		Images/minimiser.jpg \
+		Images/produit.png \
+		Images/clean.png \
+		Images/icon.jpg \
+		Images/supprimer.jpg \
+		Images/suppr.png \
 		Images/nouveau.png \
-		Images/minimiser.jpg
+		Images/next.png \
+		Images/back.png \
+		Images/button.jpg \
+		Images/determin.png \
+		Images/Ajouter.jpg
 	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name Images Images.qrc -o qrc_Images.cpp
 
-compiler_moc_header_make_all: moc_transition.cpp moc_mainwindow.cpp moc_etatright.cpp moc_etatleft.cpp moc_createautomate.cpp moc_choixpointe.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_etatright.cpp moc_etatleft.cpp moc_createautomate.cpp moc_choixpointe.cpp moc_transition.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_transition.cpp moc_mainwindow.cpp moc_etatright.cpp moc_etatleft.cpp moc_createautomate.cpp moc_choixpointe.cpp
-moc_transition.cpp: /usr/include/qt5/QtWidgets/QWidget \
-		/usr/include/qt5/QtWidgets/qwidget.h \
-		/usr/include/qt5/QtGui/qwindowdefs.h \
-		/usr/include/qt5/QtCore/qglobal.h \
-		/usr/include/qt5/QtCore/qconfig.h \
-		/usr/include/qt5/QtCore/qfeatures.h \
-		/usr/include/qt5/QtCore/qsystemdetection.h \
-		/usr/include/qt5/QtCore/qprocessordetection.h \
-		/usr/include/qt5/QtCore/qcompilerdetection.h \
-		/usr/include/qt5/QtCore/qglobalstatic.h \
-		/usr/include/qt5/QtCore/qatomic.h \
-		/usr/include/qt5/QtCore/qbasicatomic.h \
-		/usr/include/qt5/QtCore/qatomic_bootstrap.h \
-		/usr/include/qt5/QtCore/qgenericatomic.h \
-		/usr/include/qt5/QtCore/qatomic_msvc.h \
-		/usr/include/qt5/QtCore/qatomic_integrity.h \
-		/usr/include/qt5/QtCore/qoldbasicatomic.h \
-		/usr/include/qt5/QtCore/qatomic_vxworks.h \
-		/usr/include/qt5/QtCore/qatomic_power.h \
-		/usr/include/qt5/QtCore/qatomic_alpha.h \
-		/usr/include/qt5/QtCore/qatomic_armv7.h \
-		/usr/include/qt5/QtCore/qatomic_armv6.h \
-		/usr/include/qt5/QtCore/qatomic_armv5.h \
-		/usr/include/qt5/QtCore/qatomic_bfin.h \
-		/usr/include/qt5/QtCore/qatomic_ia64.h \
-		/usr/include/qt5/QtCore/qatomic_mips.h \
-		/usr/include/qt5/QtCore/qatomic_s390.h \
-		/usr/include/qt5/QtCore/qatomic_sh4a.h \
-		/usr/include/qt5/QtCore/qatomic_sparc.h \
-		/usr/include/qt5/QtCore/qatomic_gcc.h \
-		/usr/include/qt5/QtCore/qatomic_x86.h \
-		/usr/include/qt5/QtCore/qatomic_cxx11.h \
-		/usr/include/qt5/QtCore/qatomic_unix.h \
-		/usr/include/qt5/QtCore/qmutex.h \
-		/usr/include/qt5/QtCore/qlogging.h \
-		/usr/include/qt5/QtCore/qflags.h \
-		/usr/include/qt5/QtCore/qtypeinfo.h \
-		/usr/include/qt5/QtCore/qtypetraits.h \
-		/usr/include/qt5/QtCore/qsysinfo.h \
-		/usr/include/qt5/QtCore/qobjectdefs.h \
-		/usr/include/qt5/QtCore/qnamespace.h \
-		/usr/include/qt5/QtCore/qobjectdefs_impl.h \
-		/usr/include/qt5/QtGui/qwindowdefs_win.h \
-		/usr/include/qt5/QtCore/qobject.h \
-		/usr/include/qt5/QtCore/qstring.h \
-		/usr/include/qt5/QtCore/qchar.h \
-		/usr/include/qt5/QtCore/qbytearray.h \
-		/usr/include/qt5/QtCore/qrefcount.h \
-		/usr/include/qt5/QtCore/qarraydata.h \
-		/usr/include/qt5/QtCore/qstringbuilder.h \
-		/usr/include/qt5/QtCore/qlist.h \
-		/usr/include/qt5/QtCore/qalgorithms.h \
-		/usr/include/qt5/QtCore/qiterator.h \
-		/usr/include/qt5/QtCore/qcoreevent.h \
-		/usr/include/qt5/QtCore/qscopedpointer.h \
-		/usr/include/qt5/QtCore/qmetatype.h \
-		/usr/include/qt5/QtCore/qvarlengtharray.h \
-		/usr/include/qt5/QtCore/qcontainerfwd.h \
-		/usr/include/qt5/QtCore/qisenum.h \
-		/usr/include/qt5/QtCore/qobject_impl.h \
-		/usr/include/qt5/QtCore/qmargins.h \
-		/usr/include/qt5/QtCore/qrect.h \
-		/usr/include/qt5/QtCore/qsize.h \
-		/usr/include/qt5/QtCore/qpoint.h \
-		/usr/include/qt5/QtGui/qpaintdevice.h \
-		/usr/include/qt5/QtGui/qpalette.h \
-		/usr/include/qt5/QtGui/qcolor.h \
-		/usr/include/qt5/QtGui/qrgb.h \
-		/usr/include/qt5/QtCore/qstringlist.h \
-		/usr/include/qt5/QtCore/qdatastream.h \
-		/usr/include/qt5/QtCore/qiodevice.h \
-		/usr/include/qt5/QtCore/qpair.h \
-		/usr/include/qt5/QtCore/qregexp.h \
-		/usr/include/qt5/QtCore/qstringmatcher.h \
-		/usr/include/qt5/QtGui/qbrush.h \
-		/usr/include/qt5/QtCore/qvector.h \
-		/usr/include/qt5/QtGui/qmatrix.h \
-		/usr/include/qt5/QtGui/qpolygon.h \
-		/usr/include/qt5/QtGui/qregion.h \
-		/usr/include/qt5/QtCore/qline.h \
-		/usr/include/qt5/QtGui/qtransform.h \
-		/usr/include/qt5/QtGui/qpainterpath.h \
-		/usr/include/qt5/QtGui/qimage.h \
-		/usr/include/qt5/QtGui/qpixmap.h \
-		/usr/include/qt5/QtCore/qsharedpointer.h \
-		/usr/include/qt5/QtCore/qshareddata.h \
-		/usr/include/qt5/QtCore/qsharedpointer_impl.h \
-		/usr/include/qt5/QtCore/qhash.h \
-		/usr/include/qt5/QtGui/qfont.h \
-		/usr/include/qt5/QtGui/qfontmetrics.h \
-		/usr/include/qt5/QtGui/qfontinfo.h \
-		/usr/include/qt5/QtWidgets/qsizepolicy.h \
-		/usr/include/qt5/QtGui/qcursor.h \
-		/usr/include/qt5/QtGui/qkeysequence.h \
-		/usr/include/qt5/QtGui/qevent.h \
-		/usr/include/qt5/QtCore/qvariant.h \
-		/usr/include/qt5/QtCore/qmap.h \
-		/usr/include/qt5/QtCore/qdebug.h \
-		/usr/include/qt5/QtCore/qtextstream.h \
-		/usr/include/qt5/QtCore/qlocale.h \
-		/usr/include/qt5/QtCore/qset.h \
-		/usr/include/qt5/QtCore/qcontiguouscache.h \
-		/usr/include/qt5/QtCore/qurl.h \
-		/usr/include/qt5/QtCore/qurlquery.h \
-		/usr/include/qt5/QtCore/qfile.h \
-		/usr/include/qt5/QtCore/qfiledevice.h \
-		/usr/include/qt5/QtGui/qvector2d.h \
-		/usr/include/qt5/QtGui/qtouchdevice.h \
-		transition.h
-	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/x86_64-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include transition.h -o moc_transition.cpp
-
+	-$(DEL_FILE) moc_mainwindow.cpp moc_etatright.cpp moc_etatleft.cpp moc_createautomate.cpp moc_choixpointe.cpp moc_transition.cpp
 moc_mainwindow.cpp: /usr/include/qt5/QtSvg/QSvgWidget \
 		/usr/include/qt5/QtSvg/qsvgwidget.h \
 		/usr/include/qt5/QtCore/qglobal.h \
@@ -1093,41 +982,7 @@ moc_choixpointe.cpp: /usr/include/qt5/QtWidgets/QWidget \
 		choixpointe.h
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/x86_64-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include choixpointe.h -o moc_choixpointe.cpp
 
-compiler_moc_source_make_all:
-compiler_moc_source_clean:
-compiler_uic_make_all: ui_transition.h ui_mainwindow.h ui_etatright.h ui_etatleft.h ui_createautomate.h ui_choixpointe.h
-compiler_uic_clean:
-	-$(DEL_FILE) ui_transition.h ui_mainwindow.h ui_etatright.h ui_etatleft.h ui_createautomate.h ui_choixpointe.h
-ui_transition.h: transition.ui
-	/usr/lib/x86_64-linux-gnu/qt5/bin/uic transition.ui -o ui_transition.h
-
-ui_mainwindow.h: mainwindow.ui
-	/usr/lib/x86_64-linux-gnu/qt5/bin/uic mainwindow.ui -o ui_mainwindow.h
-
-ui_etatright.h: etatright.ui
-	/usr/lib/x86_64-linux-gnu/qt5/bin/uic etatright.ui -o ui_etatright.h
-
-ui_etatleft.h: etatleft.ui
-	/usr/lib/x86_64-linux-gnu/qt5/bin/uic etatleft.ui -o ui_etatleft.h
-
-ui_createautomate.h: createautomate.ui
-	/usr/lib/x86_64-linux-gnu/qt5/bin/uic createautomate.ui -o ui_createautomate.h
-
-ui_choixpointe.h: choixpointe.ui
-	/usr/lib/x86_64-linux-gnu/qt5/bin/uic choixpointe.ui -o ui_choixpointe.h
-
-compiler_yacc_decl_make_all:
-compiler_yacc_decl_clean:
-compiler_yacc_impl_make_all:
-compiler_yacc_impl_clean:
-compiler_lex_make_all:
-compiler_lex_clean:
-compiler_clean: compiler_rcc_clean compiler_moc_header_clean compiler_uic_clean 
-
-####### Compile
-
-transition.o: transition.cpp transition.h \
-		/usr/include/qt5/QtWidgets/QWidget \
+moc_transition.cpp: /usr/include/qt5/QtWidgets/QWidget \
 		/usr/include/qt5/QtWidgets/qwidget.h \
 		/usr/include/qt5/QtGui/qwindowdefs.h \
 		/usr/include/qt5/QtCore/qglobal.h \
@@ -1235,51 +1090,38 @@ transition.o: transition.cpp transition.h \
 		/usr/include/qt5/QtCore/qfiledevice.h \
 		/usr/include/qt5/QtGui/qvector2d.h \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
-		ui_transition.h \
-		/usr/include/qt5/QtCore/QVariant \
-		/usr/include/qt5/QtWidgets/QAction \
-		/usr/include/qt5/QtWidgets/qaction.h \
-		/usr/include/qt5/QtGui/qicon.h \
-		/usr/include/qt5/QtWidgets/qactiongroup.h \
-		/usr/include/qt5/QtWidgets/QApplication \
-		/usr/include/qt5/QtWidgets/qapplication.h \
-		/usr/include/qt5/QtCore/qcoreapplication.h \
-		/usr/include/qt5/QtCore/qeventloop.h \
-		/usr/include/qt5/QtWidgets/qdesktopwidget.h \
-		/usr/include/qt5/QtGui/qguiapplication.h \
-		/usr/include/qt5/QtGui/qinputmethod.h \
-		/usr/include/qt5/QtWidgets/QButtonGroup \
-		/usr/include/qt5/QtWidgets/qbuttongroup.h \
-		/usr/include/qt5/QtWidgets/QHBoxLayout \
-		/usr/include/qt5/QtWidgets/qboxlayout.h \
-		/usr/include/qt5/QtWidgets/qlayout.h \
-		/usr/include/qt5/QtWidgets/qlayoutitem.h \
-		/usr/include/qt5/QtWidgets/qgridlayout.h \
-		/usr/include/qt5/QtWidgets/QHeaderView \
-		/usr/include/qt5/QtWidgets/qheaderview.h \
-		/usr/include/qt5/QtWidgets/qabstractitemview.h \
-		/usr/include/qt5/QtWidgets/qabstractscrollarea.h \
-		/usr/include/qt5/QtWidgets/qframe.h \
-		/usr/include/qt5/QtCore/qabstractitemmodel.h \
-		/usr/include/qt5/QtCore/qitemselectionmodel.h \
-		/usr/include/qt5/QtWidgets/qabstractitemdelegate.h \
-		/usr/include/qt5/QtWidgets/qstyleoption.h \
-		/usr/include/qt5/QtWidgets/qabstractspinbox.h \
-		/usr/include/qt5/QtGui/qvalidator.h \
-		/usr/include/qt5/QtCore/qregularexpression.h \
-		/usr/include/qt5/QtWidgets/qslider.h \
-		/usr/include/qt5/QtWidgets/qabstractslider.h \
-		/usr/include/qt5/QtWidgets/qstyle.h \
-		/usr/include/qt5/QtWidgets/qtabbar.h \
-		/usr/include/qt5/QtWidgets/qtabwidget.h \
-		/usr/include/qt5/QtWidgets/qrubberband.h \
-		/usr/include/qt5/QtWidgets/QLabel \
-		/usr/include/qt5/QtWidgets/qlabel.h \
-		/usr/include/qt5/QtWidgets/QPushButton \
-		/usr/include/qt5/QtWidgets/qpushbutton.h \
-		/usr/include/qt5/QtWidgets/qabstractbutton.h \
-		/usr/include/qt5/QtWidgets/QSpacerItem
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o transition.o transition.cpp
+		transition.h
+	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/x86_64-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include transition.h -o moc_transition.cpp
+
+compiler_moc_source_make_all:
+compiler_moc_source_clean:
+compiler_uic_make_all: ui_mainwindow.h ui_etatright.h ui_etatleft.h ui_createautomate.h ui_choixpointe.h
+compiler_uic_clean:
+	-$(DEL_FILE) ui_mainwindow.h ui_etatright.h ui_etatleft.h ui_createautomate.h ui_choixpointe.h
+ui_mainwindow.h: mainwindow.ui
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic mainwindow.ui -o ui_mainwindow.h
+
+ui_etatright.h: etatright.ui
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic etatright.ui -o ui_etatright.h
+
+ui_etatleft.h: etatleft.ui
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic etatleft.ui -o ui_etatleft.h
+
+ui_createautomate.h: createautomate.ui
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic createautomate.ui -o ui_createautomate.h
+
+ui_choixpointe.h: choixpointe.ui
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic choixpointe.ui -o ui_choixpointe.h
+
+compiler_yacc_decl_make_all:
+compiler_yacc_decl_clean:
+compiler_yacc_impl_make_all:
+compiler_yacc_impl_clean:
+compiler_lex_make_all:
+compiler_lex_clean:
+compiler_clean: compiler_rcc_clean compiler_moc_header_clean compiler_uic_clean 
+
+####### Compile
 
 mainwindow.o: mainwindow.cpp /usr/include/qt5/QtGui/QtGui \
 		/usr/include/qt5/QtGui/QtGuiDepends \
@@ -2664,11 +2506,163 @@ automate.o: automate.cpp automate.h \
 		etat.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o automate.o automate.cpp
 
+transition.o: transition.cpp transition.h \
+		/usr/include/qt5/QtWidgets/QWidget \
+		/usr/include/qt5/QtWidgets/qwidget.h \
+		/usr/include/qt5/QtGui/qwindowdefs.h \
+		/usr/include/qt5/QtCore/qglobal.h \
+		/usr/include/qt5/QtCore/qconfig.h \
+		/usr/include/qt5/QtCore/qfeatures.h \
+		/usr/include/qt5/QtCore/qsystemdetection.h \
+		/usr/include/qt5/QtCore/qprocessordetection.h \
+		/usr/include/qt5/QtCore/qcompilerdetection.h \
+		/usr/include/qt5/QtCore/qglobalstatic.h \
+		/usr/include/qt5/QtCore/qatomic.h \
+		/usr/include/qt5/QtCore/qbasicatomic.h \
+		/usr/include/qt5/QtCore/qatomic_bootstrap.h \
+		/usr/include/qt5/QtCore/qgenericatomic.h \
+		/usr/include/qt5/QtCore/qatomic_msvc.h \
+		/usr/include/qt5/QtCore/qatomic_integrity.h \
+		/usr/include/qt5/QtCore/qoldbasicatomic.h \
+		/usr/include/qt5/QtCore/qatomic_vxworks.h \
+		/usr/include/qt5/QtCore/qatomic_power.h \
+		/usr/include/qt5/QtCore/qatomic_alpha.h \
+		/usr/include/qt5/QtCore/qatomic_armv7.h \
+		/usr/include/qt5/QtCore/qatomic_armv6.h \
+		/usr/include/qt5/QtCore/qatomic_armv5.h \
+		/usr/include/qt5/QtCore/qatomic_bfin.h \
+		/usr/include/qt5/QtCore/qatomic_ia64.h \
+		/usr/include/qt5/QtCore/qatomic_mips.h \
+		/usr/include/qt5/QtCore/qatomic_s390.h \
+		/usr/include/qt5/QtCore/qatomic_sh4a.h \
+		/usr/include/qt5/QtCore/qatomic_sparc.h \
+		/usr/include/qt5/QtCore/qatomic_gcc.h \
+		/usr/include/qt5/QtCore/qatomic_x86.h \
+		/usr/include/qt5/QtCore/qatomic_cxx11.h \
+		/usr/include/qt5/QtCore/qatomic_unix.h \
+		/usr/include/qt5/QtCore/qmutex.h \
+		/usr/include/qt5/QtCore/qlogging.h \
+		/usr/include/qt5/QtCore/qflags.h \
+		/usr/include/qt5/QtCore/qtypeinfo.h \
+		/usr/include/qt5/QtCore/qtypetraits.h \
+		/usr/include/qt5/QtCore/qsysinfo.h \
+		/usr/include/qt5/QtCore/qobjectdefs.h \
+		/usr/include/qt5/QtCore/qnamespace.h \
+		/usr/include/qt5/QtCore/qobjectdefs_impl.h \
+		/usr/include/qt5/QtGui/qwindowdefs_win.h \
+		/usr/include/qt5/QtCore/qobject.h \
+		/usr/include/qt5/QtCore/qstring.h \
+		/usr/include/qt5/QtCore/qchar.h \
+		/usr/include/qt5/QtCore/qbytearray.h \
+		/usr/include/qt5/QtCore/qrefcount.h \
+		/usr/include/qt5/QtCore/qarraydata.h \
+		/usr/include/qt5/QtCore/qstringbuilder.h \
+		/usr/include/qt5/QtCore/qlist.h \
+		/usr/include/qt5/QtCore/qalgorithms.h \
+		/usr/include/qt5/QtCore/qiterator.h \
+		/usr/include/qt5/QtCore/qcoreevent.h \
+		/usr/include/qt5/QtCore/qscopedpointer.h \
+		/usr/include/qt5/QtCore/qmetatype.h \
+		/usr/include/qt5/QtCore/qvarlengtharray.h \
+		/usr/include/qt5/QtCore/qcontainerfwd.h \
+		/usr/include/qt5/QtCore/qisenum.h \
+		/usr/include/qt5/QtCore/qobject_impl.h \
+		/usr/include/qt5/QtCore/qmargins.h \
+		/usr/include/qt5/QtCore/qrect.h \
+		/usr/include/qt5/QtCore/qsize.h \
+		/usr/include/qt5/QtCore/qpoint.h \
+		/usr/include/qt5/QtGui/qpaintdevice.h \
+		/usr/include/qt5/QtGui/qpalette.h \
+		/usr/include/qt5/QtGui/qcolor.h \
+		/usr/include/qt5/QtGui/qrgb.h \
+		/usr/include/qt5/QtCore/qstringlist.h \
+		/usr/include/qt5/QtCore/qdatastream.h \
+		/usr/include/qt5/QtCore/qiodevice.h \
+		/usr/include/qt5/QtCore/qpair.h \
+		/usr/include/qt5/QtCore/qregexp.h \
+		/usr/include/qt5/QtCore/qstringmatcher.h \
+		/usr/include/qt5/QtGui/qbrush.h \
+		/usr/include/qt5/QtCore/qvector.h \
+		/usr/include/qt5/QtGui/qmatrix.h \
+		/usr/include/qt5/QtGui/qpolygon.h \
+		/usr/include/qt5/QtGui/qregion.h \
+		/usr/include/qt5/QtCore/qline.h \
+		/usr/include/qt5/QtGui/qtransform.h \
+		/usr/include/qt5/QtGui/qpainterpath.h \
+		/usr/include/qt5/QtGui/qimage.h \
+		/usr/include/qt5/QtGui/qpixmap.h \
+		/usr/include/qt5/QtCore/qsharedpointer.h \
+		/usr/include/qt5/QtCore/qshareddata.h \
+		/usr/include/qt5/QtCore/qsharedpointer_impl.h \
+		/usr/include/qt5/QtCore/qhash.h \
+		/usr/include/qt5/QtGui/qfont.h \
+		/usr/include/qt5/QtGui/qfontmetrics.h \
+		/usr/include/qt5/QtGui/qfontinfo.h \
+		/usr/include/qt5/QtWidgets/qsizepolicy.h \
+		/usr/include/qt5/QtGui/qcursor.h \
+		/usr/include/qt5/QtGui/qkeysequence.h \
+		/usr/include/qt5/QtGui/qevent.h \
+		/usr/include/qt5/QtCore/qvariant.h \
+		/usr/include/qt5/QtCore/qmap.h \
+		/usr/include/qt5/QtCore/qdebug.h \
+		/usr/include/qt5/QtCore/qtextstream.h \
+		/usr/include/qt5/QtCore/qlocale.h \
+		/usr/include/qt5/QtCore/qset.h \
+		/usr/include/qt5/QtCore/qcontiguouscache.h \
+		/usr/include/qt5/QtCore/qurl.h \
+		/usr/include/qt5/QtCore/qurlquery.h \
+		/usr/include/qt5/QtCore/qfile.h \
+		/usr/include/qt5/QtCore/qfiledevice.h \
+		/usr/include/qt5/QtGui/qvector2d.h \
+		/usr/include/qt5/QtGui/qtouchdevice.h \
+		ui_transition.h \
+		/usr/include/qt5/QtCore/QVariant \
+		/usr/include/qt5/QtWidgets/QAction \
+		/usr/include/qt5/QtWidgets/qaction.h \
+		/usr/include/qt5/QtGui/qicon.h \
+		/usr/include/qt5/QtWidgets/qactiongroup.h \
+		/usr/include/qt5/QtWidgets/QApplication \
+		/usr/include/qt5/QtWidgets/qapplication.h \
+		/usr/include/qt5/QtCore/qcoreapplication.h \
+		/usr/include/qt5/QtCore/qeventloop.h \
+		/usr/include/qt5/QtWidgets/qdesktopwidget.h \
+		/usr/include/qt5/QtGui/qguiapplication.h \
+		/usr/include/qt5/QtGui/qinputmethod.h \
+		/usr/include/qt5/QtWidgets/QButtonGroup \
+		/usr/include/qt5/QtWidgets/qbuttongroup.h \
+		/usr/include/qt5/QtWidgets/QHBoxLayout \
+		/usr/include/qt5/QtWidgets/qboxlayout.h \
+		/usr/include/qt5/QtWidgets/qlayout.h \
+		/usr/include/qt5/QtWidgets/qlayoutitem.h \
+		/usr/include/qt5/QtWidgets/qgridlayout.h \
+		/usr/include/qt5/QtWidgets/QHeaderView \
+		/usr/include/qt5/QtWidgets/qheaderview.h \
+		/usr/include/qt5/QtWidgets/qabstractitemview.h \
+		/usr/include/qt5/QtWidgets/qabstractscrollarea.h \
+		/usr/include/qt5/QtWidgets/qframe.h \
+		/usr/include/qt5/QtCore/qabstractitemmodel.h \
+		/usr/include/qt5/QtCore/qitemselectionmodel.h \
+		/usr/include/qt5/QtWidgets/qabstractitemdelegate.h \
+		/usr/include/qt5/QtWidgets/qstyleoption.h \
+		/usr/include/qt5/QtWidgets/qabstractspinbox.h \
+		/usr/include/qt5/QtGui/qvalidator.h \
+		/usr/include/qt5/QtCore/qregularexpression.h \
+		/usr/include/qt5/QtWidgets/qslider.h \
+		/usr/include/qt5/QtWidgets/qabstractslider.h \
+		/usr/include/qt5/QtWidgets/qstyle.h \
+		/usr/include/qt5/QtWidgets/qtabbar.h \
+		/usr/include/qt5/QtWidgets/qtabwidget.h \
+		/usr/include/qt5/QtWidgets/qrubberband.h \
+		/usr/include/qt5/QtWidgets/QLabel \
+		/usr/include/qt5/QtWidgets/qlabel.h \
+		/usr/include/qt5/QtWidgets/QPushButton \
+		/usr/include/qt5/QtWidgets/qpushbutton.h \
+		/usr/include/qt5/QtWidgets/qabstractbutton.h \
+		/usr/include/qt5/QtWidgets/QSpacerItem
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o transition.o transition.cpp
+
 qrc_Images.o: qrc_Images.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_Images.o qrc_Images.cpp
-
-moc_transition.o: moc_transition.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_transition.o moc_transition.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
@@ -2684,6 +2678,9 @@ moc_createautomate.o: moc_createautomate.cpp
 
 moc_choixpointe.o: moc_choixpointe.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_choixpointe.o moc_choixpointe.cpp
+
+moc_transition.o: moc_transition.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_transition.o moc_transition.cpp
 
 ####### Install
 

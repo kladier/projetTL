@@ -5,8 +5,6 @@
 #include <QFrame>
 #include <QMessageBox>
 #include <QFile>
-#include "transition.h"
-
 
 CreateAutomate::CreateAutomate(QWidget *parent) :
     QMainWindow(parent),

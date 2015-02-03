@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'etatright.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.6
+** Created by: Qt User Interface Compiler version 5.2.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,17 +10,17 @@
 #define UI_ETATRIGHT_H
 
 #include <QtCore/QVariant>
-#include <QAction>
-#include <QApplication>
-#include <QButtonGroup>
-#include <QCheckBox>
-#include <QFrame>
-#include <QHBoxLayout>
-#include <QHeaderView>
-#include <QLabel>
-#include <QSpacerItem>
-#include <QVBoxLayout>
-#include <QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -45,23 +45,23 @@ public:
     void setupUi(QWidget *etatRight)
     {
         if (etatRight->objectName().isEmpty())
-            etatRight->setObjectName(QString::fromUtf8("etatRight"));
+            etatRight->setObjectName(QStringLiteral("etatRight"));
         etatRight->resize(400, 300);
         etatRight->setMinimumSize(QSize(0, 200));
         horizontalLayout = new QHBoxLayout(etatRight);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_3->addItem(horizontalSpacer);
 
         label = new QLabel(etatRight);
-        label->setObjectName(QString::fromUtf8("label"));
+        label->setObjectName(QStringLiteral("label"));
         QFont font;
-        font.setFamily(QString::fromUtf8("Times New Roman"));
+        font.setFamily(QStringLiteral("Times New Roman"));
         font.setPointSize(10);
         font.setBold(false);
         font.setItalic(false);
@@ -80,18 +80,18 @@ public:
         verticalLayout->addLayout(horizontalLayout_3);
 
         horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_2->addItem(horizontalSpacer_3);
 
         checkBox_2 = new QCheckBox(etatRight);
-        checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
+        checkBox_2->setObjectName(QStringLiteral("checkBox_2"));
 
         horizontalLayout_2->addWidget(checkBox_2);
 
         checkBox = new QCheckBox(etatRight);
-        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        checkBox->setObjectName(QStringLiteral("checkBox"));
 
         horizontalLayout_2->addWidget(checkBox);
 
@@ -103,17 +103,17 @@ public:
         verticalLayout->addLayout(horizontalLayout_2);
 
         Choix = new QHBoxLayout();
-        Choix->setObjectName(QString::fromUtf8("Choix"));
+        Choix->setObjectName(QStringLiteral("Choix"));
         Choix->setContentsMargins(-1, 4, -1, -1);
 
         verticalLayout->addLayout(Choix);
 
         frame = new QFrame(etatRight);
-        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setObjectName(QStringLiteral("frame"));
         frame->setFrameShape(QFrame::Box);
         frame->setFrameShadow(QFrame::Raised);
         ShowChoix = new QVBoxLayout(frame);
-        ShowChoix->setObjectName(QString::fromUtf8("ShowChoix"));
+        ShowChoix->setObjectName(QStringLiteral("ShowChoix"));
         ShowChoix->setSizeConstraint(QLayout::SetMinAndMaxSize);
 
         verticalLayout->addWidget(frame);
@@ -129,10 +129,10 @@ public:
 
     void retranslateUi(QWidget *etatRight)
     {
-        etatRight->setWindowTitle(QApplication::translate("etatRight", "Form", 0, -1));
-        label->setText(QApplication::translate("etatRight", "Mon Etat", 0, -1));
-        checkBox_2->setText(QApplication::translate("etatRight", "Initial", 0, -1));
-        checkBox->setText(QApplication::translate("etatRight", "Final", 0, -1));
+        etatRight->setWindowTitle(QApplication::translate("etatRight", "Form", 0));
+        label->setText(QApplication::translate("etatRight", "Mon Etat", 0));
+        checkBox_2->setText(QApplication::translate("etatRight", "Initial", 0));
+        checkBox->setText(QApplication::translate("etatRight", "Final", 0));
     } // retranslateUi
 
 };

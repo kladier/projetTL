@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>675</width>
-    <height>400</height>
+    <width>912</width>
+    <height>504</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -167,6 +167,12 @@
     </item>
     <item>
      <widget class="QTextEdit" name="label">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
       <property name="autoFillBackground">
        <bool>true</bool>
       </property>
@@ -182,7 +188,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>675</width>
+     <width>912</width>
      <height>21</height>
     </rect>
    </property>

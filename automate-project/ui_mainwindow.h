@@ -66,7 +66,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(675, 400);
+        MainWindow->resize(912, 504);
         MainWindow->setMinimumSize(QSize(600, 400));
         QIcon icon;
         icon.addFile(QStringLiteral(":/new/prefix1/myAppIco.ico"), QSize(), QIcon::Normal, QIcon::Off);
@@ -213,6 +213,7 @@ public:
 
         label = new QTextEdit(centralWidget);
         label->setObjectName(QStringLiteral("label"));
+        label->setMaximumSize(QSize(16777215, 16777215));
         label->setAutoFillBackground(true);
         label->setReadOnly(true);
 
@@ -221,7 +222,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 675, 21));
+        menuBar->setGeometry(QRect(0, 0, 912, 21));
         menuBar->setAutoFillBackground(true);
         menuFichier = new QMenu(menuBar);
         menuFichier->setObjectName(QStringLiteral("menuFichier"));
