@@ -7,14 +7,22 @@
 
 var indexSectionsWithContent =
 {
-  0: "acemqtu",
-  1: "acemqtu"
+  0: "acdefgimnopqrstu~",
+  1: "acemqtu",
+  2: "am",
+  3: "acdefgimoprst~",
+  4: "en",
+  5: "d"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "classes"
+  1: "classes",
+  2: "files",
+  3: "functions",
+  4: "variables",
+  5: "pages"
 };
 
 function convertToId(search)

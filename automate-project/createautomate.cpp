@@ -40,7 +40,7 @@ void CreateAutomate::changeEvent(QEvent *e)
 
 void CreateAutomate::ajoutEtat(bool ini, bool fina){
    if(a.getEtats().size()>9){
-       QMessageBox::critical( this, tr( "Erreur" ), tr( "Vous ne pouvez pas créer un automates de plus de 10 états" ));
+       QMessageBox::critical( this, tr( "Erreur" ), tr( "Vous ne pouvez pas crÃ©er un automates de plus de 10 Ã©tats" ));
        return;
    }
 
@@ -60,7 +60,7 @@ void CreateAutomate::ajoutEtat(bool ini, bool fina){
    connect(h,SIGNAL(etatChanges(int,bool,bool)),this,SLOT(changeState(int,bool,bool)));
    displayRight(right.size()-1);
 
-    //On remet à jour toutes les lists
+    //On remet Ã  jour toutes les lists
 
 }
 
@@ -115,7 +115,7 @@ void CreateAutomate::displayRight(int toDisplay){
     multit = multi.begin();
 
     while(multit != multi.end()){
-        //On ajoute la transition à la liste des transitions
+        //On ajoute la transition Ã  la liste des transitions
        right[toDisplay]->addVisualTransition((*multit).second.getNumber(),(*multit).first);
        multit++;
     }

@@ -4,42 +4,413 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_automate_acfb8d2af5feb86ac7c8df6dc6994646c}{{\bfseries Automate} (const \hyperlink{class_automate}{Automate} \&)}\label{class_automate_acfb8d2af5feb86ac7c8df6dc6994646c}
-
+\hyperlink{class_automate_a79dcc6fd193e40ab8246b4a70b904a11}{Automate} ()
+\begin{DoxyCompactList}\small\item\em Constructeur sans paramètre. \end{DoxyCompactList}\item 
+\hyperlink{class_automate_a89c0c96d304c3de5d7587df5f60b6c7c}{Automate} (const \hyperlink{class_automate}{Automate} \&a)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{class_automate_a25a6a03be274fd4984139b815aad0092}{$\sim$\-Automate} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void \hyperlink{class_automate_a095077a318aea188cbcd663deaa97a97}{ajout\-Etat} (\hyperlink{classetat}{etat} cible)
+\begin{DoxyCompactList}\small\item\em Ajout d'un état. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \hyperlink{class_automate_a3f8def92c8e75035516d9e67dcb244d9}{get\-Tab\-Transitions} ()
+\begin{DoxyCompactList}\small\item\em Liste les différentes transitions de l'automate. \end{DoxyCompactList}\item 
+bool \hyperlink{class_automate_a6b63a438c3e8af81e2cdf8493a949232}{is\-Deterministe} ()
+\begin{DoxyCompactList}\small\item\em Test si un automate est déterministe. \end{DoxyCompactList}\item 
+bool \hyperlink{class_automate_a763c4f441c8e0740a5ed0fbe16360a73}{is\-Standard} ()
+\begin{DoxyCompactList}\small\item\em Test si un automate est standard. \end{DoxyCompactList}\item 
+\hyperlink{classetat}{etat} $\ast$ \hyperlink{class_automate_a62ebaf51904bf539f74e87db01826999}{get\-Etat} (int number)
+\begin{DoxyCompactList}\small\item\em Retourne un pointeur vers l'état dont le numéro est précisé en paramètre. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classetat}{etat} $>$ \hyperlink{class_automate_a656b9bc8d5daedee113b6429662b5d98}{get\-Etats} ()
+\begin{DoxyCompactList}\small\item\em Retourne le vector d'états de l'automate. \end{DoxyCompactList}\item 
+void \hyperlink{class_automate_a74a66bbf357d7fdd19f1d258ef3d2704}{ajout\-Transition} (\hyperlink{classetat}{etat} from, \hyperlink{classetat}{etat} to, int vocab)
+\begin{DoxyCompactList}\small\item\em Ajoute une transition à un état. \end{DoxyCompactList}\item 
+void \hyperlink{class_automate_a6456b3b223086aea9e4efa5ae35af931}{supprime\-Etat} (\hyperlink{classetat}{etat} cible)
+\begin{DoxyCompactList}\small\item\em Supprime un état de l'automate. \end{DoxyCompactList}\item 
+int \hyperlink{class_automate_ae1852a4e9b030309bc29b96cf67e1abf}{cible\-\_\-transition} (int etat\-Depart, int etiq)
+\begin{DoxyCompactList}\small\item\em Retourne l'état ciblé par une transition. \end{DoxyCompactList}\item 
+void \hyperlink{class_automate_a5d258956a3a0a655cf0e2ac233156651}{supprime\-Etat} (\hyperlink{classetat}{etat} cible, \hyperlink{class_automate}{Automate} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Supprime un état de l'automate passé en paramètre. \end{DoxyCompactList}\item 
+void \hyperlink{class_automate_ac808d99ac1a43b37e5e7ffc95c54cd40}{supprimer\-Etats\-Non\-Accessibles} (\hyperlink{class_automate}{Automate} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Supprime les états non accessibles de l'automate passé en paramètre. \end{DoxyCompactList}\item 
+string \hyperlink{class_automate_af1f2f1cd64780ff7b302936787aeac38}{to\-Dot} ()
+\begin{DoxyCompactList}\small\item\em Fonction permettant de renvoyer une chaine à partir de l'automate actuel. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{class_automate}{Automate} $>$ \hyperlink{class_automate_a0e2d212ace9f993021c9112aa99b7aed}{produit} (\hyperlink{class_automate}{Automate} A)
+\begin{DoxyCompactList}\small\item\em Réalise le produit de deux automates. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \hyperlink{class_automate_ab18acfedc3d9704ab08d8fd464efccfe}{get\-Alpha} ()
+\begin{DoxyCompactList}\small\item\em Taille de l'alphabet de l'automate. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ \hyperlink{class_automate}{Automate}, string $>$ $>$ \hyperlink{class_automate_aa1829f8d4512f67d4e3efb945cc550f0}{determinise} ()
+\begin{DoxyCompactList}\small\item\em Réalise la déterminisation de l'automate. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ \hyperlink{class_automate}{Automate}, string $>$ $>$ \hyperlink{class_automate_a32ec8c518bd5d988ac10544b13c0bb95}{standardise} ()
+\begin{DoxyCompactList}\small\item\em Réalise la standardisation de l'automate. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ \hyperlink{class_automate}{Automate}, string $>$ $>$ \hyperlink{class_automate_af8297f77add39ea70a0877f85dedcf28}{minimise} ()
+\begin{DoxyCompactList}\small\item\em Réalise la minimisation de l'automate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_automate_a2374e1ba1527ebcb47fae239906bd01e}{void {\bfseries ajout\-Etat} (\hyperlink{classetat}{etat})}\label{class_automate_a2374e1ba1527ebcb47fae239906bd01e}
-
-\item 
-\hypertarget{class_automate_a6b63a438c3e8af81e2cdf8493a949232}{bool {\bfseries is\-Deterministe} ()}\label{class_automate_a6b63a438c3e8af81e2cdf8493a949232}
-
-\item 
-\hypertarget{class_automate_ae0c96b5f7e0eb1df5584de9fabc3d2da}{\hyperlink{classetat}{etat} $\ast$ {\bfseries get\-Etat} (int)}\label{class_automate_ae0c96b5f7e0eb1df5584de9fabc3d2da}
-
-\item 
-\hypertarget{class_automate_a656b9bc8d5daedee113b6429662b5d98}{vector$<$ \hyperlink{classetat}{etat} $>$ {\bfseries get\-Etats} ()}\label{class_automate_a656b9bc8d5daedee113b6429662b5d98}
-
-\item 
-\hypertarget{class_automate_a92bf8eb49b9948aa01043fa1c3b7c294}{void {\bfseries ajout\-Transition} (\hyperlink{classetat}{etat}, \hyperlink{classetat}{etat}, int)}\label{class_automate_a92bf8eb49b9948aa01043fa1c3b7c294}
-
-\item 
-\hypertarget{class_automate_a626a7f669fb0c76e42372cc868f151ed}{void {\bfseries supprime\-Etat} (\hyperlink{classetat}{etat})}\label{class_automate_a626a7f669fb0c76e42372cc868f151ed}
-
-\item 
-\hypertarget{class_automate_af1f2f1cd64780ff7b302936787aeac38}{string {\bfseries to\-Dot} ()}\label{class_automate_af1f2f1cd64780ff7b302936787aeac38}
-
-\item 
-\hypertarget{class_automate_a403a7e9a70bbca142e35a805555c5b16}{vector$<$ \hyperlink{class_automate}{Automate} $>$ {\bfseries produit} (\hyperlink{class_automate}{Automate})}\label{class_automate_a403a7e9a70bbca142e35a805555c5b16}
-
-\item 
-\hypertarget{class_automate_ab18acfedc3d9704ab08d8fd464efccfe}{vector$<$ int $>$ {\bfseries get\-Alpha} ()}\label{class_automate_ab18acfedc3d9704ab08d8fd464efccfe}
-
-\item 
-\hypertarget{class_automate_aa1829f8d4512f67d4e3efb945cc550f0}{vector$<$ pair$<$ \hyperlink{class_automate}{Automate}, string $>$ $>$ {\bfseries determinise} ()}\label{class_automate_aa1829f8d4512f67d4e3efb945cc550f0}
-
+vector$<$ \hyperlink{classetat}{etat} $>$ \hyperlink{class_automate_a8dd5a4e024b8e84834198ac132c3896b}{etats}
 \end{DoxyCompactItemize}
 
 
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_automate_a79dcc6fd193e40ab8246b4a70b904a11}{\index{Automate@{Automate}!Automate@{Automate}}
+\index{Automate@{Automate}!Automate@{Automate}}
+\subsubsection[{Automate}]{\setlength{\rightskip}{0pt plus 5cm}Automate\-::\-Automate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a79dcc6fd193e40ab8246b4a70b904a11}
+
+
+Constructeur sans paramètre. 
+
+Constructeur de la classe \hyperlink{class_automate}{Automate}, produit un automate vide. \hypertarget{class_automate_a89c0c96d304c3de5d7587df5f60b6c7c}{\index{Automate@{Automate}!Automate@{Automate}}
+\index{Automate@{Automate}!Automate@{Automate}}
+\subsubsection[{Automate}]{\setlength{\rightskip}{0pt plus 5cm}Automate\-::\-Automate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Automate} \&}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a89c0c96d304c3de5d7587df5f60b6c7c}
+
+
+Constructeur. 
+
+Construit l'automate passé en paramètre
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \-: automate à construire \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_automate_a25a6a03be274fd4984139b815aad0092}{\index{Automate@{Automate}!$\sim$\-Automate@{$\sim$\-Automate}}
+\index{$\sim$\-Automate@{$\sim$\-Automate}!Automate@{Automate}}
+\subsubsection[{$\sim$\-Automate}]{\setlength{\rightskip}{0pt plus 5cm}Automate\-::$\sim$\-Automate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a25a6a03be274fd4984139b815aad0092}
+
+
+Destructeur. 
+
+Destructeur de la classe \hyperlink{class_automate}{Automate} 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_automate_a095077a318aea188cbcd663deaa97a97}{\index{Automate@{Automate}!ajout\-Etat@{ajout\-Etat}}
+\index{ajout\-Etat@{ajout\-Etat}!Automate@{Automate}}
+\subsubsection[{ajout\-Etat}]{\setlength{\rightskip}{0pt plus 5cm}void Automate\-::ajout\-Etat (
+\begin{DoxyParamCaption}
+\item[{{\bf etat}}]{cible}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a095077a318aea188cbcd663deaa97a97}
+
+
+Ajout d'un état. 
+
+Methode qui permet d'ajouter un état à l'automate
+
+
+\begin{DoxyParams}{Parameters}
+{\em cible} & \-: l'état à ajouter \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_automate_a74a66bbf357d7fdd19f1d258ef3d2704}{\index{Automate@{Automate}!ajout\-Transition@{ajout\-Transition}}
+\index{ajout\-Transition@{ajout\-Transition}!Automate@{Automate}}
+\subsubsection[{ajout\-Transition}]{\setlength{\rightskip}{0pt plus 5cm}void Automate\-::ajout\-Transition (
+\begin{DoxyParamCaption}
+\item[{{\bf etat}}]{from, }
+\item[{{\bf etat}}]{to, }
+\item[{int}]{vocab}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a74a66bbf357d7fdd19f1d258ef3d2704}
+
+
+Ajoute une transition à un état. 
+
+Ajoute une transition à l'état from en direction de l'état to et portant l'étiquette vocab.
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & \-: l'état de départ de la transition \\
+\hline
+{\em to} & \-: l'état d'arrivée de la transition \\
+\hline
+{\em vocab} & \-: le numéro de la transition, son étiquette. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_automate_ae1852a4e9b030309bc29b96cf67e1abf}{\index{Automate@{Automate}!cible\-\_\-transition@{cible\-\_\-transition}}
+\index{cible\-\_\-transition@{cible\-\_\-transition}!Automate@{Automate}}
+\subsubsection[{cible\-\_\-transition}]{\setlength{\rightskip}{0pt plus 5cm}int Automate\-::cible\-\_\-transition (
+\begin{DoxyParamCaption}
+\item[{int}]{etat\-Depart, }
+\item[{int}]{etiq}
+\end{DoxyParamCaption}
+)}}\label{class_automate_ae1852a4e9b030309bc29b96cf67e1abf}
+
+
+Retourne l'état ciblé par une transition. 
+
+Renvoit le numéro de l'état ciblé par la transition partant de etat\-Depart et portant l'étiquette etiq. Cette fonction ne fonctionne que si l'automate est déterministe, elle est utilisée seulement dans la minimisation
+
+
+\begin{DoxyParams}{Parameters}
+{\em etat\-Depart} & \-: le numéro de l'état d'où part la transition \\
+\hline
+{\em etiq} & \-: l'étiquette de la transition, partant de etat\-Depart \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le numéro de l'état ciblé par la transition, -\/1 s'il n'y en a pas 
+\end{DoxyReturn}
+\hypertarget{class_automate_aa1829f8d4512f67d4e3efb945cc550f0}{\index{Automate@{Automate}!determinise@{determinise}}
+\index{determinise@{determinise}!Automate@{Automate}}
+\subsubsection[{determinise}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ pair$<$ {\bf Automate}, string $>$ $>$ Automate\-::determinise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_aa1829f8d4512f67d4e3efb945cc550f0}
+
+
+Réalise la déterminisation de l'automate. 
+
+Réalise la déterminisation de l'automate, et renvoit un vecteur. Dans ce vecteur, chaque élément correspond à une pair \-: un automate et une chaine. Chaque élément pair représente en fait une étape dans le processus de déterminisation. La chaine est le texte correspondant aux explications et l'automate est l'automate à afficher pendant cette étape.
+
+\begin{DoxyReturn}{Returns}
+le vecteur servant pour la déterminisation 
+\end{DoxyReturn}
+\hypertarget{class_automate_ab18acfedc3d9704ab08d8fd464efccfe}{\index{Automate@{Automate}!get\-Alpha@{get\-Alpha}}
+\index{get\-Alpha@{get\-Alpha}!Automate@{Automate}}
+\subsubsection[{get\-Alpha}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ Automate\-::get\-Alpha (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_ab18acfedc3d9704ab08d8fd464efccfe}
+
+
+Taille de l'alphabet de l'automate. 
+
+Fonction qui retourne la taille de l'alphabet d'un automate
+
+\begin{DoxyReturn}{Returns}
+un vecteur d'entier, représentant l'ensemble des étiquettes différentes des transitions, c'est-\/à-\/dire l'alphabet de l'automate 
+\end{DoxyReturn}
+\hypertarget{class_automate_a62ebaf51904bf539f74e87db01826999}{\index{Automate@{Automate}!get\-Etat@{get\-Etat}}
+\index{get\-Etat@{get\-Etat}!Automate@{Automate}}
+\subsubsection[{get\-Etat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf etat} $\ast$ Automate\-::get\-Etat (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a62ebaf51904bf539f74e87db01826999}
+
+
+Retourne un pointeur vers l'état dont le numéro est précisé en paramètre. 
+
+Récupère le pointeur vers l'état dont le numéro est précisé en paramètre. Récupère cet état dans le vector d'états (un attribut de l'automate).
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & \-: le numéro de l'état à retourner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un pointeur vers l'état 
+\end{DoxyReturn}
+\hypertarget{class_automate_a656b9bc8d5daedee113b6429662b5d98}{\index{Automate@{Automate}!get\-Etats@{get\-Etats}}
+\index{get\-Etats@{get\-Etats}!Automate@{Automate}}
+\subsubsection[{get\-Etats}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf etat} $>$ Automate\-::get\-Etats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a656b9bc8d5daedee113b6429662b5d98}
+
+
+Retourne le vector d'états de l'automate. 
+
+\begin{DoxyReturn}{Returns}
+Le vecteur d'états de l'automate. 
+\end{DoxyReturn}
+\hypertarget{class_automate_a3f8def92c8e75035516d9e67dcb244d9}{\index{Automate@{Automate}!get\-Tab\-Transitions@{get\-Tab\-Transitions}}
+\index{get\-Tab\-Transitions@{get\-Tab\-Transitions}!Automate@{Automate}}
+\subsubsection[{get\-Tab\-Transitions}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ Automate\-::get\-Tab\-Transitions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a3f8def92c8e75035516d9e67dcb244d9}
+
+
+Liste les différentes transitions de l'automate. 
+
+Methode permettant de lister dans un vector d'int, les différentes transitions. \hyperlink{class_automate_a3f8def92c8e75035516d9e67dcb244d9}{get\-Tab\-Transitions()}.size() permet donc de connaitre le nombre de transitions différentes dans l'automate
+
+\begin{DoxyReturn}{Returns}
+un vecteur, chaque entier du vecteur représentant un type de transition 
+\end{DoxyReturn}
+\hypertarget{class_automate_a6b63a438c3e8af81e2cdf8493a949232}{\index{Automate@{Automate}!is\-Deterministe@{is\-Deterministe}}
+\index{is\-Deterministe@{is\-Deterministe}!Automate@{Automate}}
+\subsubsection[{is\-Deterministe}]{\setlength{\rightskip}{0pt plus 5cm}bool Automate\-::is\-Deterministe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a6b63a438c3e8af81e2cdf8493a949232}
+
+
+Test si un automate est déterministe. 
+
+Permet de tester si un automate est déterministe (voir définition d'un automate déterministe).
+
+\begin{DoxyReturn}{Returns}
+true si l'automate est déterministe, false sinon 
+\end{DoxyReturn}
+\hypertarget{class_automate_a763c4f441c8e0740a5ed0fbe16360a73}{\index{Automate@{Automate}!is\-Standard@{is\-Standard}}
+\index{is\-Standard@{is\-Standard}!Automate@{Automate}}
+\subsubsection[{is\-Standard}]{\setlength{\rightskip}{0pt plus 5cm}bool Automate\-::is\-Standard (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a763c4f441c8e0740a5ed0fbe16360a73}
+
+
+Test si un automate est standard. 
+
+Permet de tester si un automate est standard (voir définition d'un automate standard).
+
+\begin{DoxyReturn}{Returns}
+true si l'automate est standard, false sinon 
+\end{DoxyReturn}
+\hypertarget{class_automate_af8297f77add39ea70a0877f85dedcf28}{\index{Automate@{Automate}!minimise@{minimise}}
+\index{minimise@{minimise}!Automate@{Automate}}
+\subsubsection[{minimise}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ pair$<$ {\bf Automate}, string $>$ $>$ Automate\-::minimise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_af8297f77add39ea70a0877f85dedcf28}
+
+
+Réalise la minimisation de l'automate. 
+
+Réalise la minimisation de l'automate, et renvoit un vecteur. Dans ce vecteur, chaque élément correspond à une pair \-: un automate et une chaine. Chaque élément pair représente en fait une étape dans le processus de minimisation. La chaine est le texte correspondant aux explications et l'automate est l'automate à afficher pendant cette étape.
+
+\begin{DoxyReturn}{Returns}
+le vecteur servant pour la minimisation 
+\end{DoxyReturn}
+\hypertarget{class_automate_a0e2d212ace9f993021c9112aa99b7aed}{\index{Automate@{Automate}!produit@{produit}}
+\index{produit@{produit}!Automate@{Automate}}
+\subsubsection[{produit}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Automate} $>$ Automate\-::produit (
+\begin{DoxyParamCaption}
+\item[{{\bf Automate}}]{A}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a0e2d212ace9f993021c9112aa99b7aed}
+
+
+Réalise le produit de deux automates. 
+
+Réalise le produit de deux automates (this et A), et renvoit un vecteur d'automates. Dans ce vecteur, chaque élément correspond à une étape du processus de produit de 2 automates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & \-: le produit est réalisé avec cet automate A, passé en paramètre\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un vecteur d'automate, chaque automate correspondant à une étape dans le logiciel 
+\end{DoxyReturn}
+\hypertarget{class_automate_a32ec8c518bd5d988ac10544b13c0bb95}{\index{Automate@{Automate}!standardise@{standardise}}
+\index{standardise@{standardise}!Automate@{Automate}}
+\subsubsection[{standardise}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ pair$<$ {\bf Automate}, string $>$ $>$ Automate\-::standardise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a32ec8c518bd5d988ac10544b13c0bb95}
+
+
+Réalise la standardisation de l'automate. 
+
+Réalise la standardisation de l'automate, et renvoit un vecteur. Dans ce vecteur, chaque élément correspond à une pair \-: un automate et une chaine. Chaque élément pair représente en fait une étape dans le processus de standardisation. La chaine est le texte correspondant aux explications et l'automate est l'automate à afficher pendant cette étape.
+
+\begin{DoxyReturn}{Returns}
+le vecteur servant pour la standardisation 
+\end{DoxyReturn}
+\hypertarget{class_automate_a6456b3b223086aea9e4efa5ae35af931}{\index{Automate@{Automate}!supprime\-Etat@{supprime\-Etat}}
+\index{supprime\-Etat@{supprime\-Etat}!Automate@{Automate}}
+\subsubsection[{supprime\-Etat}]{\setlength{\rightskip}{0pt plus 5cm}void Automate\-::supprime\-Etat (
+\begin{DoxyParamCaption}
+\item[{{\bf etat}}]{cible}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a6456b3b223086aea9e4efa5ae35af931}
+
+
+Supprime un état de l'automate. 
+
+Supprime l'état, passé en paramètre, de l'automate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cible} & \-: l'état à supprimer \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_automate_a5d258956a3a0a655cf0e2ac233156651}{\index{Automate@{Automate}!supprime\-Etat@{supprime\-Etat}}
+\index{supprime\-Etat@{supprime\-Etat}!Automate@{Automate}}
+\subsubsection[{supprime\-Etat}]{\setlength{\rightskip}{0pt plus 5cm}void Automate\-::supprime\-Etat (
+\begin{DoxyParamCaption}
+\item[{{\bf etat}}]{cible, }
+\item[{{\bf Automate} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_automate_a5d258956a3a0a655cf0e2ac233156651}
+
+
+Supprime un état de l'automate passé en paramètre. 
+
+Supprime l'état cible de l'automate dont le pointeur a est passé en paramètre.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cible} & \-: l'état à supprimer \\
+\hline
+{\em a} & \-: pointeur vers l'automate \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_automate_ac808d99ac1a43b37e5e7ffc95c54cd40}{\index{Automate@{Automate}!supprimer\-Etats\-Non\-Accessibles@{supprimer\-Etats\-Non\-Accessibles}}
+\index{supprimer\-Etats\-Non\-Accessibles@{supprimer\-Etats\-Non\-Accessibles}!Automate@{Automate}}
+\subsubsection[{supprimer\-Etats\-Non\-Accessibles}]{\setlength{\rightskip}{0pt plus 5cm}void Automate\-::supprimer\-Etats\-Non\-Accessibles (
+\begin{DoxyParamCaption}
+\item[{{\bf Automate} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_automate_ac808d99ac1a43b37e5e7ffc95c54cd40}
+
+
+Supprime les états non accessibles de l'automate passé en paramètre. 
+
+Supprime les états non accessibles de l'automate dont le pointeur est passé en paramètre
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \-: pointeur vers l'automate \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_automate_af1f2f1cd64780ff7b302936787aeac38}{\index{Automate@{Automate}!to\-Dot@{to\-Dot}}
+\index{to\-Dot@{to\-Dot}!Automate@{Automate}}
+\subsubsection[{to\-Dot}]{\setlength{\rightskip}{0pt plus 5cm}string Automate\-::to\-Dot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_af1f2f1cd64780ff7b302936787aeac38}
+
+
+Fonction permettant de renvoyer une chaine à partir de l'automate actuel. 
+
+Cette chaine correspond à la représentation de l'automate en graphe dans le langage de descrition D\-O\-T
+
+\begin{DoxyReturn}{Returns}
+La chaine décrivrant l'automate, à mettre dans un .dot ensuite 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_automate_a8dd5a4e024b8e84834198ac132c3896b}{\index{Automate@{Automate}!etats@{etats}}
+\index{etats@{etats}!Automate@{Automate}}
+\subsubsection[{etats}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf etat}$>$ Automate\-::etats}}\label{class_automate_a8dd5a4e024b8e84834198ac132c3896b}
+Vecteur des états de l'automate 
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/aaiiighht/\-Bureau/smartgit/bin/projet\-T\-L/automate-\/project/automate.\-h\item 
-/home/aaiiighht/\-Bureau/smartgit/bin/projet\-T\-L/automate-\/project/automate.\-cpp\end{DoxyCompactItemize}
+/home/aaiiighht/\-Bureau/projet\-T\-L/automate-\/project/\hyperlink{automate_8h}{automate.\-h}\item 
+/home/aaiiighht/\-Bureau/projet\-T\-L/automate-\/project/automate.\-cpp\end{DoxyCompactItemize}

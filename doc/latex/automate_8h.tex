@@ -1,0 +1,73 @@
+\hypertarget{automate_8h}{\section{/home/aaiiighht/\-Bureau/projet\-T\-L/automate-\/project/automate.h File Reference}
+\label{automate_8h}\index{/home/aaiiighht/\-Bureau/projet\-T\-L/automate-\/project/automate.\-h@{/home/aaiiighht/\-Bureau/projet\-T\-L/automate-\/project/automate.\-h}}
+}
+
+
+Représente un automate, son seul attribut est un vector d'états.  
+
+
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include \char`\"{}etat.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_automate}{Automate}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{automate_8h_a9896d1263155efd59efe2a14ef2a807f}{equal} (list$<$ \hyperlink{classetat}{etat} $>$ \&l1, list$<$ \hyperlink{classetat}{etat} $>$ \&l2)
+\begin{DoxyCompactList}\small\item\em Test l'égalité entre deux listes d'états. \end{DoxyCompactList}\item 
+bool \hyperlink{automate_8h_adad60237c4515bce78983c4510406f70}{is\-Final} (list$<$ \hyperlink{classetat}{etat} $>$ l)
+\begin{DoxyCompactList}\small\item\em Test si une liste d'états a au moins un état final. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Représente un automate, son seul attribut est un vector d'états. 
+
+\subsection{Function Documentation}
+\hypertarget{automate_8h_a9896d1263155efd59efe2a14ef2a807f}{\index{automate.\-h@{automate.\-h}!equal@{equal}}
+\index{equal@{equal}!automate.h@{automate.\-h}}
+\subsubsection[{equal}]{\setlength{\rightskip}{0pt plus 5cm}bool equal (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf etat} $>$ \&}]{l1, }
+\item[{list$<$ {\bf etat} $>$ \&}]{l2}
+\end{DoxyParamCaption}
+)}}\label{automate_8h_a9896d1263155efd59efe2a14ef2a807f}
+
+
+Test l'égalité entre deux listes d'états. 
+
+Test l'égalité entre deux listes d'états l1 et l2
+
+\begin{DoxyReturn}{Returns}
+true si les listes sont égales, false sinon 
+\end{DoxyReturn}
+\hypertarget{automate_8h_adad60237c4515bce78983c4510406f70}{\index{automate.\-h@{automate.\-h}!is\-Final@{is\-Final}}
+\index{is\-Final@{is\-Final}!automate.h@{automate.\-h}}
+\subsubsection[{is\-Final}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-Final (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf etat} $>$}]{l}
+\end{DoxyParamCaption}
+)}}\label{automate_8h_adad60237c4515bce78983c4510406f70}
+
+
+Test si une liste d'états a au moins un état final. 
+
+Fonction utilisée seulement pour la déterminisation
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \-: liste d'états testée\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true s'il y a au moins un état final dans la liste d'états, false sinon 
+\end{DoxyReturn}

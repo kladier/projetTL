@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Projet TL: Main Page</title>
+<title>Doc Projet TL: Documentation du logiciel Autoroute</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Projet TL
+   <div id="projectname">Doc Projet TL
    </div>
   </td>
  </tr>
@@ -63,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -74,13 +74,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Projet TL Documentation</div>  </div>
+<div class="title">Documentation du logiciel Autoroute </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
+Introduction</h1>
+<p>En allant dans la section Classes, vous aurait accès à la documentation de l'ensemble des classes. A partir de là, vous pourrez trouvez de la doc concernant les attributs et méthodes des classes.</p>
+<p>Dans cette page principale, nous verrons comment exécuter le logiciel Autoroute, prendre en main les sources, l'arborescence du projet ainsi que des définitions relatives à la théorie des langages et aux automates.</p>
+<h1><a class="anchor" id="install_sec"></a>
+Installation du logiciel pour les utilisateurs</h1>
+<p>Bla Bla Bla</p>
+<h1><a class="anchor" id="dev_sec"></a>
+Pour les développeurs</h1>
+<h2><a class="anchor" id="etape1"></a>
+Etape 1 : Prise en main des sources et execution</h2>
+<p>Ce logiciel est développé en C++, avec le framework QT5. La manière la plus simple d'accéder aux sources, d'exécuter le programme et de modifier ce logiciel est la suivante :</p>
+<ul>
+<li>installer QT</li>
+<li>créer un dossier dans lequel vous mettrez les 3 dossiers (executable, doc et automate-project)</li>
+<li>dans QT, cliquez sur Open a project puis allez chercher le fichier automate-project/autoroute.pro</li>
+<li>pour lancer le logiciel, cliquez simplement sur la flèche verte</li>
+</ul>
+<p>Il vous faudra peut-être configurer dans l'onglet "Projects" l'exécution. Il suffit normalement de préciser le dossier automate/project et d'utiliser les paramètres par défaut.</p>
+<p>NB : Vous aurez peut-être un problème de version si vous avez une version supérieure à QT5. Il suffit en général de modifier le nom des bibliothèques. Si cela ne change pas, il vous reste plusieurs solutions :</p>
+<ul>
+<li>aller voir sur le net comment passer le projet de QT5 à la version actuelle de QT</li>
+<li>résoudre les erreurs de compilation (aidez vous du debugger de QT), c'est la solution conseillée.</li>
+</ul>
+<h2><a class="anchor" id="etape2"></a>
+Etape 2 : Arborescence du projet</h2>
+<pre class="fragment">   - doc/ : vous trouverez ici deux dossiers (html et latex) correspondant à deux formats de la documentation. Il y aussi dans ce dossier les comptes rendus 2010 et 2015.
+</pre><p> Il est possible d'ouvrir ce fichier avec Doxygen et de générer la documentation du programme si vous voulez la modifier. Ce tutoriel est assez bien fait pour prendre en main doxygen : <a href="http://franckh.developpez.com/tutoriels/outils/doxygen/">http://franckh.developpez.com/tutoriels/outils/doxygen/</a></p>
+<pre class="fragment">   - automate-project/ : les sources du programme.
+</pre><p> Mieux vaux ne pas y toucher au début, surtout si l'on ne connait pas QT et modifier le code seulement via QT. </p>
+<pre class="fragment">  - executable/ : tout les fichiers relatifs aux exécutables
+</pre><h1><a class="anchor" id="definitions"></a>
+Définitions</h1>
+<h2><a class="anchor" id="minimisation"></a>
+Minimisation d'un automate</h2>
+<h2><a class="anchor" id="standardisation"></a>
+Standardisation d'un automate</h2>
+<h2><a class="anchor" id="produit"></a>
+Produit de deux automates</h2>
+<h2><a class="anchor" id="determinisation"></a>
+Déterminisation de deux automates</h2>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 23 2015 17:17:24 for Projet TL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 8 2015 23:09:36 for Doc Projet TL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

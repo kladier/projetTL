@@ -1,0 +1,151 @@
+\begin{theindex}
+
+  \item {$\sim $\discretionary {-}{}{}Automate}
+    \subitem {Automate}, \hyperpage{10}
+  \item {/home/aaiiighht/\discretionary {-}{}{}Bureau/projet\discretionary {-}{}{}T\discretionary {-}{}{}L/automate-\/project/automate.\discretionary {-}{}{}h}, 
+		\hyperpage{29}
+
+  \indexspace
+
+  \item {ajout\discretionary {-}{}{}Etat}
+    \subitem {Automate}, \hyperpage{10}
+  \item {ajout\discretionary {-}{}{}Transition}
+    \subitem {Automate}, \hyperpage{10}
+  \item {Automate}, \hyperpage{9}
+    \subitem {$\sim $\discretionary {-}{}{}Automate}, \hyperpage{10}
+    \subitem {ajout\discretionary {-}{}{}Etat}, \hyperpage{10}
+    \subitem {ajout\discretionary {-}{}{}Transition}, \hyperpage{10}
+    \subitem {Automate}, \hyperpage{10}
+    \subitem {cible\discretionary {-}{}{}\_\discretionary {-}{}{}transition}, 
+		\hyperpage{11}
+    \subitem {determinise}, \hyperpage{11}
+    \subitem {etats}, \hyperpage{14}
+    \subitem {get\discretionary {-}{}{}Alpha}, \hyperpage{11}
+    \subitem {get\discretionary {-}{}{}Etat}, \hyperpage{11}
+    \subitem {get\discretionary {-}{}{}Etats}, \hyperpage{12}
+    \subitem {get\discretionary {-}{}{}Tab\discretionary {-}{}{}Transitions}, 
+		\hyperpage{12}
+    \subitem {is\discretionary {-}{}{}Deterministe}, \hyperpage{12}
+    \subitem {is\discretionary {-}{}{}Standard}, \hyperpage{12}
+    \subitem {minimise}, \hyperpage{12}
+    \subitem {produit}, \hyperpage{12}
+    \subitem {standardise}, \hyperpage{13}
+    \subitem {supprime\discretionary {-}{}{}Etat}, \hyperpage{13}
+    \subitem {supprimer\discretionary {-}{}{}Etats\discretionary {-}{}{}Non\discretionary {-}{}{}Accessibles}, 
+		\hyperpage{13}
+    \subitem {to\discretionary {-}{}{}Dot}, \hyperpage{14}
+  \item {automate.\discretionary {-}{}{}h}
+    \subitem {equal}, \hyperpage{29}
+    \subitem {is\discretionary {-}{}{}Final}, \hyperpage{30}
+
+  \indexspace
+
+  \item {choix\discretionary {-}{}{}Pointe}, \hyperpage{14}
+  \item {cible\discretionary {-}{}{}\_\discretionary {-}{}{}transition}
+    \subitem {Automate}, \hyperpage{11}
+  \item {Create\discretionary {-}{}{}Automate}, \hyperpage{15}
+
+  \indexspace
+
+  \item {determinise}
+    \subitem {Automate}, \hyperpage{11}
+
+  \indexspace
+
+  \item {equal}
+    \subitem {automate.\discretionary {-}{}{}h}, \hyperpage{29}
+  \item {etat}, \hyperpage{16}
+  \item {etat\discretionary {-}{}{}Left}, \hyperpage{17}
+  \item {etat\discretionary {-}{}{}Right}, \hyperpage{18}
+  \item {etats}
+    \subitem {Automate}, \hyperpage{14}
+
+  \indexspace
+
+  \item {get\discretionary {-}{}{}Alpha}
+    \subitem {Automate}, \hyperpage{11}
+  \item {get\discretionary {-}{}{}Etat}
+    \subitem {Automate}, \hyperpage{11}
+  \item {get\discretionary {-}{}{}Etats}
+    \subitem {Automate}, \hyperpage{12}
+  \item {get\discretionary {-}{}{}Tab\discretionary {-}{}{}Transitions}
+    \subitem {Automate}, \hyperpage{12}
+
+  \indexspace
+
+  \item {is\discretionary {-}{}{}Deterministe}
+    \subitem {Automate}, \hyperpage{12}
+  \item {is\discretionary {-}{}{}Final}
+    \subitem {automate.\discretionary {-}{}{}h}, \hyperpage{30}
+  \item {is\discretionary {-}{}{}Standard}
+    \subitem {Automate}, \hyperpage{12}
+
+  \indexspace
+
+  \item {Main\discretionary {-}{}{}Window}, \hyperpage{20}
+  \item {minimise}
+    \subitem {Automate}, \hyperpage{12}
+
+  \indexspace
+
+  \item {produit}
+    \subitem {Automate}, \hyperpage{12}
+
+  \indexspace
+
+  \item {qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Automate\discretionary {-}{}{}\_\discretionary {-}{}{}t}, 
+		\hyperpage{21}
+  \item {qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Main\discretionary {-}{}{}Window\discretionary {-}{}{}\_\discretionary {-}{}{}t}, 
+		\hyperpage{21}
+  \item {qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Transition\discretionary {-}{}{}\_\discretionary {-}{}{}t}, 
+		\hyperpage{22}
+  \item {qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}choix\discretionary {-}{}{}Pointe\discretionary {-}{}{}\_\discretionary {-}{}{}t}, 
+		\hyperpage{21}
+  \item {qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}etat\discretionary {-}{}{}Left\discretionary {-}{}{}\_\discretionary {-}{}{}t}, 
+		\hyperpage{21}
+  \item {qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}etat\discretionary {-}{}{}Right\discretionary {-}{}{}\_\discretionary {-}{}{}t}, 
+		\hyperpage{21}
+
+  \indexspace
+
+  \item {standardise}
+    \subitem {Automate}, \hyperpage{13}
+  \item {supprime\discretionary {-}{}{}Etat}
+    \subitem {Automate}, \hyperpage{13}
+  \item {supprimer\discretionary {-}{}{}Etats\discretionary {-}{}{}Non\discretionary {-}{}{}Accessibles}
+    \subitem {Automate}, \hyperpage{13}
+
+  \indexspace
+
+  \item {to\discretionary {-}{}{}Dot}
+    \subitem {Automate}, \hyperpage{14}
+  \item {Transition}, \hyperpage{22}
+
+  \indexspace
+
+  \item {Ui\discretionary {-}{}{}::\discretionary {-}{}{}Create\discretionary {-}{}{}Automate}, 
+		\hyperpage{15}
+  \item {Ui\discretionary {-}{}{}::\discretionary {-}{}{}Main\discretionary {-}{}{}Window}, 
+		\hyperpage{19}
+  \item {Ui\discretionary {-}{}{}::\discretionary {-}{}{}Transition}, 
+		\hyperpage{22}
+  \item {Ui\discretionary {-}{}{}::choix\discretionary {-}{}{}Pointe}, 
+		\hyperpage{15}
+  \item {Ui\discretionary {-}{}{}::etat\discretionary {-}{}{}Left}, 
+		\hyperpage{18}
+  \item {Ui\discretionary {-}{}{}::etat\discretionary {-}{}{}Right}, 
+		\hyperpage{18}
+  \item {Ui\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Automate}, 
+		\hyperpage{24}
+  \item {Ui\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Main\discretionary {-}{}{}Window}, 
+		\hyperpage{26}
+  \item {Ui\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Transition}, 
+		\hyperpage{27}
+  \item {Ui\discretionary {-}{}{}\_\discretionary {-}{}{}choix\discretionary {-}{}{}Pointe}, 
+		\hyperpage{23}
+  \item {Ui\discretionary {-}{}{}\_\discretionary {-}{}{}etat\discretionary {-}{}{}Left}, 
+		\hyperpage{24}
+  \item {Ui\discretionary {-}{}{}\_\discretionary {-}{}{}etat\discretionary {-}{}{}Right}, 
+		\hyperpage{25}
+
+\end{theindex}

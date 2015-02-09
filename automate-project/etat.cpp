@@ -1,4 +1,4 @@
-#include "etat.h"
+ï»¿#include "etat.h"
 #include <sstream>
 
 
@@ -44,13 +44,13 @@ void etat::ajoutTransition(const etat cible,int vocab){
 
 
     while(it != transition.end()){
-        //Si il y a un état de transition vocab, qui mene a l'etat cible, pas la peine d'ajouter
+        //Si il y a un Ã©tat de transition vocab, qui mene a l'etat cible, pas la peine d'ajouter
         if( (*it).second.numero == cible.numero){
             return;
         }
         it++;
     }
-    //Sinon , on ajoute l'état.
+    //Sinon , on ajoute l'Ã©tat.
     transition.insert(pair<int,etat>(vocab,cible));
 }
 
@@ -68,7 +68,7 @@ void etat::supprimeTransition(etat cible,int vocab){
     it = transition.find(vocab);
 
     while(it != transition.end()){
-    //    Si il y a un état de transition vocab, qui mene a l'etat cible, on le supprime
+    //    Si il y a un Ã©tat de transition vocab, qui mene a l'etat cible, on le supprime
         if( ((*it).second.numero == cible.numero) && ((*it).first == vocab)){
             transition.erase(it);
         }
@@ -81,12 +81,12 @@ multimap<int,etat> etat::getTransitions(){
 
 }
 
-void etat::renameTransition(etat cible,int newt){
+void etat::renameTransition(etat cible){
     multimap<int,etat>::iterator it;
     it = transition.begin();
 
     while(it != transition.end()){
-    //    Si il y a un état de transition vocab, qui mene a l'etat cible, on le supprime
+    //    Si il y a un Ã©tat de transition vocab, qui mene a l'etat cible, on le supprime
         if( (*it).second.numero == cible.numero){
             (*it).second.numero--;
         }

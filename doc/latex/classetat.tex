@@ -4,75 +4,439 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classetat_a65b2ac734cc1af21fb1aea8fb873d4c9}{{\bfseries etat} (int, bool ini=false, bool fina=false)}\label{classetat_a65b2ac734cc1af21fb1aea8fb873d4c9}
-
-\item 
-\hypertarget{classetat_af42b35ca878600e1877052978a11303f}{{\bfseries etat} (const \hyperlink{classetat}{etat} \&e)}\label{classetat_af42b35ca878600e1877052978a11303f}
-
-\item 
-\hypertarget{classetat_a0eeba3eaa0ce8633957d309f04f07995}{int {\bfseries get\-Number} ()}\label{classetat_a0eeba3eaa0ce8633957d309f04f07995}
-
-\item 
-\hypertarget{classetat_ab771b2354397b5b4d3ead9a62668d44f}{void {\bfseries set\-Number} (int)}\label{classetat_ab771b2354397b5b4d3ead9a62668d44f}
-
-\item 
-\hypertarget{classetat_a89188d6ea23ce287c3f3afda46fa2858}{bool {\bfseries is\-Final} ()}\label{classetat_a89188d6ea23ce287c3f3afda46fa2858}
-
-\item 
-\hypertarget{classetat_ae4daff4d04de194b976ad489eeceb07d}{void {\bfseries set\-Final} (bool)}\label{classetat_ae4daff4d04de194b976ad489eeceb07d}
-
-\item 
-\hypertarget{classetat_a6993bd53bfd754392515e4ef5772fcdc}{bool {\bfseries is\-Initial} ()}\label{classetat_a6993bd53bfd754392515e4ef5772fcdc}
-
-\item 
-\hypertarget{classetat_a2c3e2a7b1bfda47c137aa3f6b563e369}{void {\bfseries set\-Initial} (bool)}\label{classetat_a2c3e2a7b1bfda47c137aa3f6b563e369}
-
-\item 
-\hypertarget{classetat_a3d94a2b3e6f60c9475b142e28ea495b4}{void {\bfseries ajout\-Transition} (\hyperlink{classetat}{etat}, int)}\label{classetat_a3d94a2b3e6f60c9475b142e28ea495b4}
-
-\item 
-\hypertarget{classetat_a87328ea8752e2396ac15f2465f2ff315}{void {\bfseries supprime\-Transition} (\hyperlink{classetat}{etat}, int)}\label{classetat_a87328ea8752e2396ac15f2465f2ff315}
-
-\item 
-\hypertarget{classetat_a8e195072b1adca99801b6a4a432eb9f8}{void {\bfseries rename\-Transition} (\hyperlink{classetat}{etat}, int)}\label{classetat_a8e195072b1adca99801b6a4a432eb9f8}
-
-\item 
-\hypertarget{classetat_acc168f9b970e301d65e72cf1f4ee9062}{multimap$<$ int, \hyperlink{classetat}{etat} $>$ {\bfseries get\-Transitions} ()}\label{classetat_acc168f9b970e301d65e72cf1f4ee9062}
-
-\item 
-\hypertarget{classetat_a0a1950caa3737139ea5dc29c600e842d}{bool {\bfseries operator==} (\hyperlink{classetat}{etat} \&) const }\label{classetat_a0a1950caa3737139ea5dc29c600e842d}
-
-\item 
-\hypertarget{classetat_ab6f5ff8cf0dadb8b9be06095ae3b2c49}{bool {\bfseries operator!=} (\hyperlink{classetat}{etat} \&) const }\label{classetat_ab6f5ff8cf0dadb8b9be06095ae3b2c49}
-
-\item 
-\hypertarget{classetat_acab203fc095b3974136c4f73895df9a6}{bool {\bfseries find\-\_\-transition} (int etiq, \hyperlink{classetat}{etat} e)}\label{classetat_acab203fc095b3974136c4f73895df9a6}
-
-\item 
-\hypertarget{classetat_a381028a7a37e890734c1cc4afe05bd55}{bool {\bfseries est\-Dans\-List} (list$<$ \hyperlink{classetat}{etat} $>$ liste)}\label{classetat_a381028a7a37e890734c1cc4afe05bd55}
-
-\item 
-\hypertarget{classetat_a65ef0b41b54bbf36b5dab8071822171d}{void {\bfseries set\-Name} (string)}\label{classetat_a65ef0b41b54bbf36b5dab8071822171d}
-
-\item 
-\hypertarget{classetat_a938d2165beabfb6de3ad16e2a15b05c5}{string {\bfseries get\-Name} ()}\label{classetat_a938d2165beabfb6de3ad16e2a15b05c5}
-
-\item 
-\hypertarget{classetat_a37ee0f6502f471dd3566733f8a1bc8fe}{string {\bfseries get\-Name\-F} ()}\label{classetat_a37ee0f6502f471dd3566733f8a1bc8fe}
-
-\item 
+\hyperlink{classetat_ad34378d04abb8957bdfce91129af74a7}{etat} (int number, bool ini=false, bool fina=false)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{classetat_af42b35ca878600e1877052978a11303f}{etat} (const \hyperlink{classetat}{etat} \&e)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{classetat_a9a8af0c9c7e32293342e6d147a5f2b7b}{etat} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+int \hyperlink{classetat_a0eeba3eaa0ce8633957d309f04f07995}{get\-Number} ()
+\begin{DoxyCompactList}\small\item\em Retourne le numéro de l'état. \end{DoxyCompactList}\item 
+void \hyperlink{classetat_a014f6f12767d69825f7a3d4d610a2c97}{set\-Number} (int number)
+\begin{DoxyCompactList}\small\item\em Définit le numéro de l'état. \end{DoxyCompactList}\item 
+bool \hyperlink{classetat_a89188d6ea23ce287c3f3afda46fa2858}{is\-Final} ()
+\begin{DoxyCompactList}\small\item\em Test si l'état est un état final. \end{DoxyCompactList}\item 
+void \hyperlink{classetat_afc8af7e41796cf05670e9b2856ffcd73}{set\-Final} (bool decision)
+\begin{DoxyCompactList}\small\item\em Définit si l'état est final ou non. \end{DoxyCompactList}\item 
+bool \hyperlink{classetat_a6993bd53bfd754392515e4ef5772fcdc}{is\-Initial} ()
+\begin{DoxyCompactList}\small\item\em Test si l'état est un état initial. \end{DoxyCompactList}\item 
+void \hyperlink{classetat_aa30d0693cce29763ec555e103d7fda11}{set\-Initial} (bool decision)
+\begin{DoxyCompactList}\small\item\em Définit si l'état est initial ou non. \end{DoxyCompactList}\item 
+void \hyperlink{classetat_a9a6aec9a31e666ae17dd7fefcad18211}{ajout\-Transition} (\hyperlink{classetat}{etat} cible, int vocab)
+\begin{DoxyCompactList}\small\item\em Ajoute une transition à l'état. \end{DoxyCompactList}\item 
+void \hyperlink{classetat_a5cbda5ddad6a28b2d7f7458defd5d472}{supprime\-Transition} (\hyperlink{classetat}{etat} cible, int vocab)
+\begin{DoxyCompactList}\small\item\em Supprime une transition à l'état. \end{DoxyCompactList}\item 
+void \hyperlink{classetat_a164b80c240d038739bfea098c0499928}{rename\-Transition} (\hyperlink{classetat}{etat} cible)
+\begin{DoxyCompactList}\small\item\em Renomme une transition de l'état. \end{DoxyCompactList}\item 
+multimap$<$ int, \hyperlink{classetat}{etat} $>$ \hyperlink{classetat_acc168f9b970e301d65e72cf1f4ee9062}{get\-Transitions} ()
+\begin{DoxyCompactList}\small\item\em Retourne les transitions de l'état. \end{DoxyCompactList}\item 
+bool \hyperlink{classetat_a3d26c7ad12fb95b34e6ec2a44cdf0214}{operator==} (\hyperlink{classetat}{etat} \&e) const 
+\begin{DoxyCompactList}\small\item\em Opérateur d'égalité entre 2 états. \end{DoxyCompactList}\item 
+bool \hyperlink{classetat_a5841b1b0055485e6d3edc6d9b1c500cb}{operator!=} (\hyperlink{classetat}{etat} \&e) const 
+\begin{DoxyCompactList}\small\item\em Opérateur d'inégalité entre 2 états. \end{DoxyCompactList}\item 
+bool \hyperlink{classetat_acab203fc095b3974136c4f73895df9a6}{find\-\_\-transition} (int etiq, \hyperlink{classetat}{etat} e)
+\begin{DoxyCompactList}\small\item\em Test l'existence d'une transition. \end{DoxyCompactList}\item 
+bool \hyperlink{classetat_a381028a7a37e890734c1cc4afe05bd55}{est\-Dans\-List} (list$<$ \hyperlink{classetat}{etat} $>$ liste)
+\begin{DoxyCompactList}\small\item\em Test l'état est dans une liste. \end{DoxyCompactList}\item 
+void \hyperlink{classetat_a935983bd0159129dbd0bbddb50e1dd8a}{set\-Name} (string rename)
+\begin{DoxyCompactList}\small\item\em Attribuer un nom à l'état. \end{DoxyCompactList}\item 
+string \hyperlink{classetat_a938d2165beabfb6de3ad16e2a15b05c5}{get\-Name} ()
+\begin{DoxyCompactList}\small\item\em Renvois le nom de l'état. \end{DoxyCompactList}\item 
+string \hyperlink{classetat_a37ee0f6502f471dd3566733f8a1bc8fe}{get\-Name\-F} ()
+\begin{DoxyCompactList}\small\item\em Renvois le nom de l'état. \end{DoxyCompactList}\item 
 \hypertarget{classetat_a87882f3b4b4e3bae6b7a22008241d836}{void {\bfseries set\-Name} (list$<$ \hyperlink{classetat}{etat} $>$ l)}\label{classetat_a87882f3b4b4e3bae6b7a22008241d836}
 
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classetat_a155cdfece54b9e8f4a633249ee037595}{int {\bfseries numero}}\label{classetat_a155cdfece54b9e8f4a633249ee037595}
-
+int \hyperlink{classetat_a155cdfece54b9e8f4a633249ee037595}{numero}
 \end{DoxyCompactItemize}
 
 
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classetat_ad34378d04abb8957bdfce91129af74a7}{\index{etat@{etat}!etat@{etat}}
+\index{etat@{etat}!etat@{etat}}
+\subsubsection[{etat}]{\setlength{\rightskip}{0pt plus 5cm}etat\-::etat (
+\begin{DoxyParamCaption}
+\item[{int}]{number, }
+\item[{bool}]{ini = {\ttfamily false}, }
+\item[{bool}]{fina = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classetat_ad34378d04abb8957bdfce91129af74a7}
+
+
+Constructeur. 
+
+Construit l'état passé avec le numéro number, peux être initial et/ou final
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & \-: numéro de l'état \\
+\hline
+{\em ini} & \-: par défaut false, true si l'état est initial \\
+\hline
+{\em fina} & \-: par défaut false, true si l'état est final \\
+\hline
+\end{DoxyParams}
+\hypertarget{classetat_af42b35ca878600e1877052978a11303f}{\index{etat@{etat}!etat@{etat}}
+\index{etat@{etat}!etat@{etat}}
+\subsubsection[{etat}]{\setlength{\rightskip}{0pt plus 5cm}etat\-::etat (
+\begin{DoxyParamCaption}
+\item[{const {\bf etat} \&}]{e}
+\end{DoxyParamCaption}
+)}}\label{classetat_af42b35ca878600e1877052978a11303f}
+
+
+Constructeur. 
+
+Construit l'état passé en paramètre
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \-: pointeur vers l'état à construire \\
+\hline
+\end{DoxyParams}
+\hypertarget{classetat_a9a8af0c9c7e32293342e6d147a5f2b7b}{\index{etat@{etat}!etat@{etat}}
+\index{etat@{etat}!etat@{etat}}
+\subsubsection[{etat}]{\setlength{\rightskip}{0pt plus 5cm}etat\-::etat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classetat_a9a8af0c9c7e32293342e6d147a5f2b7b}
+
+
+Destructeur. 
+
+Destructeur de la classe Etat 
+
+\subsection{Member Function Documentation}
+\hypertarget{classetat_a9a6aec9a31e666ae17dd7fefcad18211}{\index{etat@{etat}!ajout\-Transition@{ajout\-Transition}}
+\index{ajout\-Transition@{ajout\-Transition}!etat@{etat}}
+\subsubsection[{ajout\-Transition}]{\setlength{\rightskip}{0pt plus 5cm}void etat\-::ajout\-Transition (
+\begin{DoxyParamCaption}
+\item[{{\bf etat}}]{cible, }
+\item[{int}]{vocab}
+\end{DoxyParamCaption}
+)}}\label{classetat_a9a6aec9a31e666ae17dd7fefcad18211}
+
+
+Ajoute une transition à l'état. 
+
+Ajoute une transition allant vers l'état cible et portant l'étiquette vocab.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cible} & \-: l'état vers laquelle la transition arrive \\
+\hline
+{\em vocab} & \-: l'étiquette de la transition \\
+\hline
+\end{DoxyParams}
+\hypertarget{classetat_a381028a7a37e890734c1cc4afe05bd55}{\index{etat@{etat}!est\-Dans\-List@{est\-Dans\-List}}
+\index{est\-Dans\-List@{est\-Dans\-List}!etat@{etat}}
+\subsubsection[{est\-Dans\-List}]{\setlength{\rightskip}{0pt plus 5cm}bool etat\-::est\-Dans\-List (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf etat} $>$}]{liste}
+\end{DoxyParamCaption}
+)}}\label{classetat_a381028a7a37e890734c1cc4afe05bd55}
+
+
+Test l'état est dans une liste. 
+
+Teste si l'état est dans la liste passée en paramètre. Se base sur l'opérateur d'égalité entre deux états.
+
+
+\begin{DoxyParams}{Parameters}
+{\em liste} & \-: la liste d'états dans laquelle on va chercher l'état. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si cette transition existe, false sinon 
+\end{DoxyReturn}
+\hypertarget{classetat_acab203fc095b3974136c4f73895df9a6}{\index{etat@{etat}!find\-\_\-transition@{find\-\_\-transition}}
+\index{find\-\_\-transition@{find\-\_\-transition}!etat@{etat}}
+\subsubsection[{find\-\_\-transition}]{\setlength{\rightskip}{0pt plus 5cm}bool etat\-::find\-\_\-transition (
+\begin{DoxyParamCaption}
+\item[{int}]{etiq, }
+\item[{{\bf etat}}]{e}
+\end{DoxyParamCaption}
+)}}\label{classetat_acab203fc095b3974136c4f73895df9a6}
+
+
+Test l'existence d'une transition. 
+
+Teste si la transition allant vers l'état e et portant l'étiquette etiq existe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \-: l'état d'arrivée de la transition \\
+\hline
+{\em etiq} & \-: l'étiquette de la transition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si cette transition existe, false sinon 
+\end{DoxyReturn}
+\hypertarget{classetat_a938d2165beabfb6de3ad16e2a15b05c5}{\index{etat@{etat}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!etat@{etat}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string etat\-::get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classetat_a938d2165beabfb6de3ad16e2a15b05c5}
+
+
+Renvois le nom de l'état. 
+
+Renvoit le nom de l'état. Si aucun nom n'a été attribué, cela renvoit le numéro.
+
+\begin{DoxyReturn}{Returns}
+le nom de l'état 
+\end{DoxyReturn}
+\hypertarget{classetat_a37ee0f6502f471dd3566733f8a1bc8fe}{\index{etat@{etat}!get\-Name\-F@{get\-Name\-F}}
+\index{get\-Name\-F@{get\-Name\-F}!etat@{etat}}
+\subsubsection[{get\-Name\-F}]{\setlength{\rightskip}{0pt plus 5cm}string etat\-::get\-Name\-F (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classetat_a37ee0f6502f471dd3566733f8a1bc8fe}
+
+
+Renvois le nom de l'état. 
+
+Fonctionne comme \hyperlink{classetat_a938d2165beabfb6de3ad16e2a15b05c5}{get\-Name()} mais en ajoutant un F avant le nom de l'état.
+
+\begin{DoxyReturn}{Returns}
+le nom de l'état, précèdé d'un F 
+\end{DoxyReturn}
+\hypertarget{classetat_a0eeba3eaa0ce8633957d309f04f07995}{\index{etat@{etat}!get\-Number@{get\-Number}}
+\index{get\-Number@{get\-Number}!etat@{etat}}
+\subsubsection[{get\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int etat\-::get\-Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classetat_a0eeba3eaa0ce8633957d309f04f07995}
+
+
+Retourne le numéro de l'état. 
+
+Getter de l'attribut number.
+
+\begin{DoxyReturn}{Returns}
+Le numéro de l'état 
+\end{DoxyReturn}
+\hypertarget{classetat_acc168f9b970e301d65e72cf1f4ee9062}{\index{etat@{etat}!get\-Transitions@{get\-Transitions}}
+\index{get\-Transitions@{get\-Transitions}!etat@{etat}}
+\subsubsection[{get\-Transitions}]{\setlength{\rightskip}{0pt plus 5cm}multimap$<$ int, {\bf etat} $>$ etat\-::get\-Transitions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classetat_acc168f9b970e301d65e72cf1f4ee9062}
+
+
+Retourne les transitions de l'état. 
+
+Getter de l'attribut transition.
+
+\begin{DoxyReturn}{Returns}
+Multimap représentant les transitions de l'état 
+\end{DoxyReturn}
+\hypertarget{classetat_a89188d6ea23ce287c3f3afda46fa2858}{\index{etat@{etat}!is\-Final@{is\-Final}}
+\index{is\-Final@{is\-Final}!etat@{etat}}
+\subsubsection[{is\-Final}]{\setlength{\rightskip}{0pt plus 5cm}bool etat\-::is\-Final (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classetat_a89188d6ea23ce287c3f3afda46fa2858}
+
+
+Test si l'état est un état final. 
+
+Renvoit un booléen en fonction de si l'état est final ou non
+
+\begin{DoxyReturn}{Returns}
+true si l'état est final, false sinon 
+\end{DoxyReturn}
+\hypertarget{classetat_a6993bd53bfd754392515e4ef5772fcdc}{\index{etat@{etat}!is\-Initial@{is\-Initial}}
+\index{is\-Initial@{is\-Initial}!etat@{etat}}
+\subsubsection[{is\-Initial}]{\setlength{\rightskip}{0pt plus 5cm}bool etat\-::is\-Initial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classetat_a6993bd53bfd754392515e4ef5772fcdc}
+
+
+Test si l'état est un état initial. 
+
+Renvoit un booléen en fonction de si l'état est initial ou non
+
+\begin{DoxyReturn}{Returns}
+true si l'état est initial, false sinon 
+\end{DoxyReturn}
+\hypertarget{classetat_a5841b1b0055485e6d3edc6d9b1c500cb}{\index{etat@{etat}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!etat@{etat}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool etat\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{{\bf etat} \&}]{e}
+\end{DoxyParamCaption}
+) const}}\label{classetat_a5841b1b0055485e6d3edc6d9b1c500cb}
+
+
+Opérateur d'inégalité entre 2 états. 
+
+L'inégalité entre deux états se teste seulement sur le numéro de l'état.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \-: l'état à tester \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si les numéros sont différents, false sinon 
+\end{DoxyReturn}
+\hypertarget{classetat_a3d26c7ad12fb95b34e6ec2a44cdf0214}{\index{etat@{etat}!operator==@{operator==}}
+\index{operator==@{operator==}!etat@{etat}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool etat\-::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf etat} \&}]{e}
+\end{DoxyParamCaption}
+) const}}\label{classetat_a3d26c7ad12fb95b34e6ec2a44cdf0214}
+
+
+Opérateur d'égalité entre 2 états. 
+
+L'égalité entre deux états se teste seulement sur le numéro de l'état.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \-: l'état à tester \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si les numéros sont les mêmes, false sinon 
+\end{DoxyReturn}
+\hypertarget{classetat_a164b80c240d038739bfea098c0499928}{\index{etat@{etat}!rename\-Transition@{rename\-Transition}}
+\index{rename\-Transition@{rename\-Transition}!etat@{etat}}
+\subsubsection[{rename\-Transition}]{\setlength{\rightskip}{0pt plus 5cm}void etat\-::rename\-Transition (
+\begin{DoxyParamCaption}
+\item[{{\bf etat}}]{cible}
+\end{DoxyParamCaption}
+)}}\label{classetat_a164b80c240d038739bfea098c0499928}
+
+
+Renomme une transition de l'état. 
+
+Renomme la transition allant vers l'état cible et portant l'étiquette vocab.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cible} & \-: l'état vers laquelle la transition arrive \\
+\hline
+{\em vocab} & \-: l'étiquette de la transition \\
+\hline
+\end{DoxyParams}
+\hypertarget{classetat_afc8af7e41796cf05670e9b2856ffcd73}{\index{etat@{etat}!set\-Final@{set\-Final}}
+\index{set\-Final@{set\-Final}!etat@{etat}}
+\subsubsection[{set\-Final}]{\setlength{\rightskip}{0pt plus 5cm}void etat\-::set\-Final (
+\begin{DoxyParamCaption}
+\item[{bool}]{decision}
+\end{DoxyParamCaption}
+)}}\label{classetat_afc8af7e41796cf05670e9b2856ffcd73}
+
+
+Définit si l'état est final ou non. 
+
+Setter de l'attribut final.
+
+
+\begin{DoxyParams}{Parameters}
+{\em decision} & \-: true si l'état est final, false sinon \\
+\hline
+\end{DoxyParams}
+\hypertarget{classetat_aa30d0693cce29763ec555e103d7fda11}{\index{etat@{etat}!set\-Initial@{set\-Initial}}
+\index{set\-Initial@{set\-Initial}!etat@{etat}}
+\subsubsection[{set\-Initial}]{\setlength{\rightskip}{0pt plus 5cm}void etat\-::set\-Initial (
+\begin{DoxyParamCaption}
+\item[{bool}]{decision}
+\end{DoxyParamCaption}
+)}}\label{classetat_aa30d0693cce29763ec555e103d7fda11}
+
+
+Définit si l'état est initial ou non. 
+
+Setter de l'attribut initial.
+
+
+\begin{DoxyParams}{Parameters}
+{\em decision} & \-: true si l'état est initial, false sinon \\
+\hline
+\end{DoxyParams}
+\hypertarget{classetat_a935983bd0159129dbd0bbddb50e1dd8a}{\index{etat@{etat}!set\-Name@{set\-Name}}
+\index{set\-Name@{set\-Name}!etat@{etat}}
+\subsubsection[{set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void etat\-::set\-Name (
+\begin{DoxyParamCaption}
+\item[{string}]{rename}
+\end{DoxyParamCaption}
+)}}\label{classetat_a935983bd0159129dbd0bbddb50e1dd8a}
+
+
+Attribuer un nom à l'état. 
+
+Setter sur l'attribut name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rename} & \-: le nom à donner à l'état \\
+\hline
+\end{DoxyParams}
+\hypertarget{classetat_a014f6f12767d69825f7a3d4d610a2c97}{\index{etat@{etat}!set\-Number@{set\-Number}}
+\index{set\-Number@{set\-Number}!etat@{etat}}
+\subsubsection[{set\-Number}]{\setlength{\rightskip}{0pt plus 5cm}void etat\-::set\-Number (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)}}\label{classetat_a014f6f12767d69825f7a3d4d610a2c97}
+
+
+Définit le numéro de l'état. 
+
+Setter de l'attribut number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & \-: le numéro de l'état à mettre \\
+\hline
+\end{DoxyParams}
+\hypertarget{classetat_a5cbda5ddad6a28b2d7f7458defd5d472}{\index{etat@{etat}!supprime\-Transition@{supprime\-Transition}}
+\index{supprime\-Transition@{supprime\-Transition}!etat@{etat}}
+\subsubsection[{supprime\-Transition}]{\setlength{\rightskip}{0pt plus 5cm}void etat\-::supprime\-Transition (
+\begin{DoxyParamCaption}
+\item[{{\bf etat}}]{cible, }
+\item[{int}]{vocab}
+\end{DoxyParamCaption}
+)}}\label{classetat_a5cbda5ddad6a28b2d7f7458defd5d472}
+
+
+Supprime une transition à l'état. 
+
+Supprime la transition allant vers l'état cible et portant l'étiquette vocab.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cible} & \-: l'état vers laquelle la transition arrive \\
+\hline
+{\em vocab} & \-: l'étiquette de la transition \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classetat_a155cdfece54b9e8f4a633249ee037595}{\index{etat@{etat}!numero@{numero}}
+\index{numero@{numero}!etat@{etat}}
+\subsubsection[{numero}]{\setlength{\rightskip}{0pt plus 5cm}int etat\-::numero}}\label{classetat_a155cdfece54b9e8f4a633249ee037595}
+Numéro de l'état 
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-/home/aaiiighht/\-Bureau/smartgit/bin/projet\-T\-L/automate-\/project/etat.\-h\item 
-/home/aaiiighht/\-Bureau/smartgit/bin/projet\-T\-L/automate-\/project/etat.\-cpp\end{DoxyCompactItemize}
+/home/aaiiighht/\-Bureau/projet\-T\-L/automate-\/project/etat.\-h\item 
+/home/aaiiighht/\-Bureau/projet\-T\-L/automate-\/project/etat.\-cpp\end{DoxyCompactItemize}

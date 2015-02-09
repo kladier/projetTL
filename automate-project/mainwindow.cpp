@@ -1,4 +1,4 @@
-#include <QtGui>
+ï»¿#include <QtGui>
 #include <QFrame>
 #include <QMessageBox>
 #include <QFile>
@@ -138,7 +138,7 @@ void MainWindow::getMinimisation() {
         ui->boutonSuiv->show();
 
 
-        //On affiche ensuite l'aide à droite
+        //On affiche ensuite l'aide Ã  droite
         ui->label->clear();
         ui->label->show();
         ui->label->insertPlainText(QString().fromStdString("Hello World"));
@@ -151,8 +151,12 @@ void MainWindow::getStandard() {
     ui->actionFaireProduit->setVisible(true);
     ui->actionDeterminiser->setVisible(true);
 
+
     //On netoi l'eventuel vecteur de produit
     monVector.clear();
+    monVectorMinimise.clear();
+    monDeterminisme.clear();
+
     actuel = 0;
 
     //On affiche l'automate a dans la vue superieur.
@@ -181,7 +185,7 @@ void MainWindow::getStandard() {
     string resStandard="Un automate standard est un automate fini non deterministe tel que : \n 1) il y a un seul etat initial, \n 2) l'etat initial n'est l'etat d'arrivee d'aucune transition. \n\n ETAPE 1 \n On verifie que l'automate ne soit pas deja standard";
 
     if (a.isStandard()) {
-        resStandard=resStandard+"\n L'automate est standard, la standardisation est donc terminée.";
+        resStandard=resStandard+"\n L'automate est standard, la standardisation est donc terminÃ©e.";
 
         ui->label->clear();
         ui->label->show();
@@ -213,7 +217,7 @@ void MainWindow::getStandard() {
         ui->boutonSuiv->show();
 
 
-        //On affiche ensuite l'aide à droite
+        //On affiche ensuite l'aide Ã  droite
         ui->label->clear();
         ui->label->show();
         string texte = resStandard+monVectorStandard[actuel].second;
@@ -250,7 +254,7 @@ void MainWindow::openFile(){
 }
 
 void MainWindow::getProduit(){
-    //On recupère l'automate dont on veut le produit.
+    //On recupÃ¨re l'automate dont on veut le produit.
     dotFileNameB.clear();
     QFileDialog tempFen;
 
@@ -286,7 +290,7 @@ void MainWindow::getProduit(){
 
     maVue1->load(ProcessT.readAll());
 
-   /*On fait ensuite la même chose pour le second automate */
+   /*On fait ensuite la mÃªme chose pour le second automate */
 
     ProcessT.close();
 
@@ -327,13 +331,13 @@ void MainWindow::getProduit(){
     maVue1->show();
     maVue2->show();
     maVue->show();
-    //Ensuite , on met le commentaire à droite.
+    //Ensuite , on met le commentaire Ã  droite.
     ui->label->clear();
-    ui->label->insertPlainText("L'automate résultat du produit a une taille de m*n (m taille du premier automate, n taille du second).\n");
-    ui->label->insertPlainText("On nomme chaque état de la façon suivante: etat p du premier automate, etat q du second automate.\n");
+    ui->label->insertPlainText("L'automate rÃ©sultat du produit a une taille de m*n (m taille du premier automate, n taille du second).\n");
+    ui->label->insertPlainText("On nomme chaque Ã©tat de la faÃ§on suivante: etat p du premier automate, etat q du second automate.\n");
     ui->label->insertPlainText("Ensuite, une transition existe entre p1,q1 et p2,q2 si et seulement si");
-    ui->label->insertPlainText(" il existe une transition entre p1  et p2  par i dans le premier automate ET une transition entre q1 et q2 par i également dans le second automate.\n");
-    ui->label->insertPlainText("Enfin, un état est initial si les état p et q sont initiaux. De même pour les états finaux.");
+    ui->label->insertPlainText(" il existe une transition entre p1  et p2  par i dans le premier automate ET une transition entre q1 et q2 par i Ã©galement dans le second automate.\n");
+    ui->label->insertPlainText("Enfin, un Ã©tat est initial si les Ã©tat p et q sont initiaux. De mÃªme pour les Ã©tats finaux.");
     ui->label->show();
     ui->actionFaireProduit->setVisible(false);
     ui->actionDeterminiser->setVisible(true);
@@ -368,7 +372,7 @@ bool MainWindow::lireDot(){
             return false;
         }
 
-        //On doit faire un premier parcour, pour ajouter tout les états de l'automate
+        //On doit faire un premier parcour, pour ajouter tout les Ã©tats de l'automate
         QTextStream in(&monDot);
 
         while (!in.atEnd()) {
@@ -376,7 +380,7 @@ bool MainWindow::lireDot(){
             QString line = in.readLine();
             //On separe notre ligne, en utilisant les espaces comment caractere delimiteur
             QStringList maLigne(line.split((QRegExp("\\s+"))));
-            //Str permet de garder en mémoire le mot precedent de la ligne.
+            //Str permet de garder en mÃ©moire le mot precedent de la ligne.
             QString MotPrec;
             foreach( QString str,maLigne){
 
@@ -388,12 +392,12 @@ bool MainWindow::lireDot(){
                         //Et si son premier char est un int
 
                         if(MotPrec.at(0).digitValue()!=-1){
-                            //On ajoute l'état
+                            //On ajoute l'Ã©tat
                             Etat = MotPrec.at(0).digitValue();
                             b.ajoutEtat(Etat);
                         }
                         if(MotPrec.at(MotPrec.size()-1).digitValue()!=-1 && (MotPrec.size()-1)==4 ){
-                            //On ajoute l'état
+                            //On ajoute l'Ã©tat
                             Etat = MotPrec.at(MotPrec.size()-1).digitValue();
                             b.ajoutEtat(Etat);
                             b.getEtat(Etat)->setInitial(true);
@@ -443,7 +447,7 @@ bool MainWindow::lireDotB(){
             return false;
         }
 
-        //On doit faire un premier parcour, pour ajouter tout les états de l'automate
+        //On doit faire un premier parcour, pour ajouter tout les Ã©tats de l'automate
         QTextStream in(&monDot);
 
         while (!in.atEnd()) {
@@ -451,7 +455,7 @@ bool MainWindow::lireDotB(){
             QString line = in.readLine();
             //On separe notre ligne, en utilisant les espaces comment caractere delimiteur
             QStringList maLigne(line.split((QRegExp("\\s+"))));
-            //Str permet de garder en mémoire le mot precedent de la ligne.
+            //Str permet de garder en mÃ©moire le mot precedent de la ligne.
             QString MotPrec;
             foreach( QString str,maLigne){
 
@@ -463,12 +467,12 @@ bool MainWindow::lireDotB(){
                         //Et si son premier char est un int
 
                         if(MotPrec.at(0).digitValue()!=-1){
-                            //On ajoute l'état
+                            //On ajoute l'Ã©tat
                             Etat = MotPrec.at(0).digitValue();
                             b.ajoutEtat(Etat);
                         }
                         if(MotPrec.at(MotPrec.size()-1).digitValue()!=-1 && (MotPrec.size()-1)==4 ){
-                            //On ajoute l'état
+                            //On ajoute l'Ã©tat
                             Etat = MotPrec.at(MotPrec.size()-1).digitValue();
                             b.ajoutEtat(Etat);
                             b.getEtat(Etat)->setInitial(true);
@@ -690,12 +694,12 @@ void MainWindow::info(){
 
 
         ui->label->insertHtml("<img src = \":./new/prefix1/Images/nouveau.png\" WIDTH = 20 HEIGHT = 20 alt = \"Nouveau \"/>");
-        ui->label->insertPlainText(" : ce bouton permet de créer un nouvel automate.\n");
+        ui->label->insertPlainText(" : ce bouton permet de crÃ©er un nouvel automate.\n");
         ui->label->insertHtml("<img src = \":./new/prefix1/Images/home.png\" WIDTH = 20 HEIGHT = 20 alt = \"Nouveau \"/>");
         ui->label->insertPlainText(" : ce bouton permet de charger un automate.\n");
         ui->label->insertHtml("<img src = \":./new/prefix1/Images/clean.png\" WIDTH = 20 HEIGHT = 20 alt = \"Nouveau \"/>");
         ui->label->insertPlainText(" : ce bouton permet de nettoyer l'interface.\n");
-        ui->label->insertPlainText("\n \nUne fois que vous avez chargé un automate, de nouvelles options apparaissent :\n");
+        ui->label->insertPlainText("\n \nUne fois que vous avez chargÃ© un automate, de nouvelles options apparaissent :\n");
         ui->label->insertHtml("<img src = \":./new/prefix1/Images/produit.png\" WIDTH = 20 HEIGHT = 20 alt = \"Nouveau \"/>");
         ui->label->insertPlainText(" : ce bouton permet de faire le produit de l'automate courant avec un autre automate.\n");
         ui->label->insertHtml("<img src = \":./new/prefix1/Images/determin.png\" WIDTH = 20 HEIGHT = 20 alt = \"Nouveau \"/>");
@@ -711,6 +715,8 @@ void MainWindow::getDetermin(){
     //On netoi l'eventuel vecteur de produit et celui de standardisation
     monVector.clear();
     monVectorStandard.clear();
+    monVectorMinimise.clear();
+
     actuel = 0;
     //On affiche l'automate a dans la vue superieur.
     QProcess ProcessT;
@@ -758,7 +764,7 @@ void MainWindow::getDetermin(){
     ui->boutonSuiv->show();
 
 
-    //On affiche ensuite l'aide à droite
+    //On affiche ensuite l'aide Ã  droite
     ui->label->clear();
     ui->label->show();
     string texte = monDeterminisme[actuel].second;

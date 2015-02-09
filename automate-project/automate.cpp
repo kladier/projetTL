@@ -1,4 +1,4 @@
-#include "automate.h"
+ï»¿#include "automate.h"
 #include <sstream>
 #include <iostream>
 
@@ -21,7 +21,7 @@ Automate::Automate(const Automate &a){
 void Automate::ajoutEtat(etat cible){
     vector<etat>::iterator it;
 
-        //On test si l'état cible existe déja.
+        //On test si l'Ã©tat cible existe dÃ©ja.
     for ( it=etats.begin() ; it != etats.end(); it++ ){
 
         if((*it).numero == cible.numero){
@@ -84,7 +84,7 @@ void Automate::supprimeEtat(etat cible){
                 (*it).supprimeTransition((*it2).second,(*it2).first);
             }
             else if(((*it2).second.numero > cible.numero)){
-            (*it).renameTransition((*it2).second,((*it2).second.numero-1));
+            (*it).renameTransition((*it2).second);
 
             }
             it2++;
@@ -108,7 +108,7 @@ void Automate::supprimeEtat(etat cible){
             it2++;
         }
     }
-//ON renome ensuite les états
+//ON renome ensuite les Ã©tats
     for ( it=etats.begin() ; it != etats.end(); it++ ){
 
         if ((*it).numero >= cible.numero){
@@ -133,7 +133,7 @@ void Automate::supprimeEtat(etat cible, Automate * a){
                 (*it).supprimeTransition((*it2).second,(*it2).first);
             }
             else if(((*it2).second.numero > cible.numero)){
-            (*it).renameTransition((*it2).second,((*it2).second.numero-1));
+            (*it).renameTransition((*it2).second);
 
             }
             it2++;
@@ -157,7 +157,7 @@ void Automate::supprimeEtat(etat cible, Automate * a){
             it2++;
         }
     }
-//ON renome ensuite les états
+//ON renome ensuite les Ã©tats
     for ( it=a->etats.begin() ; it != a->etats.end(); it++ ){
 
         if ((*it).numero >= cible.numero){
@@ -167,6 +167,8 @@ void Automate::supprimeEtat(etat cible, Automate * a){
 
     return;
 }
+
+
 
 
 string Automate::toDot(){
@@ -216,7 +218,7 @@ string Automate::toDot(){
     return out;
 }
 
-//renvoit true si au moins une transition va vers cette état et partant d'un autre état que lui-meme, false sinon
+//renvoit true si au moins une transition va vers cette Ã©tat et partant d'un autre Ã©tat que lui-meme, false sinon
 bool transitionExist(etat e, Automate a) {
     vector<etat>::iterator it;
     for( it=a.etats.begin() ; it!=a.etats.end() ; it++) {
@@ -241,7 +243,7 @@ void Automate::supprimerEtatsNonAccessibles(Automate * a) {
 }
 
 bool Automate::isStandard() {
-    //on vérifie déjà qu'il n'y a qu'un seul état initial
+    //on vÃ©rifie dÃ©jÃ  qu'il n'y a qu'un seul Ã©tat initial
     int comptEtatInit=0, numEtatInit;
 
     vector<etat>::iterator it;
@@ -256,8 +258,8 @@ bool Automate::isStandard() {
         return false;
     }
 
-    //on vérifie ensuite qu'aucune transition n'arrive à l'état initial
-    //pour cela, on vérifie toutes les transitions de chaque états.
+    //on vÃ©rifie ensuite qu'aucune transition n'arrive Ã  l'Ã©tat initial
+    //pour cela, on vÃ©rifie toutes les transitions de chaque Ã©tats.
     for (it=etats.begin();it!=etats.end();it++) {
          multimap<int,etat> tempTrans=(*it).getTransitions();
         multimap<int,etat>::iterator it2;
@@ -276,7 +278,7 @@ string convertIntToString(int i) {
     return numstr;
 }
 
-//cette fonction renvoit le numero de l'état qui est ciblé par la transition partant de l'etat this et portant l'etiquette etiq.
+//cette fonction renvoit le numero de l'Ã©tat qui est ciblÃ© par la transition partant de l'etat this et portant l'etiquette etiq.
 //renvoit -1 sinon
 int Automate::cible_transition(int etatDepart, int etiq) {
     multimap<int,etat>::iterator it2;
@@ -307,12 +309,12 @@ vector<int> Automate::getTabTransitions() {
 }
 
 
-//Fonction utilisée uniquement pour la minimisation
+//Fonction utilisÃ©e uniquement pour la minimisation
 //cette fonction renvoit le numero de l'etat en fonction de son bilan precedent et de ces lignes pour les transitions
-//elle sert en fait pour définir un nouveau bilan
-//si l'etat n'existe pas déjà, il l'ajoute
+//elle sert en fait pour dÃ©finir un nouveau bilan
+//si l'etat n'existe pas dÃ©jÃ , il l'ajoute
 int existInTabBilan(int numEtat, vector < pair< vector<int> , int > > * tabBilan, vector< vector<int> > tabMinimisation, int nbTransitions, int iBilanCourant) {
-    //on récupére dans un vector<int> tout les chiffres dont on a besoin (bilan 0, en 1, en 2 etc)
+    //on rÃ©cupÃ©re dans un vector<int> tout les chiffres dont on a besoin (bilan 0, en 1, en 2 etc)
     vector<int> nbUtilises;
     for (int i=iBilanCourant;i<nbTransitions+1+iBilanCourant;i++) {
         nbUtilises.push_back(tabMinimisation[numEtat][i]);
@@ -336,13 +338,13 @@ int existInTabBilan(int numEtat, vector < pair< vector<int> , int > > * tabBilan
         }
     }
 
-    //si l'on arrive là, c'est que cette combinaison n'existe pas, on l'ajoute donc
+    //si l'on arrive lÃ , c'est que cette combinaison n'existe pas, on l'ajoute donc
     tabBilan->push_back(pair< vector<int> , int >(nbUtilises,tabBilan->size()+1));
     return tabBilan->at(tabBilan->size()-1).second;
 }
 
-//Fonction utilisée uniquement pour la minimisation
-//Sert à comparer 2 bilans, retourne true s'ils sont égaux, false sinon
+//Fonction utilisÃ©e uniquement pour la minimisation
+//Sert Ã  comparer 2 bilans, retourne true s'ils sont Ã©gaux, false sinon
 bool compareBilans(int iBilanCourant, int iBilanPrec, vector< vector<int> > tabMinimisation) {
     for (unsigned int i=0;i<tabMinimisation.size();i++) {
         if (tabMinimisation[i][iBilanCourant]!=tabMinimisation[i][iBilanPrec]) {
@@ -378,14 +380,14 @@ vector <  pair< Automate , string > > Automate::minimise() {
     //on s'occupe ici des lignes "en 1", "en 2" etc
     for (int i=1;i<nombreDeTransitionDifferente+1;i++) {
         for (unsigned int j=0;j<tabMinimisation.size();j++) {
-            //a partir de l'etat n° j et de la transition n°i, on détermine ou vers quel état va cette transition
+            //a partir de l'etat nÂ° j et de la transition nÂ°i, on dÃ©termine ou vers quel Ã©tat va cette transition
             int etatcible=cible_transition(j,i);
             tabMinimisation[j].push_back(tabMinimisation[etatcible][iBilanCourant]);
         }
     }
 
-    //on réalise désormais le bilan 1, pour cela on associe un chiffre à un tableau d'entier
-    //concrétement, on utilise les n dernières lignes (du bilan 0 et ttes les lignes des transitions) pour définir un chiffre
+    //on rÃ©alise dÃ©sormais le bilan 1, pour cela on associe un chiffre Ã  un tableau d'entier
+    //concrÃ©tement, on utilise les n derniÃ¨res lignes (du bilan 0 et ttes les lignes des transitions) pour dÃ©finir un chiffre
     vector < pair< vector<int> , int > > tabBilan;
     for (unsigned int i=0;i<tabMinimisation.size();i++) {
         tabMinimisation[i].push_back(existInTabBilan(i,&tabBilan,tabMinimisation,nombreDeTransitionDifferente,iBilanCourant));
@@ -398,18 +400,18 @@ vector <  pair< Automate , string > > Automate::minimise() {
     }
     else {
         //on continue de miniser
-        commentaire=commentaire+"\n Les bilans 0 et 1 n'étant pas égaux, on continue la minimisation.\n";
+        commentaire=commentaire+"\n Les bilans 0 et 1 n'Ã©tant pas Ã©gaux, on continue la minimisation.\n";
 
         //on s'occupe ici des lignes "en 1", "en 2" etc
         for (int i=1;i<nombreDeTransitionDifferente+1;i++) {
             for (unsigned int j=0;j<tabMinimisation.size();j++) {
-                //a partir de l'etat n° j et de la transition n°i, on détermine ou vers quel état va cette transition
+                //a partir de l'etat nÂ° j et de la transition nÂ°i, on dÃ©termine ou vers quel Ã©tat va cette transition
                 int etatcible=cible_transition(j,i);
                 tabMinimisation[j].push_back(tabMinimisation[etatcible][iBilanCourant]);
             }
         }
 
-        //on réalise désormais le bilan 2
+        //on rÃ©alise dÃ©sormais le bilan 2
         tabBilan.clear();
         for (unsigned int i=0;i<tabMinimisation.size();i++) {
             tabMinimisation[i].push_back(existInTabBilan(i,&tabBilan,tabMinimisation,nombreDeTransitionDifferente,iBilanCourant));
@@ -421,20 +423,20 @@ vector <  pair< Automate , string > > Automate::minimise() {
             commentaire=commentaire+"\n On voit que les bilans 1 et 2 sont les memes, la minimisation s'arrete donc ici.\n";
         }
         else {
-            //on continue de miniser jusqu'a ce que les bilans soient égaux
-            commentaire=commentaire+"\n Les bilans 1 et 2 n'étant pas égaux, on continue la minimisation.\n";
+            //on continue de miniser jusqu'a ce que les bilans soient Ã©gaux
+            commentaire=commentaire+"\n Les bilans 1 et 2 n'Ã©tant pas Ã©gaux, on continue la minimisation.\n";
 
             while (!compareBilans(iBilanCourant,iBilanCourant-nombreDeTransitionDifferente-1,tabMinimisation)) {
                 //on s'occupe ici des lignes "en 1", "en 2" etc
                 for (int i=1;i<nombreDeTransitionDifferente+1;i++) {
                     for (unsigned int j=0;j<tabMinimisation.size();j++) {
-                        //a partir de l'etat n° j et de la transition n°i, on détermine ou vers quel état va cette transition
+                        //a partir de l'etat nÂ° j et de la transition nÂ°i, on dÃ©termine ou vers quel Ã©tat va cette transition
                         int etatcible=cible_transition(j,i);
                         tabMinimisation[j].push_back(tabMinimisation[etatcible][iBilanCourant]);
                     }
                 }
 
-                //on réalise désormais le bilan
+                //on rÃ©alise dÃ©sormais le bilan
                 tabBilan.clear();
                 for (unsigned int i=0;i<tabMinimisation.size();i++) {
                     tabMinimisation[i].push_back(existInTabBilan(i,&tabBilan,tabMinimisation,nombreDeTransitionDifferente,iBilanCourant));
@@ -453,64 +455,32 @@ vector <  pair< Automate , string > > Automate::minimise() {
         }
         affichageTableau=affichageTableau+"\n";
     }
-    commentaire=commentaire+affichageTableau+"\n\n Nombre de transitions différentes dans l'automate : "+convertIntToString(nombreDeTransitionDifferente);
+    commentaire=commentaire+affichageTableau+"\n\n Nombre de transitions diffÃ©rentes dans l'automate : "+convertIntToString(nombreDeTransitionDifferente);
 
     res.push_back(pair< Automate , string >(*temp,commentaire));
 
-    //On s'occupe des 2 premières lignes
-  /*  string tableau, commentaire="Avant de minimiser, il faut d'abord construire un tableau de minimisation.\n";
-    tableau="            |";
-    vector<etat>::iterator it;
-    for( it=etats.begin() ; it!=etats.end() ; it++){
-        tableau=tableau+"  "+it->getName()+"  |";
-    }
-    tableau=tableau+"\nBilan 0 |";
-    for( it=etats.begin() ; it!=etats.end() ; it++){
-        if (it->isFinal()) {
-            tableau=tableau+"  II   |";
-        }
-        else {
-            tableau=tableau+"  I   |";
-        }
-    }
-    commentaire=commentaire+"\n"+tableau+"\nSur la première ligne, chaque numéro correspond à un état.\nLe bilan 0 est simple, on attribue I à tout les états non finaux et II à tout les etats finaux.\n";
-    res.push_back(pair< Automate , string >(*temp,commentaire));
-
-    //on s'occupe de la premiere série de ligne en 1 , en 2 etc
-    commentaire="\n";
-    tableau=tableau+"\n";*/
-
-    //
-  /*  vector<int> tabTransition=getTabTransitions();
-    vector<int>::iterator it3;
-    for( it3=tabTransition.begin() ; it3!=tabTransition.end() ; it3++){
-        tableau=tableau+"En "+convertIntToString(*it3)+"       |";
-        for (it=)
-    }*/
-    //PB DE CONCEPTION, IL FAUT UN TAB INT DU TAB DE MINIMISATION
-    //res.push_back(pair< Automate , string >(*temp,commentaire));
 
     return res;
 
 }
 
-//on remplit un vecteur d'automates, chaque élément correspondant à un automate
-//quand le vecteur est lu (avec le bouton suivant), cela correspond à une étape dans l'ui
-//numEtatCurr correspond au numéro de l'état suivant à ajouter
+//on remplit un vecteur d'automates, chaque Ã©lÃ©ment correspondant Ã  un automate
+//quand le vecteur est lu (avec le bouton suivant), cela correspond Ã  une Ã©tape dans l'ui
+//numEtatCurr correspond au numÃ©ro de l'Ã©tat suivant Ã  ajouter
 //temp est l'automate qu'on ajoute au fur et a mesure au vecteur de standardisation res
 vector <  pair< Automate , string > > Automate::standardise() {
     vector <  pair< Automate , string > > res;
     Automate *temp = new Automate;
     int numEtatCurr=0;
 
-    // 1) On crée le nouvel etat initial
+    // 1) On crÃ©e le nouvel etat initial
     etat *e = new etat(numEtatCurr,false,false);
     numEtatCurr++;
     e->setName("0'");
     temp->ajoutEtat(*e);
-    res.push_back(pair< Automate , string >(*temp,"On créé le nouvel état initial appelé 0'.\n"));
+    res.push_back(pair< Automate , string >(*temp,"On crÃ©Ã© le nouvel Ã©tat initial appelÃ© 0'.\n"));
 
-    // 2)on crée tout les autres états sans aucune transition (y compris les anciens états initial)
+    // 2)on crÃ©e tout les autres Ã©tats sans aucune transition (y compris les anciens Ã©tats initial)
     vector<etat>::iterator it;
     for( it=etats.begin() ; it!=etats.end() ; it++){
        etat *e = new etat(numEtatCurr,false,it->isFinal());
@@ -518,15 +488,15 @@ vector <  pair< Automate , string > > Automate::standardise() {
        e->setName(it->getName());
        temp->ajoutEtat(*e);
     }
-    res.push_back(pair< Automate , string >(*temp,"On crée tout les autres états sans aucune transition (y compris les anciens états initial).\n"));
+    res.push_back(pair< Automate , string >(*temp,"On crÃ©e tout les autres Ã©tats sans aucune transition (y compris les anciens Ã©tats initial).\n"));
 
     // 3) on s'occupe des cas particuliers (voir ci-dessous)
-    //Cas particulier : quand un ancien état initial a une transition allant vers lui-même.
-    //Dans ce cas là, il faut créer 2 transitions : une transition partant du nouvel état initial et allant vers le nouvel état correspondant et une transition partant de cet état et allant vers lui-même
+    //Cas particulier : quand un ancien Ã©tat initial a une transition allant vers lui-mÃªme.
+    //Dans ce cas lÃ , il faut crÃ©er 2 transitions : une transition partant du nouvel Ã©tat initial et allant vers le nouvel Ã©tat correspondant et une transition partant de cet Ã©tat et allant vers lui-mÃªme
     int numberCasParticulier=0;
     for( it=etats.begin() ; it!=etats.end() ; it++){
        if (it->isInitial()) {
-            //si c'est un ancien etat initial, on vérifie qu'il n'a pas de transition allant vers lui-meme
+            //si c'est un ancien etat initial, on vÃ©rifie qu'il n'a pas de transition allant vers lui-meme
            multimap<int,etat> tempTrans=(*it).getTransitions();
            multimap<int,etat>::iterator it2;
            for (it2=tempTrans.begin();it2!=tempTrans.end();it2++) {
@@ -539,42 +509,42 @@ vector <  pair< Automate , string > > Automate::standardise() {
        }
     }
 
-    string ajoutPourCasParticulier="Il y a dans cet automate "+convertIntToString(numberCasParticulier)+" cas particuliers à gérer.";
-    res.push_back(pair< Automate , string >(*temp,"On s'occupe des cas particuliers.\nCas particulier : quand un ancien état initial a une transition allant vers lui-même. Dans ce cas là, il faut créer 2 transitions et un état : une transition partant du nouvel état initial et allant vers l'état nouvellement créé et une transition partant de cet état et allant vers lui-même.\n"+ajoutPourCasParticulier));
+    string ajoutPourCasParticulier="Il y a dans cet automate "+convertIntToString(numberCasParticulier)+" cas particuliers Ã  gÃ©rer.";
+    res.push_back(pair< Automate , string >(*temp,"On s'occupe des cas particuliers.\nCas particulier : quand un ancien Ã©tat initial a une transition allant vers lui-mÃªme. Dans ce cas lÃ , il faut crÃ©er 2 transitions et un Ã©tat : une transition partant du nouvel Ã©tat initial et allant vers l'Ã©tat nouvellement crÃ©Ã© et une transition partant de cet Ã©tat et allant vers lui-mÃªme.\n"+ajoutPourCasParticulier));
 
 
-    // 4) on s'occupe des transitions partant du nouvel etat initial (correspondant aux transitions partant des anciens états initiaux)
+    // 4) on s'occupe des transitions partant du nouvel etat initial (correspondant aux transitions partant des anciens Ã©tats initiaux)
     for( it=etats.begin() ; it!=etats.end() ; it++){
         if (it->isInitial()) {
             multimap<int,etat> tempTrans=(*it).getTransitions();
             multimap<int,etat>::iterator it2;
             for (it2=tempTrans.begin();it2!=tempTrans.end();it2++) {
-                //on précise qu'on ne s'occupe du cas ou cette transition allait vers l'état initial duquel il partait
+                //on prÃ©cise qu'on ne s'occupe du cas ou cette transition allait vers l'Ã©tat initial duquel il partait
                 if (it2->second.numero!=it->numero) {
                     temp->ajoutTransition(*(temp->getEtat(0)),*(temp->getEtat(it->numero+2)),it2->first);
                 }
             }
         }
     }
-    res.push_back(pair< Automate , string >(*temp,"on s'occupe des transitions partant du nouvel etat initial : on ajoute toutes les transitions qui partaient des anciens états initiaux."));
+    res.push_back(pair< Automate , string >(*temp,"on s'occupe des transitions partant du nouvel etat initial : on ajoute toutes les transitions qui partaient des anciens Ã©tats initiaux."));
 
-    // 5) on reproduit toutes les anciennes transitions (sauf les cas particuliers, c'est déjà géré avant)
+    // 5) on reproduit toutes les anciennes transitions (sauf les cas particuliers, c'est dÃ©jÃ  gÃ©rÃ© avant)
     for( it=etats.begin() ; it!=etats.end() ; it++){
         multimap<int,etat> tempTrans=(*it).getTransitions();
         multimap<int,etat>::iterator it2;
         for (it2=tempTrans.begin();it2!=tempTrans.end();it2++) {
-            //on précise qu'on ne s'occupe du cas ou cette transition allait vers l'état initial duquel il partait
+            //on prÃ©cise qu'on ne s'occupe du cas ou cette transition allait vers l'Ã©tat initial duquel il partait
             if ((it->isInitial()&&it2->second.numero==it->numero)==false) {
                 temp->ajoutTransition(*(temp->getEtat(it->numero+1)),*(temp->getEtat(it2->second.numero+1)),it2->first);
             }
         }
     }
 
-    res.push_back(pair< Automate , string >(*temp,"on reproduit toutes les anciennes transitions (sauf les cas particuliers, c'est déjà géré avant).\n"));
+    res.push_back(pair< Automate , string >(*temp,"on reproduit toutes les anciennes transitions (sauf les cas particuliers, c'est dÃ©jÃ  gÃ©rÃ© avant).\n"));
 
-    // 6) on supprime désormais tout les etats non accessibles
+    // 6) on supprime dÃ©sormais tout les etats non accessibles
     supprimerEtatsNonAccessibles(temp);
-    res.push_back(pair< Automate , string >(*temp,"On supprime désormais tout les états non accessibles, c'est-à-dire tout les états non initiaux vers lesquelles aucune transition ne pointe.\n L'automate est maintenant standardiser.\n"));
+    res.push_back(pair< Automate , string >(*temp,"On supprime dÃ©sormais tout les Ã©tats non accessibles, c'est-Ã -dire tout les Ã©tats non initiaux vers lesquelles aucune transition ne pointe.\n L'automate est maintenant standardiser.\n"));
 
     return res;
 }
@@ -582,7 +552,7 @@ vector <  pair< Automate , string > > Automate::standardise() {
 //a modifier : il faut avoir une structure comme la determinisation et la standardisation
 vector<Automate> Automate::produit(Automate A){
    vector<Automate> produit;
-   map< int, pair<etat,etat> > etat_prod; // équivalence etat automate f -> (etat_automate1,etat_automate2)
+   map< int, pair<etat,etat> > etat_prod; // Ã©quivalence etat automate f -> (etat_automate1,etat_automate2)
 
    int m=(A.etats).size();
    unsigned int i=0,j=0;
@@ -603,7 +573,7 @@ vector<Automate> Automate::produit(Automate A){
 
             q=(*it_auto2).numero;
 
-            //création d'un nouvel automate recopiant celui de l'étape précédente
+            //crÃ©ation d'un nouvel automate recopiant celui de l'Ã©tape prÃ©cÃ©dente
             if(p!=0 || q!=0){
                 temp=Automate(produit[(p*m+q)-1]);
 
@@ -613,7 +583,7 @@ vector<Automate> Automate::produit(Automate A){
                 temp = Automate();
 
             }
-            //création du nouvel état p*m+q
+            //crÃ©ation du nouvel Ã©tat p*m+q
             e=etat(p*m+q,(this->getEtat(p))->isInitial() && (A.getEtat(q))->isInitial(),(this->getEtat(p))->isFinal() && (A.getEtat(q))->isFinal());
             ostringstream tmp;
             tmp<<p<<","<<q;
@@ -621,16 +591,16 @@ vector<Automate> Automate::produit(Automate A){
             tmp.str("");
             (temp.etats).push_back(e);
 
-            //remplissage de la map d'équivalence des états
+            //remplissage de la map d'Ã©quivalence des Ã©tats
             etat_prod[p*m+q]=pair<etat,etat>(*(this->getEtat(p)),*(A.getEtat(q)));
 
 
-            //remplissage des transitions pointant sur le nouvel état
+            //remplissage des transitions pointant sur le nouvel Ã©tat
             i=0;
 
             while(i<etat_prod.size()){
 
-                //on cherche si l'état nouvellement créer pointe sur l'état i par une trans qcq
+                //on cherche si l'Ã©tat nouvellement crÃ©er pointe sur l'Ã©tat i par une trans qcq
 
                 multiTmp = (etat_prod[p*m+q].first).getTransitions();
                 it_trans1=multiTmp.begin();
@@ -651,7 +621,7 @@ vector<Automate> Automate::produit(Automate A){
 
                 }
 
-                //on cherche si il existe une transition pointant sur l'etat de l'autom init1 qui correspond au nouvel etat crée
+                //on cherche si il existe une transition pointant sur l'etat de l'autom init1 qui correspond au nouvel etat crÃ©e
                 multiTmp = (etat_prod[i].first).getTransitions();
                 it_trans1=multiTmp.begin();
                 j=0;
@@ -663,7 +633,7 @@ vector<Automate> Automate::produit(Automate A){
 
                         etiq=(*it_trans1).first;
 
-                        //on cherche alors dans autom init2 si il existe une transition avec la meme étiquette pointant sur l'etat eq au nouvel etat cree
+                        //on cherche alors dans autom init2 si il existe une transition avec la meme Ã©tiquette pointant sur l'etat eq au nouvel etat cree
                             if( (etat_prod[i].second).find_transition( etiq, etat_prod[p*m+q].second )==true ){
                                (temp.etats[i]).ajoutTransition(e,etiq);
                             }
@@ -695,17 +665,17 @@ vector<int> Automate::getAlpha(){
     multimap<int,etat> transitions;
     multimap<int,etat>::iterator it_trans;
     vector<etat>::iterator it_etat;
-    //Pour chaque état
+    //Pour chaque Ã©tat
     for(it_etat = etats.begin();it_etat != etats.end();it_etat++){
         transitions = (*it_etat).getTransitions();
-        //Pour chaque transition de cet état
-        for(it_trans=transitions.begin();it_trans!=transitions.end();it_trans++){ //problème avec l'iterator end
+        //Pour chaque transition de cet Ã©tat
+        for(it_trans=transitions.begin();it_trans!=transitions.end();it_trans++){ //problÃ¨me avec l'iterator end
             i=0;
             while(i<sizealpha && (*it_trans).first!=tab[i]){
                 i++;
             }
             if(i==sizealpha){
-                tab.push_back((*it_trans).first); // on ajoute la clé trouvé au tableau pour la mémorisé
+                tab.push_back((*it_trans).first); // on ajoute la clÃ© trouvÃ© au tableau pour la mÃ©morisÃ©
                 j++;
                 sizealpha++;
             }
@@ -717,7 +687,7 @@ vector<int> Automate::getAlpha(){
 
 
 //--------------------------------------------------------
-// Fonction qui déterminise un automate
+// Fonction qui dÃ©terminise un automate
 //-----------------------------------------------------------
 vector <  pair< Automate , string > > Automate::determinise(){
 
@@ -739,7 +709,7 @@ vector <  pair< Automate , string > > Automate::determinise(){
  unsigned int i,j,k=0,m;
  bool init_isFinal=false ,existe=false, isEtatInit=false;
 
- //recherce des états initiaux pour créer le premier états
+ //recherce des Ã©tats initiaux pour crÃ©er le premier Ã©tats
  for(i=0;i<etats.size();i++){
 
      if(etats[i].isInitial()){
@@ -759,7 +729,7 @@ vector <  pair< Automate , string > > Automate::determinise(){
      e=etat(0,false,false);
      temp_det=new Automate;
      temp_det->ajoutEtat(e);
-     determin.push_back(pair<Automate,string>(*temp_det,"L'automate n'a pas d'etat initial, il ne peut etre déterminisé"));
+     determin.push_back(pair<Automate,string>(*temp_det,"L'automate n'a pas d'etat initial, il ne peut etre dÃ©terminisÃ©"));
      delete temp_det;
      return determin;
  }
@@ -770,14 +740,14 @@ vector <  pair< Automate , string > > Automate::determinise(){
  temp_det=new Automate;
  temp_det->ajoutEtat(e);
 
-    comment="creation de l'etat initial à partir des états initiaux des deux automates";
+    comment="creation de l'etat initial Ã  partir des Ã©tats initiaux des deux automates";
     determin.push_back(pair<Automate,string>(*temp_det,comment));
 
 
 
- //déterminisation
+ //dÃ©terminisation
  //it_det=etat_det.begin();
- while(k<etat_det.size()){ // on parcours la liste d'état de l'automate déter
+ while(k<etat_det.size()){ // on parcours la liste d'Ã©tat de l'automate dÃ©ter
 
     for(i=0;i<alpha.size();i++){ // on parcours l'alphabet
 
@@ -785,7 +755,7 @@ vector <  pair< Automate , string > > Automate::determinise(){
 
         it_etat=etat_det[k].begin();
 
-        for(j=0;j<etat_det[k].size();j++){ // on parcoures la liste de corres pour l'état k de l'auto deter
+        for(j=0;j<etat_det[k].size();j++){ // on parcoures la liste de corres pour l'Ã©tat k de l'auto deter
 
             trans=it_etat->getTransitions();
 
@@ -807,7 +777,7 @@ vector <  pair< Automate , string > > Automate::determinise(){
 
          }
 
-         //vérifier si la liste est déjà un état déterminisé
+         //vÃ©rifier si la liste est dÃ©jÃ  un Ã©tat dÃ©terminisÃ©
         if(list_etat.begin()!=list_etat.end()){
 
             existe=false;
@@ -817,7 +787,7 @@ vector <  pair< Automate , string > > Automate::determinise(){
             while(it_det!=etat_det.end() && existe==false ){
 
 
-                if(equal(list_etat,it_det->second)){ //espérer que le test d'égalité est bon ;)
+                if(equal(list_etat,it_det->second)){ //espÃ©rer que le test d'Ã©galitÃ© est bon ;)
                     existe=true;
                 }
                 else
@@ -855,7 +825,7 @@ vector <  pair< Automate , string > > Automate::determinise(){
             }
 
             determin.push_back(pair<Automate,string>(*temp_det,comment));
-                //si non, nouvel état, si oui trans de l'état encours vers l'état trouvé
+                //si non, nouvel Ã©tat, si oui trans de l'Ã©tat encours vers l'Ã©tat trouvÃ©
                 //nouvel auto dans vecteur
         }
      }
@@ -890,6 +860,7 @@ bool equal(list<etat> &l1 ,list<etat> &l2) {
     return true;
 }
 
+
 bool isFinal(list <etat> l){
 
     list <etat>::iterator it;
@@ -906,14 +877,4 @@ bool isFinal(list <etat> l){
     return false;
 
 
-}
-
-//fonction d'aide au débugage: affiche une list d'état
-
-void affichageList(list<etat> l){
-
-    list<etat>::iterator it=l.begin();
-
-    for(it=l.begin();it!=l.end();it++){
-    }
 }
