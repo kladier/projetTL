@@ -354,10 +354,60 @@ bool compareBilans(int iBilanCourant, int iBilanPrec, vector< vector<int> > tabM
     return true;
 }
 
+//utilisé seulement dans la minimisation, permet de savoir combien d'états il y a selon le dernier bilan fait dans tabMinimisation
+int compteNbEtatsDansBilan(vector< vector<int> > tabMinimisation) {
+    vector<int> temp;
+    for (unsigned int i=0;i<tabMinimisation.size();i++) {
+        if (std::find(temp.begin(), temp.end(), tabMinimisation[i][tabMinimisation[i].size()-1])==temp.end()) {
+            temp.push_back(tabMinimisation[i][tabMinimisation[i].size()-1]);
+        }
+    }
+    return temp.size();
+}
+
+//permet, pour un numéro d'état, de renvoyer le tableau dont chaque élément correspond à la cible de la transition
+//utilisé seulement dans la minimisation
+vector<int> renvoyerTabTransition(vector< vector<int> > tabMinimisation,int nbTransition, int iColonne) {
+    vector<int> res;
+
+    for (int i=0;i<nbTransition;i++) {
+        int ligne=tabMinimisation[iColonne].size()-1-nbTransition+i;
+        res.push_back(tabMinimisation[iColonne][ligne]);
+    }
+    return res;
+}
+
+//utilisé seulement pour la minimisation, renvoit l'indice de la colonne de l'état
+//renvoit -1 s'il ne trouve pas
+int trouverIndiceColonne(vector< vector<int> > tabMinimisation,int numEtat) {
+    for (unsigned int i=0;i<tabMinimisation.size();i++) {
+        if (numEtat==tabMinimisation[i][tabMinimisation[0].size()-1]) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+string toStringTabMini(vector< vector<int> > tabMinimisation) {
+    string affichageTableau;
+    for (unsigned int i=0;i<tabMinimisation[0].size();i++) {
+        for (unsigned int j=0;j<tabMinimisation.size();j++) {
+            affichageTableau=affichageTableau+"  "+convertIntToString(tabMinimisation[j][i])+"   |";
+        }
+        affichageTableau=affichageTableau+"\n";
+    }
+    return affichageTableau;
+}
+
+
 vector <  pair< Automate , string > > Automate::minimise() {
     vector <  pair< Automate , string > > res;
     Automate *temp = new Automate;
-    string commentaire="Avant de minimiser, il faut d'abord construire un tableau de minimisation.\n";
+
+    string commentaire="\nAvant de minimiser, il faut d'abord construire un tableau de minimisation.\n";
+    commentaire+="Chaque colonne représente un état de l'automate à minimiser.\n";
+    commentaire+="Cette première ligne appelée bilan 0 est simple à réaliser, les états finaux prennent le chiffre 2, les autres états prennent le chiffre 1.\n\n";
+
 
     vector< vector<int> > tabMinimisation;
 
@@ -373,12 +423,18 @@ vector <  pair< Automate , string > > Automate::minimise() {
         }
     }
 
+    commentaire+=toStringTabMini(tabMinimisation);
+
+    res.push_back(pair< Automate , string >(*temp,commentaire));
+
+
+    commentaire="\nOn réalise désormais, pour chaque transition (par exemple, pour la transition qui porte l'étiquette 1), une ligne où l'on va spécifier, pour chaque état, vers quel état il va.)";
     vector<int> tabTransition=getTabTransitions();
-    int nombreDeTransitionDifferente=tabTransition.size();
+    int nbTransDiff=tabTransition.size();
     int iBilanCourant=0;
 
     //on s'occupe ici des lignes "en 1", "en 2" etc
-    for (int i=1;i<nombreDeTransitionDifferente+1;i++) {
+    for (int i=1;i<nbTransDiff+1;i++) {
         for (unsigned int j=0;j<tabMinimisation.size();j++) {
             //a partir de l'etat n° j et de la transition n°i, on détermine ou vers quel état va cette transition
             int etatcible=cible_transition(j,i);
@@ -386,24 +442,37 @@ vector <  pair< Automate , string > > Automate::minimise() {
         }
     }
 
+
+    commentaire+="\n\n"+toStringTabMini(tabMinimisation);
+
+    res.push_back(pair< Automate , string >(*temp,commentaire));
+
+    commentaire="\nOn réalise désormais le bilan 1, en prenant en compte toutes les lignes de type \"pour la transition 1\" et le dernier bilan, c'est-à-dire le bilan 0.\n";
+    commentaire+="Chaque groupe formé est unique et s'il n'existe pas déjà, on lui attribue un numéro";
+
     //on réalise désormais le bilan 1, pour cela on associe un chiffre à un tableau d'entier
     //concrétement, on utilise les n dernières lignes (du bilan 0 et ttes les lignes des transitions) pour définir un chiffre
     vector < pair< vector<int> , int > > tabBilan;
     for (unsigned int i=0;i<tabMinimisation.size();i++) {
-        tabMinimisation[i].push_back(existInTabBilan(i,&tabBilan,tabMinimisation,nombreDeTransitionDifferente,iBilanCourant));
+        tabMinimisation[i].push_back(existInTabBilan(i,&tabBilan,tabMinimisation,nbTransDiff,iBilanCourant));
     }
-    iBilanCourant=iBilanCourant+nombreDeTransitionDifferente+1;
+    iBilanCourant=iBilanCourant+nbTransDiff+1;
+
+    commentaire+="\n\n"+toStringTabMini(tabMinimisation)+"\nOn compare désormais les bilans, pour chaque état, on doit avoir le même chiffre, si c'est le cas les bilans sont égaux et le tableau de minimisation est terminée.\n";
 
     //on compare le bilan 0 au bilan 1
-    if (compareBilans(iBilanCourant,iBilanCourant-nombreDeTransitionDifferente-1,tabMinimisation)) {
-        commentaire=commentaire+"\n On voit que les bilans 0 et 1 sont les memes, la minimisation s'arrete donc ici.\n";
+    if (compareBilans(iBilanCourant,iBilanCourant-nbTransDiff-1,tabMinimisation)) {
+        commentaire+="\n On voit que les bilans 0 et 1 sont les memes, la minimisation s'arrete donc ici.\n";
+        res.push_back(pair< Automate , string >(*temp,commentaire));
     }
     else {
         //on continue de miniser
         commentaire=commentaire+"\n Les bilans 0 et 1 n'étant pas égaux, on continue la minimisation.\n";
+        res.push_back(pair< Automate , string >(*temp,commentaire));
 
+        commentaire="\nOn refait l'étape pour les transitions, en prenant en compte le nouveau bilan.\n";
         //on s'occupe ici des lignes "en 1", "en 2" etc
-        for (int i=1;i<nombreDeTransitionDifferente+1;i++) {
+        for (int i=1;i<nbTransDiff+1;i++) {
             for (unsigned int j=0;j<tabMinimisation.size();j++) {
                 //a partir de l'etat n° j et de la transition n°i, on détermine ou vers quel état va cette transition
                 int etatcible=cible_transition(j,i);
@@ -411,24 +480,36 @@ vector <  pair< Automate , string > > Automate::minimise() {
             }
         }
 
+        commentaire+="\n"+toStringTabMini(tabMinimisation);
+
+        res.push_back(pair< Automate , string >(*temp,commentaire));
+
+        commentaire="\nOn réalise maintenant le bilan 2 et on le compare au bilan 1.\n";
+
         //on réalise désormais le bilan 2
         tabBilan.clear();
         for (unsigned int i=0;i<tabMinimisation.size();i++) {
-            tabMinimisation[i].push_back(existInTabBilan(i,&tabBilan,tabMinimisation,nombreDeTransitionDifferente,iBilanCourant));
+            tabMinimisation[i].push_back(existInTabBilan(i,&tabBilan,tabMinimisation,nbTransDiff,iBilanCourant));
         }
-        iBilanCourant=iBilanCourant+nombreDeTransitionDifferente+1;
+        iBilanCourant=iBilanCourant+nbTransDiff+1;
 
         //on compare le bilan 1 au bilan 2
-        if (compareBilans(iBilanCourant,iBilanCourant-nombreDeTransitionDifferente-1,tabMinimisation)) {
-            commentaire=commentaire+"\n On voit que les bilans 1 et 2 sont les memes, la minimisation s'arrete donc ici.\n";
+        if (compareBilans(iBilanCourant,iBilanCourant-nbTransDiff-1,tabMinimisation)) {
+            commentaire+="\n On voit que les bilans 1 et 2 sont les memes, la minimisation s'arrete donc ici.\n";
+
+            res.push_back(pair< Automate , string >(*temp,commentaire));
+
         }
         else {
             //on continue de miniser jusqu'a ce que les bilans soient égaux
-            commentaire=commentaire+"\n Les bilans 1 et 2 n'étant pas égaux, on continue la minimisation.\n";
+            commentaire+="\n Les bilans 1 et 2 n'étant pas égaux, on continue la minimisation.\n";
 
-            while (!compareBilans(iBilanCourant,iBilanCourant-nombreDeTransitionDifferente-1,tabMinimisation)) {
+            res.push_back(pair< Automate , string >(*temp,commentaire));
+
+            commentaire="On va au bout de la minimisation : on s'occupe des lignes concernant les transitions, on fait le bilan, on le compare au précédent et si ce n'est pas les mêmes on refait la même chose.\n";
+            while (!compareBilans(iBilanCourant,iBilanCourant-nbTransDiff-1,tabMinimisation)) {
                 //on s'occupe ici des lignes "en 1", "en 2" etc
-                for (int i=1;i<nombreDeTransitionDifferente+1;i++) {
+                for (int i=1;i<nbTransDiff+1;i++) {
                     for (unsigned int j=0;j<tabMinimisation.size();j++) {
                         //a partir de l'etat n° j et de la transition n°i, on détermine ou vers quel état va cette transition
                         int etatcible=cible_transition(j,i);
@@ -439,23 +520,58 @@ vector <  pair< Automate , string > > Automate::minimise() {
                 //on réalise désormais le bilan
                 tabBilan.clear();
                 for (unsigned int i=0;i<tabMinimisation.size();i++) {
-                    tabMinimisation[i].push_back(existInTabBilan(i,&tabBilan,tabMinimisation,nombreDeTransitionDifferente,iBilanCourant));
+                    tabMinimisation[i].push_back(existInTabBilan(i,&tabBilan,tabMinimisation,nbTransDiff,iBilanCourant));
                 }
-                iBilanCourant=iBilanCourant+nombreDeTransitionDifferente+1;
+                iBilanCourant=iBilanCourant+nbTransDiff+1;
 
             }
+
+            commentaire+="\n"+toStringTabMini(tabMinimisation);
+            commentaire+="\nOn remarque que les deux derniers bilans sont égaux, le tableau de minimisation est terminé.\n";
+            res.push_back(pair< Automate , string >(*temp,commentaire));
         }
     }
 
-    //on transforme le tableau en chaine
-    string affichageTableau;
-    for (unsigned int i=0;i<tabMinimisation[0].size();i++) {
-        for (unsigned int j=0;j<tabMinimisation.size();j++) {
-            affichageTableau=affichageTableau+"  "+convertIntToString(tabMinimisation[j][i])+"   |";
-        }
-        affichageTableau=affichageTableau+"\n";
+
+    commentaire="\nA partir du dernier bilan et des dernières lignes concernant les transitions, nous allons construire l'automate minimisé.\n";
+    commentaire+="\n On s'occupe de créer tout les états. S'ils étaient initiaux et/ou finaux, il le reste.\n";
+
+    //on associe ici l'indice du num de colonne dans tabMinimisation a un nouvel état : l'état 1 va correspondre à la colonne 0 par exemple
+    int nbEtatsDansBilan = compteNbEtatsDansBilan(tabMinimisation);
+    vector< pair< int , int > > assoEtatIndiceTabMini;
+    for (int i=1;i<nbEtatsDansBilan+1;i++) {
+        assoEtatIndiceTabMini.push_back(pair< int , int >(i,trouverIndiceColonne(tabMinimisation,i)));
     }
-    commentaire=commentaire+affichageTableau+"\n\n Nombre de transitions différentes dans l'automate : "+convertIntToString(nombreDeTransitionDifferente);
+
+    //une fois cette association réalisée, il est facile de s'occuper des états
+    //lorsqu'on ajoute un état, on vérifie s'il est initial ou non grace à l'indice associée, correspondant au numéro de l'état actuel
+    for (int i=1;i<nbEtatsDansBilan+1;i++) {
+        int j;
+        for (unsigned int k=0;k<assoEtatIndiceTabMini.size();k++) {
+            if (assoEtatIndiceTabMini[k].first==i) {
+                j=assoEtatIndiceTabMini[k].second;
+            }
+        }
+        temp->ajoutEtat((*new etat(i,etats[j].isInitial(),etats[j].isFinal())));
+    }
+
+    res.push_back(pair< Automate , string >(*temp,commentaire));
+
+    commentaire="\nOn s'occupe maintenant des transitions, pour chaque nouvel état, on va voir vers quel état vont chaque transition et on les dessine.\n";
+    //cela simplifie aussi le travail pour les transitions
+    for (int i=1;i<nbEtatsDansBilan+1;i++) {
+        int j;
+        for (unsigned int k=0;k<assoEtatIndiceTabMini.size();k++) {
+            if (assoEtatIndiceTabMini[k].first==i) {
+                j=assoEtatIndiceTabMini[k].second;
+            }
+        }
+        vector<int> tempTransitions = renvoyerTabTransition(tabMinimisation,nbTransDiff,j);
+
+        for (unsigned int l=0;l<tempTransitions.size();l++) {
+            temp->getEtat(i)->ajoutTransition(*temp->getEtat(tempTransitions[l]),l+1);
+        }
+    }
 
     res.push_back(pair< Automate , string >(*temp,commentaire));
 
@@ -463,6 +579,17 @@ vector <  pair< Automate , string > > Automate::minimise() {
     return res;
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 //on remplit un vecteur d'automates, chaque élément correspondant à un automate
 //quand le vecteur est lu (avec le bouton suivant), cela correspond à une étape dans l'ui
