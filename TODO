@@ -5,7 +5,7 @@ Les chiffres correspondent à l'ordre de priorité :
 
 	
 	
-	1) finir la documentation : seuls les classes automate, etat et mainwindow ont une doc, reste à faire les autres qui concernent en fait uniquement les affichages utilisées pour la création d'un automate. Il faut ajouter le depot git du projet et expliquez très vite fait comment y accéder (renvoyer un lien vers un tuto git)
+	1) [OK] finir la documentation pour les classes
 	
 	1) commencer a faire sérieusement le compte-rendu !
 		
@@ -16,6 +16,8 @@ Les chiffres correspondent à l'ordre de priorité :
 	1) [OK] S'occuper du bouton Précédent (pas encore fait)
 	
 	
+	 2) Continuer la doc, surtout la page principale : ajouter les définitions, le depot git du projet et expliquez très vite fait comment y accéder (renvoyer un lien vers un tuto git)
+	 
 	2) voir pour les exécutables, il faudrait dans l'idéal avoir un "protocole" pour générer les exécutables pour les différents OS (Linux/Window)
 		Il faut surtout arriver à faire ces exécutables.
 	

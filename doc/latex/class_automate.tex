@@ -43,7 +43,9 @@ vector$<$ pair$<$ \hyperlink{class_automate}{Automate}, string $>$ $>$ \hyperlin
 vector$<$ pair$<$ \hyperlink{class_automate}{Automate}, string $>$ $>$ \hyperlink{class_automate_a32ec8c518bd5d988ac10544b13c0bb95}{standardise} ()
 \begin{DoxyCompactList}\small\item\em Réalise la standardisation de l'automate. \end{DoxyCompactList}\item 
 vector$<$ pair$<$ \hyperlink{class_automate}{Automate}, string $>$ $>$ \hyperlink{class_automate_af8297f77add39ea70a0877f85dedcf28}{minimise} ()
-\begin{DoxyCompactList}\small\item\em Réalise la minimisation de l'automate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Réalise la minimisation de l'automate. \end{DoxyCompactList}\item 
+int \hyperlink{class_automate_aa2070cd084587f8999e3d9cd847f5c1d}{get\-Nb\-Transition} ()
+\begin{DoxyCompactList}\small\item\em Renvoit le nombre de transition portant une étiquette différente. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -227,6 +229,22 @@ Retourne le vector d'états de l'automate.
 
 \begin{DoxyReturn}{Returns}
 Le vecteur d'états de l'automate. 
+\end{DoxyReturn}
+\hypertarget{class_automate_aa2070cd084587f8999e3d9cd847f5c1d}{\index{Automate@{Automate}!get\-Nb\-Transition@{get\-Nb\-Transition}}
+\index{get\-Nb\-Transition@{get\-Nb\-Transition}!Automate@{Automate}}
+\subsubsection[{get\-Nb\-Transition}]{\setlength{\rightskip}{0pt plus 5cm}int Automate\-::get\-Nb\-Transition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_aa2070cd084587f8999e3d9cd847f5c1d}
+
+
+Renvoit le nombre de transition portant une étiquette différente. 
+
+Fonction utilisée dans la minimisation
+
+\begin{DoxyReturn}{Returns}
+le nombre de transitions différentes de l'automate 
 \end{DoxyReturn}
 \hypertarget{class_automate_a3f8def92c8e75035516d9e67dcb244d9}{\index{Automate@{Automate}!get\-Tab\-Transitions@{get\-Tab\-Transitions}}
 \index{get\-Tab\-Transitions@{get\-Tab\-Transitions}!Automate@{Automate}}

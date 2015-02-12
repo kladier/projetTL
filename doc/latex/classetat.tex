@@ -36,6 +36,8 @@ bool \hyperlink{classetat_a5841b1b0055485e6d3edc6d9b1c500cb}{operator!=} (\hyper
 \begin{DoxyCompactList}\small\item\em Opérateur d'inégalité entre 2 états. \end{DoxyCompactList}\item 
 bool \hyperlink{classetat_acab203fc095b3974136c4f73895df9a6}{find\-\_\-transition} (int etiq, \hyperlink{classetat}{etat} e)
 \begin{DoxyCompactList}\small\item\em Test l'existence d'une transition. \end{DoxyCompactList}\item 
+bool \hyperlink{classetat_adc481f8f4c2c2357a88ac925e6440a8b}{find\-\_\-transition} (\hyperlink{classetat}{etat} e)
+\begin{DoxyCompactList}\small\item\em Test l'existence d'une transition. \end{DoxyCompactList}\item 
 bool \hyperlink{classetat_a381028a7a37e890734c1cc4afe05bd55}{est\-Dans\-List} (list$<$ \hyperlink{classetat}{etat} $>$ liste)
 \begin{DoxyCompactList}\small\item\em Test l'état est dans une liste. \end{DoxyCompactList}\item 
 void \hyperlink{classetat_a935983bd0159129dbd0bbddb50e1dd8a}{set\-Name} (string rename)
@@ -177,6 +179,27 @@ Teste si la transition allant vers l'état e et portant l'étiquette etiq existe
 \begin{DoxyReturn}{Returns}
 true si cette transition existe, false sinon 
 \end{DoxyReturn}
+\hypertarget{classetat_adc481f8f4c2c2357a88ac925e6440a8b}{\index{etat@{etat}!find\-\_\-transition@{find\-\_\-transition}}
+\index{find\-\_\-transition@{find\-\_\-transition}!etat@{etat}}
+\subsubsection[{find\-\_\-transition}]{\setlength{\rightskip}{0pt plus 5cm}bool etat\-::find\-\_\-transition (
+\begin{DoxyParamCaption}
+\item[{{\bf etat}}]{e}
+\end{DoxyParamCaption}
+)}}\label{classetat_adc481f8f4c2c2357a88ac925e6440a8b}
+
+
+Test l'existence d'une transition. 
+
+Teste si la transition allant vers l'état e existe.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \-: l'état d'arrivée de la transition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si cette transition existe, false sinon 
+\end{DoxyReturn}
 \hypertarget{classetat_a938d2165beabfb6de3ad16e2a15b05c5}{\index{etat@{etat}!get\-Name@{get\-Name}}
 \index{get\-Name@{get\-Name}!etat@{etat}}
 \subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string etat\-::get\-Name (
@@ -236,7 +259,7 @@ Le numéro de l'état
 
 Retourne les transitions de l'état. 
 
-Getter de l'attribut transition.
+Getter de l'attribut transition. Le premier membre est l'étiquette de la transition et le deuxieme est l'état ciblé par la transition.
 
 \begin{DoxyReturn}{Returns}
 Multimap représentant les transitions de l'état 

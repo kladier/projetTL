@@ -1,5 +1,10 @@
-#ifndef TRANSITION_H
+﻿#ifndef TRANSITION_H
 #define TRANSITION_H
+
+/*!
+ * \file transition.h
+ * \brief Représente une transition d'un état.
+ */
 
 #include <QWidget>
 
@@ -10,15 +15,33 @@ namespace Ui {
 class Transition : public QWidget {
     Q_OBJECT
 public:
-    Transition(int,int,QWidget *parent = 0);
+
+    /*!
+         *  \brief Constructeur
+         *
+         *  Construit la transition passée en paramètre
+         *
+         *  \param to : numero de l'état cible de la transition
+         *  \param vocab : etiquette de la transition
+         */
+    Transition(int to,int vocab,QWidget *parent = 0);
+
+    /*!
+         *  \brief Destructeur
+         *
+         *  Destructeur de la classe Transition
+         */
     ~Transition();
-    int cible;
-    int vocab;
+    int cible; /*!< Numéro de l'état ciblé par la transition */
+    int vocab; /*!< Numéro de l'étiquette portée par la transition */
 
 signals:
-    void eraser(int,int);
+    void eraser(int to,int vocab);
 
 public slots:
+    /*!
+         *  \brief Appelle la fonction eraser permettant de supprimer la transition.
+         */
     void getOff();
 protected:
     void changeEvent(QEvent *e);

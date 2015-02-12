@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Doc Projet TL: /home/aaiiighht/Bureau/projetTL/automate-project/ui_mainwindow.h Source File</title>
+<title>Autoroute: /home/aaiiighht/Bureau/projetTL/automate-project/ui_mainwindow.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="myAppIco.ico"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Doc Projet TL
+   <div id="projectname">Autoroute
    </div>
+   <div id="projectbrief">Apprentissage et gestion d&#39;automates</div>
   </td>
  </tr>
  </tbody>
@@ -208,16 +210,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        actionDeterminiser-&gt;setVisible(<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        actionStandardiser = <span class="keyword">new</span> QAction(MainWindow);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        actionStandardiser-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;actionStandardiser&quot;</span>));</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        actionStandardiser-&gt;setEnabled(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        QIcon icon9;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        icon9.addFile(QStringLiteral(<span class="stringliteral">&quot;:/new/prefix1/Images/standardiser.jpg&quot;</span>), QSize(), QIcon::Normal, QIcon::Off);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        actionStandardiser-&gt;setIcon(icon9);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        actionStandardiser-&gt;setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        actionMinimiser = <span class="keyword">new</span> QAction(MainWindow);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        actionMinimiser-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;actionMinimiser&quot;</span>));</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        QIcon icon10;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        icon10.addFile(QStringLiteral(<span class="stringliteral">&quot;:/new/prefix1/Images/minimiser.jpg&quot;</span>), QSize(), QIcon::Normal, QIcon::Off);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        actionMinimiser-&gt;setIcon(icon10);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        QIcon icon9;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        icon9.addFile(QStringLiteral(<span class="stringliteral">&quot;:/new/prefix1/Images/standardiser.png&quot;</span>), QSize(), QIcon::Normal, QIcon::Off);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        actionStandardiser-&gt;setIcon(icon9);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        actionStandardiser-&gt;setVisible(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        actionMinimiser = <span class="keyword">new</span> QAction(MainWindow);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        actionMinimiser-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;actionMinimiser&quot;</span>));</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        QIcon icon10;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        icon10.addFile(QStringLiteral(<span class="stringliteral">&quot;:/new/prefix1/Images/minimiser.png&quot;</span>), QSize(), QIcon::Normal, QIcon::Off);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        actionMinimiser-&gt;setIcon(icon10);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        actionMinimiser-&gt;setVisible(<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        centralWidget = <span class="keyword">new</span> QWidget(MainWindow);</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        centralWidget-&gt;setObjectName(QStringLiteral(<span class="stringliteral">&quot;centralWidget&quot;</span>));</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        horizontalLayout = <span class="keyword">new</span> QHBoxLayout(centralWidget);</div>
@@ -335,88 +337,89 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        toolBar_2-&gt;addAction(actionOuvrir);</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        toolBar_2-&gt;addAction(actionClean);</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        toolBar_2-&gt;addAction(actionInfo);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        toolBar_2-&gt;addAction(actionFaireProduit);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        toolBar_2-&gt;addAction(actionTest);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        toolBar_2-&gt;addAction(actionDeterminiser);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        toolBar_2-&gt;addAction(actionStandardiser);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        toolBar_2-&gt;addAction(actionMinimiser);</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        retranslateUi(MainWindow);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        QMetaObject::connectSlotsByName(MainWindow);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    } <span class="comment">// setupUi</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">void</span> retranslateUi(QMainWindow *MainWindow)</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        MainWindow-&gt;setWindowTitle(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;MainWindow&quot;</span>, 0));</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        actionFermer-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Fermer&quot;</span>, 0));</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        actionFermer-&gt;setShortcut(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Esc&quot;</span>, 0));</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        actionNew-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Nouveau&quot;</span>, 0));</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor"></span>        actionNew-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Cr\303\251er un automate&quot;</span>, 0));</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor"></span>        actionNew-&gt;setShortcut(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Ctrl+N&quot;</span>, 0));</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        actionFaireProduit-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;FaireProduit&quot;</span>, 0));</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor"></span>        actionFaireProduit-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Faire le produit de deux automates&quot;</span>, 0));</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor"></span>        actionOuvrir-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Ouvrir&quot;</span>, 0));</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor"></span>        actionOuvrir-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Ouvrir un automate&quot;</span>, 0));</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor"></span>        actionOuvrir-&gt;setShortcut(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Ctrl+O&quot;</span>, 0));</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        actionVoir-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;voir&quot;</span>, 0));</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        actionTest-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Test&quot;</span>, 0));</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        actionClean-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Clean&quot;</span>, 0));</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor"></span>        actionClean-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Nettoyer l&#39;interface&quot;</span>, 0));</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor"></span>        actionInfo-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Info&quot;</span>, 0));</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        actionDeterminiser-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Determiniser&quot;</span>, 0));</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor"></span>        actionDeterminiser-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Determiniser L&#39;automate&quot;</span>, 0));</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor"></span>        actionStandardiser-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Standardiser&quot;</span>, 0));</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        actionMinimiser-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Minimiser&quot;</span>, 0));</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor"></span>        actionMinimiser-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Minimiser l&#39;automate&quot;</span>, 0));</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor"></span>        boutonPrec-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Voir l&#39;\303\251tape pr\303\251cedente&quot;</span>, 0));</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor"></span>        boutonPrec-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Pr\303\251c\303\251dent&quot;</span>, 0));</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        boutonPrec-&gt;setShortcut(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Left&quot;</span>, 0));</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor"></span>        boutonSuiv-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Voir l&#39;\303\251tape suivante&quot;</span>, 0));</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor"></span>        boutonSuiv-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Suivant&quot;</span>, 0));</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        boutonSuiv-&gt;setShortcut(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Right&quot;</span>, 0));</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        menuFichier-&gt;setTitle(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Fichier&quot;</span>, 0));</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        toolBar_2-&gt;setWindowTitle(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;toolBar_2&quot;</span>, 0));</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor"></span>        statusBar-&gt;setToolTip(QString());</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifndef QT_NO_STATUSTIP</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor"></span>        statusBar-&gt;setStatusTip(QString());</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">#endif // QT_NO_STATUSTIP</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor"></span>    } <span class="comment">// retranslateUi</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;};</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="keyword">namespace </span>Ui {</div>
-<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="class_ui_1_1_main_window.html">  318</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ui_1_1_main_window.html">MainWindow</a>: <span class="keyword">public</span> <a class="code" href="class_ui___main_window.html">Ui_MainWindow</a> {};</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;} <span class="comment">// namespace Ui</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;QT_END_NAMESPACE</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor">#endif // UI_MAINWINDOW_H</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        toolBar_2-&gt;addSeparator();</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        toolBar_2-&gt;addAction(actionFaireProduit);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        toolBar_2-&gt;addAction(actionTest);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        toolBar_2-&gt;addAction(actionDeterminiser);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        toolBar_2-&gt;addAction(actionStandardiser);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        toolBar_2-&gt;addAction(actionMinimiser);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        retranslateUi(MainWindow);</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        QMetaObject::connectSlotsByName(MainWindow);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    } <span class="comment">// setupUi</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">void</span> retranslateUi(QMainWindow *MainWindow)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        MainWindow-&gt;setWindowTitle(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;MainWindow&quot;</span>, 0));</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        actionFermer-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Fermer&quot;</span>, 0));</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        actionFermer-&gt;setShortcut(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Esc&quot;</span>, 0));</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        actionNew-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Nouveau&quot;</span>, 0));</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor"></span>        actionNew-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Cr\303\251er un automate&quot;</span>, 0));</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor"></span>        actionNew-&gt;setShortcut(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Ctrl+N&quot;</span>, 0));</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        actionFaireProduit-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;FaireProduit&quot;</span>, 0));</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor"></span>        actionFaireProduit-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Faire le produit de deux automates&quot;</span>, 0));</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor"></span>        actionOuvrir-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Ouvrir&quot;</span>, 0));</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor"></span>        actionOuvrir-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Ouvrir un automate&quot;</span>, 0));</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor"></span>        actionOuvrir-&gt;setShortcut(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Ctrl+O&quot;</span>, 0));</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        actionVoir-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;voir&quot;</span>, 0));</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        actionTest-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Test&quot;</span>, 0));</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        actionClean-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Clean&quot;</span>, 0));</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor"></span>        actionClean-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Nettoyer l&#39;interface&quot;</span>, 0));</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor"></span>        actionInfo-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Info&quot;</span>, 0));</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        actionDeterminiser-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Determiniser&quot;</span>, 0));</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor"></span>        actionDeterminiser-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Determiniser L&#39;automate&quot;</span>, 0));</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor"></span>        actionStandardiser-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Standardiser&quot;</span>, 0));</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        actionMinimiser-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Minimiser&quot;</span>, 0));</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="preprocessor"></span>        actionMinimiser-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Minimiser l&#39;automate&quot;</span>, 0));</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="preprocessor"></span>        boutonPrec-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Voir l&#39;\303\251tape pr\303\251cedente&quot;</span>, 0));</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor"></span>        boutonPrec-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Pr\303\251c\303\251dent&quot;</span>, 0));</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        boutonPrec-&gt;setShortcut(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Left&quot;</span>, 0));</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor"></span>        boutonSuiv-&gt;setToolTip(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Voir l&#39;\303\251tape suivante&quot;</span>, 0));</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="preprocessor"></span>        boutonSuiv-&gt;setText(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Suivant&quot;</span>, 0));</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        boutonSuiv-&gt;setShortcut(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Right&quot;</span>, 0));</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        menuFichier-&gt;setTitle(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;Fichier&quot;</span>, 0));</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        toolBar_2-&gt;setWindowTitle(QApplication::translate(<span class="stringliteral">&quot;MainWindow&quot;</span>, <span class="stringliteral">&quot;toolBar_2&quot;</span>, 0));</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">#ifndef QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor"></span>        statusBar-&gt;setToolTip(QString());</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="preprocessor">#endif // QT_NO_TOOLTIP</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifndef QT_NO_STATUSTIP</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor"></span>        statusBar-&gt;setStatusTip(QString());</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor">#endif // QT_NO_STATUSTIP</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor"></span>    } <span class="comment">// retranslateUi</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;};</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="keyword">namespace </span>Ui {</div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="class_ui_1_1_main_window.html">  319</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_ui_1_1_main_window.html">MainWindow</a>: <span class="keyword">public</span> <a class="code" href="class_ui___main_window.html">Ui_MainWindow</a> {};</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;} <span class="comment">// namespace Ui</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;QT_END_NAMESPACE</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="preprocessor">#endif // UI_MAINWINDOW_H</span></div>
 <div class="ttc" id="class_ui___main_window_html"><div class="ttname"><a href="class_ui___main_window.html">Ui_MainWindow</a></div><div class="ttdef"><b>Definition:</b> ui_mainwindow.h:31</div></div>
-<div class="ttc" id="class_ui_1_1_main_window_html"><div class="ttname"><a href="class_ui_1_1_main_window.html">Ui::MainWindow</a></div><div class="ttdef"><b>Definition:</b> ui_mainwindow.h:318</div></div>
+<div class="ttc" id="class_ui_1_1_main_window_html"><div class="ttname"><a href="class_ui_1_1_main_window.html">Ui::MainWindow</a></div><div class="ttdef"><b>Definition:</b> ui_mainwindow.h:319</div></div>
 <div class="ttc" id="class_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdef"><b>Definition:</b> mainwindow.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 8 2015 23:09:32 for Doc Projet TL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 12 2015 16:55:12 for Autoroute by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

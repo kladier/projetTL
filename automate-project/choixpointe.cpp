@@ -1,4 +1,4 @@
-#include "choixpointe.h"
+﻿#include "choixpointe.h"
 #include "ui_choixpointe.h"
 
 choixPointe::choixPointe(QWidget *parent) :
@@ -42,6 +42,5 @@ void choixPointe::resetAffichage(Automate a){
 void choixPointe::sendDad(){
     if((!ui->lesChoix->currentText().isEmpty()) &&( !ui->lineEdit->text().isEmpty() ) ){
         emit add(ui->lesChoix->currentText().toInt(),ui->lineEdit->text().toInt());
-
     }
 }

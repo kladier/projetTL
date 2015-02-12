@@ -1,5 +1,11 @@
-#ifndef ETATRIGHT_H
+﻿#ifndef ETATRIGHT_H
 #define ETATRIGHT_H
+
+/*!
+ * \file etatright.h
+ * \brief Représente la partie sup droite lors de la création d'un automate, la partie listant les transitions d'un état, s'il est final/initial etc.
+
+ */
 
 #include <QWidget>
 #include "automate.h"
@@ -13,18 +19,49 @@ namespace Ui {
 class etatRight : public QWidget {
     Q_OBJECT
 public:
-    etatRight(Automate*,int,QWidget *parent = 0);
+
+    /*!
+         *  \brief Constructeur
+         *
+         *  \param a : automate en cours de construction
+         */
+    etatRight(Automate* a,int,QWidget *parent = 0);
+
+    /*!
+         *  \brief Destructeur
+         */
     ~etatRight();
-    choixPointe* addTrans;
-    Automate* a;
+
+    choixPointe* addTrans; /*!< Pointeur vers l'objet choixPointe permettant de gérer une transition*/
+    Automate* a; /*!< Pointeur vers l'automate en construction*/
+    int numero; /*!< Numéro de l'état*/
+
+    /*!
+       *  \brief Remet à jour la liste dans choixPointe permettant de choisir l'etat cible de la transition
+       *
+       */
     void remplirListChoix();
-    int numero;
     void addVisualTransition(int,int);
     void cleanTrans();
 
 public slots:
-    void addTransition(int,int);
-    void eraseTransition(int,int);
+    /*!
+       *  \brief Ajout d'une transition
+       *
+       * \param to : numero de l'état cible
+       * \param vocab : etiquette de la transition
+       */
+    void addTransition(int to,int vocab);
+
+    /*!
+       *  \brief Suppresion d'une transition
+       *
+       * \param to : numero de l'état cible
+       * \param vocab : etiquette de la transition
+       */
+    void eraseTransition(int to,int vocab);
+
+
     void etatChange();
 
 signals:
@@ -35,7 +72,7 @@ protected:
     void changeEvent(QEvent *e);
 
 private:
-    vector<Transition*> mesTrans;
+    vector<Transition*> mesTrans; /*!< Vecteur des transitions de l'état */
     Ui::etatRight *ui;
 };
 
