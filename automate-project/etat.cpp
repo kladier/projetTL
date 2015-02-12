@@ -132,6 +132,24 @@ bool etat::find_transition(int etiq, etat e){
      return trouve;
  }
 
+bool etat::find_transition(etat e){
+     multimap<int,etat>::iterator it=transition.begin();
+
+     bool trouve=false;
+
+     while(trouve==false && it!=transition.end()){
+
+         if((*it).second==e ){
+             trouve=true;
+         }
+
+         it++;
+     }
+
+     return trouve;
+ }
+
+
 
 bool etat::estDansList(list<etat> liste){
 

@@ -223,6 +223,7 @@
    <addaction name="actionOuvrir"/>
    <addaction name="actionClean"/>
    <addaction name="actionInfo"/>
+   <addaction name="separator"/>
    <addaction name="actionFaireProduit"/>
    <addaction name="actionTest"/>
    <addaction name="actionDeterminiser"/>
@@ -348,30 +349,30 @@
    </property>
   </action>
   <action name="actionStandardiser">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
    <property name="icon">
     <iconset resource="Images.qrc">
-     <normaloff>:/new/prefix1/Images/standardiser.jpg</normaloff>:/new/prefix1/Images/standardiser.jpg</iconset>
+     <normaloff>:/new/prefix1/Images/standardiser.png</normaloff>:/new/prefix1/Images/standardiser.png</iconset>
    </property>
    <property name="text">
     <string>Standardiser</string>
    </property>
    <property name="visible">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
   </action>
   <action name="actionMinimiser">
    <property name="icon">
     <iconset resource="Images.qrc">
-     <normaloff>:/new/prefix1/Images/minimiser.jpg</normaloff>:/new/prefix1/Images/minimiser.jpg</iconset>
+     <normaloff>:/new/prefix1/Images/minimiser.png</normaloff>:/new/prefix1/Images/minimiser.png</iconset>
    </property>
    <property name="text">
     <string>Minimiser</string>
    </property>
    <property name="toolTip">
     <string>Minimiser l'automate</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
    </property>
   </action>
  </widget>

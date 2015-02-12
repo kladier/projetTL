@@ -119,16 +119,16 @@ public:
         actionDeterminiser->setVisible(false);
         actionStandardiser = new QAction(MainWindow);
         actionStandardiser->setObjectName(QStringLiteral("actionStandardiser"));
-        actionStandardiser->setEnabled(true);
         QIcon icon9;
-        icon9.addFile(QStringLiteral(":/new/prefix1/Images/standardiser.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon9.addFile(QStringLiteral(":/new/prefix1/Images/standardiser.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionStandardiser->setIcon(icon9);
-        actionStandardiser->setVisible(true);
+        actionStandardiser->setVisible(false);
         actionMinimiser = new QAction(MainWindow);
         actionMinimiser->setObjectName(QStringLiteral("actionMinimiser"));
         QIcon icon10;
-        icon10.addFile(QStringLiteral(":/new/prefix1/Images/minimiser.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon10.addFile(QStringLiteral(":/new/prefix1/Images/minimiser.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionMinimiser->setIcon(icon10);
+        actionMinimiser->setVisible(false);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         horizontalLayout = new QHBoxLayout(centralWidget);
@@ -246,6 +246,7 @@ public:
         toolBar_2->addAction(actionOuvrir);
         toolBar_2->addAction(actionClean);
         toolBar_2->addAction(actionInfo);
+        toolBar_2->addSeparator();
         toolBar_2->addAction(actionFaireProduit);
         toolBar_2->addAction(actionTest);
         toolBar_2->addAction(actionDeterminiser);

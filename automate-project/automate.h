@@ -225,6 +225,15 @@ public:
      */
     vector <  pair< Automate , string > > minimise();
 
+    /*!
+     *  \brief Renvoit le nombre de transition portant une étiquette différente
+     *
+     * Fonction utilisée dans la minimisation
+     *
+     * \return le nombre de transitions différentes de l'automate
+     */
+    int getNbTransition();
+
 };
 
 /*!
@@ -246,6 +255,8 @@ bool equal(list<etat> &l1 ,list<etat> &l2);
  * \return true s'il y a au moins un état final dans la liste d'états, false sinon
  */
 bool isFinal(list <etat> l);
+
+
 
 
 #endif // AUTOMATE_H

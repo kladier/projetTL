@@ -86,6 +86,7 @@ void MainWindow::getMinimisation() {
     resetUi();
     ui->actionFaireProduit->setVisible(true);
     ui->actionDeterminiser->setVisible(true);
+    ui->actionStandardiser->setVisible(true);
 
     //On netoi l'eventuel vecteur de produit
     monVector.clear();
@@ -114,6 +115,17 @@ void MainWindow::getMinimisation() {
     ui->scrollArea_3->show();
     maVue1->show();
 
+
+    if (a.isDeterministe()==false) {
+        string resMinimise="L'automate n'est pas déterministe, or la minimisation ne peut se faire que sur des automates déterministes.";
+
+        //On affiche ensuite l'aide à droite
+        ui->label->clear();
+        ui->label->show();
+        ui->label->insertPlainText(QString().fromStdString(resMinimise));
+    }
+    else {
+
     //on recupere le vecteur de standardisation
 
         monVectorMinimise  = a.minimise();
@@ -141,7 +153,8 @@ void MainWindow::getMinimisation() {
         //On affiche ensuite l'aide à droite
         ui->label->clear();
         ui->label->show();
-        ui->label->insertPlainText(QString().fromStdString("Hello World"));
+        ui->label->insertPlainText(QString().fromStdString(""));
+    }
         adjust();
 
 }
@@ -150,6 +163,7 @@ void MainWindow::getStandard() {
     resetUi();
     ui->actionFaireProduit->setVisible(true);
     ui->actionDeterminiser->setVisible(true);
+    ui->actionMinimiser->setVisible(true);
 
 
     //On netoi l'eventuel vecteur de produit
@@ -190,7 +204,6 @@ void MainWindow::getStandard() {
         ui->label->clear();
         ui->label->show();
         ui->label->insertPlainText(QString().fromStdString(resStandard));
-        adjust();
     }
     else {
         resStandard=resStandard+"\n L'automate n'est pas standard, nous allons donc le standardiser.";
@@ -222,8 +235,8 @@ void MainWindow::getStandard() {
         ui->label->show();
         string texte = resStandard+monVectorStandard[actuel].second;
         ui->label->insertPlainText(QString().fromStdString(texte));
-        adjust();
     }
+    adjust();
 
 
 }
@@ -248,13 +261,20 @@ void MainWindow::openFile(){
     startLayouting();
     ui->actionFaireProduit->setVisible(true);
     ui->actionStandardiser->setVisible(true);
+    ui->actionDeterminiser->setVisible(true);
+    ui->actionMinimiser->setVisible(true);
     maVue->show();
     adjust();
-    ui->actionDeterminiser->setVisible(true);
+
+
 }
 
 void MainWindow::getProduit(){
     //On recupère l'automate dont on veut le produit.
+    ui->actionMinimiser->setVisible(true);
+    ui->actionStandardiser->setVisible(true);
+    ui->actionDeterminiser->setVisible(true);
+
     dotFileNameB.clear();
     QFileDialog tempFen;
 
@@ -342,6 +362,7 @@ void MainWindow::getProduit(){
     ui->actionFaireProduit->setVisible(false);
     ui->actionDeterminiser->setVisible(true);
     ui->actionStandardiser->setVisible(true);
+    ui->actionMinimiser->setVisible(true);
 
     adjust();
 }
@@ -616,6 +637,28 @@ void MainWindow::getPrecedent(){
     if (monVector.empty()== false){
         out << QString().fromStdString(monVector[actuel].toDot());
     }
+    else if (monVectorStandard.empty()== false) {
+        out << QString().fromStdString(monVectorStandard[actuel].first.toDot());
+        ui->label->clear();
+        for(unsigned int j = 0;j<=actuel;j++){
+            QString texte;
+            string texte2 = monVectorStandard[j].second;
+            QTextStream(&texte)<<"\n--ETAPE "<<(j+1)<<"--\n";
+            ui->label->insertPlainText(texte);
+            ui->label->insertPlainText(QString().fromStdString(texte2));
+        }
+    }
+    else if (monVectorMinimise.empty()== false) {
+        out << QString().fromStdString(monVectorMinimise[actuel].first.toDot());
+        ui->label->clear();
+        for(unsigned int j = 0;j<=actuel;j++){
+            QString texte;
+            string texte2 = monVectorMinimise[j].second;
+            QTextStream(&texte)<<"\n--ETAPE "<<(j+1)<<"--\n";
+            ui->label->insertPlainText(texte);
+            ui->label->insertPlainText(QString().fromStdString(texte2));
+        }
+    }
     else{
         out << QString().fromStdString(monDeterminisme[actuel].first.toDot());
         ui->label->clear();
@@ -675,12 +718,14 @@ void MainWindow::resetUi(){
     ui->scrollArea_2->hide();
     ui->scrollArea_3->hide();
     ui->actionFaireProduit->setVisible(false);
+    ui->actionDeterminiser->setVisible(false);
+    ui->actionMinimiser->setVisible(false);
+    ui->actionStandardiser->setVisible(false);
     maVue->clearFocus();
     maVue->hide();
     maVue1->hide();
     maVue2->hide();
     ui->label->hide();
-    ui->actionDeterminiser->setVisible(false);
 
 }
 
@@ -712,6 +757,8 @@ void MainWindow::info(){
 void MainWindow::getDetermin(){
     resetUi();
     ui->actionFaireProduit->setVisible(true);
+    ui->actionMinimiser->setVisible(true);
+    ui->actionStandardiser->setVisible(true);
     //On netoi l'eventuel vecteur de produit et celui de standardisation
     monVector.clear();
     monVectorStandard.clear();

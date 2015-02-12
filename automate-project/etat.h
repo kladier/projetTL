@@ -127,6 +127,7 @@ public:
      *  \brief Retourne les transitions de l'état
      *
      *  Getter de l'attribut transition.
+     * Le premier membre est l'étiquette de la transition et le deuxieme est l'état ciblé par la transition.
      *
      *  \return Multimap représentant les transitions de l'état
      */
@@ -162,6 +163,16 @@ public:
      *  \return true si cette transition existe, false sinon
      */
     bool find_transition(int etiq, etat e);
+
+    /*!
+     *  \brief Test l'existence d'une transition
+     *
+     *  Teste si la transition allant vers l'état e existe.
+     *
+     *  \param e : l'état d'arrivée de la transition
+     *  \return true si cette transition existe, false sinon
+     */
+    bool find_transition(etat e);
 
     /*!
      *  \brief Test l'état est dans une liste

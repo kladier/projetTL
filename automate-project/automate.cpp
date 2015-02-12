@@ -33,16 +33,65 @@ void Automate::ajoutEtat(etat cible){
     etats.push_back(cible);
 }
 
-bool Automate::isDeterministe(){
+//renvoit le nombre de transition portant une étiquette différente dans un automate
+int Automate::getNbTransition() {
+    vector<int> temp;
     vector<etat>::iterator it;
-    for ( it=etats.begin() ; it != etats.end(); it++ ){
-        if ((*it).isFinal()){
-            return false;
+    for( it=etats.begin() ; it!=etats.end() ; it++){
+        multimap<int,etat> tempTrans=(*it).getTransitions();
+        multimap<int,etat>::iterator it2;
+        for (it2=tempTrans.begin();it2!=tempTrans.end();it2++) {
+            if ((std::find(temp.begin(),temp.end(),it2->first))==temp.end()) {
+                temp.push_back(it2->first);
+            }
         }
     }
 
-return true;
+    return temp.size();
+
+
+  /*  int res;
+    vector<int> temp;
+    for (int i=0;i<etats.size();i++) {
+        for (int j=0;j<etats[i].getTransitions().size();j++) {
+            if ()
+        }
+    }
+
+    res=temp.size();
+    return res;*/
 }
+
+bool Automate::isDeterministe () {
+    //on vérifie déjà qu'il n'y est qu'un seul etat initial
+    int compt2=0;
+    for (unsigned int i=0;i<etats.size();i++) {
+        if (etats[i].isInitial()) {
+            compt2++;
+        }
+    }
+    if (compt2>1) {
+        return false;
+    }
+    //pour chaque état, on va vérifier que chaque lettre a une seule destination ou aucune
+    int nbTransitions=getNbTransition();
+    for (unsigned int i=0;i<etats.size();i++) {
+        for (int j=1;j<nbTransitions+1;j++) {
+            int compt=0;
+            multimap<int,etat> tempTrans=etats[i].getTransitions();
+            multimap<int,etat>::iterator it2;
+            for (it2=tempTrans.begin();it2!=tempTrans.end();it2++) {
+                if(it2->first==j) {
+                    compt++;
+                }
+            }
+            if (compt>1) return false;
+        }
+    }
+    return true;
+}
+
+
 
 
 etat* Automate::getEtat(int number){
@@ -218,26 +267,27 @@ string Automate::toDot(){
     return out;
 }
 
-//renvoit true si au moins une transition va vers cette état et partant d'un autre état que lui-meme, false sinon
-bool transitionExist(etat e, Automate a) {
-    vector<etat>::iterator it;
-    for( it=a.etats.begin() ; it!=a.etats.end() ; it++) {
-       multimap<int,etat> tempTrans=(*it).getTransitions();
-       multimap<int,etat>::iterator it2;
-       for (it2=tempTrans.begin();it2!=tempTrans.end();it2++) {
-            if (it->numero!=e.numero&&it2->second.numero==e.numero) {
-                return true;
-            }
-       }
-    }
-    return false;
-}
 
+//cette fonction est à modifier/tester, elle ne fonctionne pas.
 void Automate::supprimerEtatsNonAccessibles(Automate * a) {
-    vector<etat>::iterator it;
-    for( it=a->etats.begin() ; it!=a->etats.end() ; it++) {
-        if (transitionExist(*it,*a)==false) {
-            supprimeEtat(*it,a);
+    //on vérifie que chaque état soit accessible
+    for (unsigned int i=0;i<a->etats.size();i++) {
+        if (a->etats[i].isInitial()==false) {
+            bool continuer=true;
+            int j=0;
+            while (continuer&&j<a->etats.size()) {
+               //les transitions allant vers lui même ne compte pas
+                if (j!=i) {
+                    //on va maintenant vérifier s'il y a une transition de j qui va vers i
+                    if (a->etats[j].find_transition(a->etats[i])) {
+                        continuer=false;
+                    }
+                }
+                j++;
+            }
+            if (continuer) {
+                supprimeEtat(a->etats[i],a);
+            }
         }
     }
 }
@@ -601,7 +651,7 @@ vector <  pair< Automate , string > > Automate::standardise() {
     int numEtatCurr=0;
 
     // 1) On crée le nouvel etat initial
-    etat *e = new etat(numEtatCurr,false,false);
+    etat *e = new etat(numEtatCurr,true,false);
     numEtatCurr++;
     e->setName("0'");
     temp->ajoutEtat(*e);
@@ -669,8 +719,9 @@ vector <  pair< Automate , string > > Automate::standardise() {
 
     res.push_back(pair< Automate , string >(*temp,"on reproduit toutes les anciennes transitions (sauf les cas particuliers, c'est déjà géré avant).\n"));
 
+    //Il faut modifier la fonction supprimerEtatsNonAccessibles()
     // 6) on supprime désormais tout les etats non accessibles
-    supprimerEtatsNonAccessibles(temp);
+   supprimerEtatsNonAccessibles(temp);
     res.push_back(pair< Automate , string >(*temp,"On supprime désormais tout les états non accessibles, c'est-à-dire tout les états non initiaux vers lesquelles aucune transition ne pointe.\n L'automate est maintenant standardiser.\n"));
 
     return res;
