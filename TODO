@@ -1,21 +1,7 @@
-Les chiffres correspondent à l'ordre de priorité : 
-1 -> a faire en premier
-2 -> a faire avant le rendu
-3 -> a faire éventuellement si on a plus rien à faire (donc pas grave si c'est pas fait)
 
 	
-	
-	1) [OK] finir la documentation pour les classes
-	
-	1) commencer a faire sérieusement le compte-rendu !
+	1) finir le compte-rendu !
 		
-	1) [OK] finir la standardisation (un bug a réglé et quelques retouches à faire)
-	
-	1) [OK] s'occuper des bugs du bouton Suivant 
-	
-	1) [OK] S'occuper du bouton Précédent (pas encore fait)
-	
-	
 	 2) Continuer la doc, surtout la page principale : ajouter les définitions, le depot git du projet et expliquez très vite fait comment y accéder (renvoyer un lien vers un tuto git)
 	 
 	 2) menu Fichier à mettre en place (déjà existant dans les mainwindow.ui)
@@ -26,18 +12,10 @@ Les chiffres correspondent à l'ordre de priorité :
 	
 	2) possibilité d'agrandir / réduire les différents blocs (bloc texte à droite, automate initial et automate final)
 	
-	2) [OK] problème repéré quand on fait plusieurs opérations sans fermer l'UI, par exemple : si on fait une minimisation puis une déterminisation, le bouton suivant nous renvoit vers la minimisation
-	
-	2) [OK] boutons standardiser & minimiser en png (permet de mettre aucun fond dans les images au lieu du blanc)
-	
-	2) [OK] pas afficher les boutons standardiser et minimiser dès le démarrage mais seulement quand il y a un automate
-		d'une manière générale, revoir l'affichage des boutons dans les différents cas : quand on fait le produit, pas possible d'afficher ce bouton
 	
 	2) pour la minimisation, il faut afficher un peu mieux le tableau, avec E0 E1 ... en haut pour état 0 état 1 ...
 		B0 (bilan 0) et pour les lignes concernant les transitions mettre "en 1" (pour la ligne concernant les transitions étiquettées avec le num 1
 	
-
-	2) [OK] empêcher la minimisation pour les automates qui ne sont pas déterministe (compléter la fonction isDeterministe)
 	
 	2) faire en sorte qu'il soit simple d'ajouter une fonctionnalité sur les automates dans le code. Détailler comment faire dans la doc (page principale)
 	
@@ -46,23 +24,4 @@ Les chiffres correspondent à l'ordre de priorité :
 	2) refaire des exemples et en supprimer, faire en sorte que les exemples soient adaptés
 	
 	2) faire une fonction isComplet() et compléter la minimisation pour pouvoir minimiser des automates déterministes mais non complet
-	
-	3) faire une fonction pour compléter un automate ainsi qu'une fonction isComplet().
-	
-	3) dans l'idéal il faudrait revoir un peu l'UI, càd faire 2 grosses colonnes pour l'automate initial (à gauche par exemple) et l'automate minimisé ou déterminisé à droite. Faire un bloc qui prend toute la longueur de la page en bas et permettant d'afficher le texte. 
-	D'une manière générale, réfléchir à ce que l'affichage soit mieux fait : on voit rarement correctement l'automate inital quand on fait une opération
-	
-	3) empêcher d'enregistrer un automate s'il n'est pas conforme à nos normes : - les transitions ont des numéros >= 1 et qui se suivent (1,2,3) et pas (1,3,4)
-										    - les numéros des états commencent à 0 et se suivent 
-										    - pas plus de 8/10 états par automate
-	C'est pas le plus urgent mais ca permettrait d'empêcher beaucoup de bugs et de crash du logiciel.
-	
-
-	3) pour toutes les opérations, revoir les textes, faire en sorte que ce soit bien du pas à pas et que les explications soient claires et précises pour des étudiants.
-	
-	
-	3) commenter plus le code + énormément d'améliorations / d'optimisation qu'on pourrait apporter au code
-	
-	
-	3) possibilité d'enregistrer les automates qui ont été généré par une opération
 	
