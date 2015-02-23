@@ -37,7 +37,7 @@ public:
          *
          *  Destructeur de la classe Etat
          */
-    etat(){};
+    ~etat();
 
     /*!
      *  \brief Retourne le numéro de l'état

@@ -23,53 +23,124 @@
 \contentsline {subsubsection}{\numberline {5.1.1.3}$\sim $\discretionary {-}{}{}Automate}{10}{subsubsection.5.1.1.3}
 \contentsline {subsection}{\numberline {5.1.2}Member Function Documentation}{10}{subsection.5.1.2}
 \contentsline {subsubsection}{\numberline {5.1.2.1}ajout\discretionary {-}{}{}Etat}{10}{subsubsection.5.1.2.1}
-\contentsline {subsubsection}{\numberline {5.1.2.2}ajout\discretionary {-}{}{}Transition}{10}{subsubsection.5.1.2.2}
-\contentsline {subsubsection}{\numberline {5.1.2.3}cible\discretionary {-}{}{}\_\discretionary {-}{}{}transition}{11}{subsubsection.5.1.2.3}
-\contentsline {subsubsection}{\numberline {5.1.2.4}determinise}{11}{subsubsection.5.1.2.4}
-\contentsline {subsubsection}{\numberline {5.1.2.5}get\discretionary {-}{}{}Alpha}{11}{subsubsection.5.1.2.5}
-\contentsline {subsubsection}{\numberline {5.1.2.6}get\discretionary {-}{}{}Etat}{11}{subsubsection.5.1.2.6}
-\contentsline {subsubsection}{\numberline {5.1.2.7}get\discretionary {-}{}{}Etats}{12}{subsubsection.5.1.2.7}
-\contentsline {subsubsection}{\numberline {5.1.2.8}get\discretionary {-}{}{}Tab\discretionary {-}{}{}Transitions}{12}{subsubsection.5.1.2.8}
-\contentsline {subsubsection}{\numberline {5.1.2.9}is\discretionary {-}{}{}Deterministe}{12}{subsubsection.5.1.2.9}
-\contentsline {subsubsection}{\numberline {5.1.2.10}is\discretionary {-}{}{}Standard}{12}{subsubsection.5.1.2.10}
-\contentsline {subsubsection}{\numberline {5.1.2.11}minimise}{12}{subsubsection.5.1.2.11}
-\contentsline {subsubsection}{\numberline {5.1.2.12}produit}{13}{subsubsection.5.1.2.12}
-\contentsline {subsubsection}{\numberline {5.1.2.13}standardise}{13}{subsubsection.5.1.2.13}
-\contentsline {subsubsection}{\numberline {5.1.2.14}supprime\discretionary {-}{}{}Etat}{13}{subsubsection.5.1.2.14}
-\contentsline {subsubsection}{\numberline {5.1.2.15}supprime\discretionary {-}{}{}Etat}{13}{subsubsection.5.1.2.15}
-\contentsline {subsubsection}{\numberline {5.1.2.16}supprimer\discretionary {-}{}{}Etats\discretionary {-}{}{}Non\discretionary {-}{}{}Accessibles}{13}{subsubsection.5.1.2.16}
-\contentsline {subsubsection}{\numberline {5.1.2.17}to\discretionary {-}{}{}Dot}{14}{subsubsection.5.1.2.17}
-\contentsline {subsection}{\numberline {5.1.3}Member Data Documentation}{14}{subsection.5.1.3}
-\contentsline {subsubsection}{\numberline {5.1.3.1}etats}{14}{subsubsection.5.1.3.1}
-\contentsline {section}{\numberline {5.2}choix\discretionary {-}{}{}Pointe Class Reference}{14}{section.5.2}
-\contentsline {section}{\numberline {5.3}Ui\discretionary {-}{}{}:\discretionary {-}{}{}:choix\discretionary {-}{}{}Pointe Class Reference}{15}{section.5.3}
-\contentsline {section}{\numberline {5.4}Ui\discretionary {-}{}{}:\discretionary {-}{}{}:Create\discretionary {-}{}{}Automate Class Reference}{15}{section.5.4}
-\contentsline {section}{\numberline {5.5}Create\discretionary {-}{}{}Automate Class Reference}{15}{section.5.5}
-\contentsline {section}{\numberline {5.6}etat Class Reference}{16}{section.5.6}
-\contentsline {section}{\numberline {5.7}etat\discretionary {-}{}{}Left Class Reference}{17}{section.5.7}
-\contentsline {section}{\numberline {5.8}Ui\discretionary {-}{}{}:\discretionary {-}{}{}:etat\discretionary {-}{}{}Left Class Reference}{18}{section.5.8}
-\contentsline {section}{\numberline {5.9}Ui\discretionary {-}{}{}:\discretionary {-}{}{}:etat\discretionary {-}{}{}Right Class Reference}{18}{section.5.9}
-\contentsline {section}{\numberline {5.10}etat\discretionary {-}{}{}Right Class Reference}{18}{section.5.10}
-\contentsline {section}{\numberline {5.11}Ui\discretionary {-}{}{}:\discretionary {-}{}{}:Main\discretionary {-}{}{}Window Class Reference}{19}{section.5.11}
-\contentsline {section}{\numberline {5.12}Main\discretionary {-}{}{}Window Class Reference}{20}{section.5.12}
-\contentsline {section}{\numberline {5.13}qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}choix\discretionary {-}{}{}Pointe\discretionary {-}{}{}\_\discretionary {-}{}{}t Struct Reference}{21}{section.5.13}
-\contentsline {section}{\numberline {5.14}qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Automate\discretionary {-}{}{}\_\discretionary {-}{}{}t Struct Reference}{21}{section.5.14}
-\contentsline {section}{\numberline {5.15}qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}etat\discretionary {-}{}{}Left\discretionary {-}{}{}\_\discretionary {-}{}{}t Struct Reference}{21}{section.5.15}
-\contentsline {section}{\numberline {5.16}qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}etat\discretionary {-}{}{}Right\discretionary {-}{}{}\_\discretionary {-}{}{}t Struct Reference}{21}{section.5.16}
-\contentsline {section}{\numberline {5.17}qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Main\discretionary {-}{}{}Window\discretionary {-}{}{}\_\discretionary {-}{}{}t Struct Reference}{21}{section.5.17}
-\contentsline {section}{\numberline {5.18}qt\discretionary {-}{}{}\_\discretionary {-}{}{}meta\discretionary {-}{}{}\_\discretionary {-}{}{}stringdata\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Transition\discretionary {-}{}{}\_\discretionary {-}{}{}t Struct Reference}{22}{section.5.18}
-\contentsline {section}{\numberline {5.19}Ui\discretionary {-}{}{}:\discretionary {-}{}{}:Transition Class Reference}{22}{section.5.19}
-\contentsline {section}{\numberline {5.20}Transition Class Reference}{22}{section.5.20}
-\contentsline {section}{\numberline {5.21}Ui\discretionary {-}{}{}\_\discretionary {-}{}{}choix\discretionary {-}{}{}Pointe Class Reference}{23}{section.5.21}
-\contentsline {section}{\numberline {5.22}Ui\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Automate Class Reference}{24}{section.5.22}
-\contentsline {section}{\numberline {5.23}Ui\discretionary {-}{}{}\_\discretionary {-}{}{}etat\discretionary {-}{}{}Left Class Reference}{24}{section.5.23}
-\contentsline {section}{\numberline {5.24}Ui\discretionary {-}{}{}\_\discretionary {-}{}{}etat\discretionary {-}{}{}Right Class Reference}{25}{section.5.24}
-\contentsline {section}{\numberline {5.25}Ui\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Main\discretionary {-}{}{}Window Class Reference}{26}{section.5.25}
-\contentsline {section}{\numberline {5.26}Ui\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Transition Class Reference}{27}{section.5.26}
-\contentsline {chapter}{\numberline {6}File Documentation}{29}{chapter.6}
-\contentsline {section}{\numberline {6.1}/home/aaiiighht/\discretionary {-}{}{}Bureau/projet\discretionary {-}{}{}T\discretionary {-}{}{}L/automate-\/project/automate.h File Reference}{29}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{29}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Function Documentation}{29}{subsection.6.1.2}
-\contentsline {subsubsection}{\numberline {6.1.2.1}equal}{29}{subsubsection.6.1.2.1}
-\contentsline {subsubsection}{\numberline {6.1.2.2}is\discretionary {-}{}{}Final}{30}{subsubsection.6.1.2.2}
-\contentsline {chapter}{Index}{31}{section*.59}
+\contentsline {subsubsection}{\numberline {5.1.2.2}ajout\discretionary {-}{}{}Transition}{11}{subsubsection.5.1.2.2}
+\contentsline {subsubsection}{\numberline {5.1.2.3}cible\discretionary {-}{}{}\_\discretionary {-}{}{}transition}{12}{subsubsection.5.1.2.3}
+\contentsline {subsubsection}{\numberline {5.1.2.4}determinise}{12}{subsubsection.5.1.2.4}
+\contentsline {subsubsection}{\numberline {5.1.2.5}get\discretionary {-}{}{}Alpha}{12}{subsubsection.5.1.2.5}
+\contentsline {subsubsection}{\numberline {5.1.2.6}get\discretionary {-}{}{}Etat}{12}{subsubsection.5.1.2.6}
+\contentsline {subsubsection}{\numberline {5.1.2.7}get\discretionary {-}{}{}Etats}{13}{subsubsection.5.1.2.7}
+\contentsline {subsubsection}{\numberline {5.1.2.8}get\discretionary {-}{}{}Nb\discretionary {-}{}{}Transition}{13}{subsubsection.5.1.2.8}
+\contentsline {subsubsection}{\numberline {5.1.2.9}get\discretionary {-}{}{}Tab\discretionary {-}{}{}Transitions}{13}{subsubsection.5.1.2.9}
+\contentsline {subsubsection}{\numberline {5.1.2.10}is\discretionary {-}{}{}Deterministe}{13}{subsubsection.5.1.2.10}
+\contentsline {subsubsection}{\numberline {5.1.2.11}is\discretionary {-}{}{}Standard}{13}{subsubsection.5.1.2.11}
+\contentsline {subsubsection}{\numberline {5.1.2.12}minimise}{14}{subsubsection.5.1.2.12}
+\contentsline {subsubsection}{\numberline {5.1.2.13}produit}{14}{subsubsection.5.1.2.13}
+\contentsline {subsubsection}{\numberline {5.1.2.14}standardise}{14}{subsubsection.5.1.2.14}
+\contentsline {subsubsection}{\numberline {5.1.2.15}supprime\discretionary {-}{}{}Etat}{14}{subsubsection.5.1.2.15}
+\contentsline {subsubsection}{\numberline {5.1.2.16}supprime\discretionary {-}{}{}Etat}{14}{subsubsection.5.1.2.16}
+\contentsline {subsubsection}{\numberline {5.1.2.17}supprimer\discretionary {-}{}{}Etats\discretionary {-}{}{}Non\discretionary {-}{}{}Accessibles}{15}{subsubsection.5.1.2.17}
+\contentsline {subsubsection}{\numberline {5.1.2.18}to\discretionary {-}{}{}Dot}{15}{subsubsection.5.1.2.18}
+\contentsline {subsection}{\numberline {5.1.3}Member Data Documentation}{15}{subsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.3.1}etats}{15}{subsubsection.5.1.3.1}
+\contentsline {section}{\numberline {5.2}choix\discretionary {-}{}{}Pointe Class Reference}{15}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Constructor \& Destructor Documentation}{16}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}choix\discretionary {-}{}{}Pointe}{16}{subsubsection.5.2.1.1}
+\contentsline {subsection}{\numberline {5.2.2}Member Function Documentation}{16}{subsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.1}change\discretionary {-}{}{}Event}{16}{subsubsection.5.2.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2.2}reset\discretionary {-}{}{}Affichage}{16}{subsubsection.5.2.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.3}send\discretionary {-}{}{}Dad}{16}{subsubsection.5.2.2.3}
+\contentsline {section}{\numberline {5.3}Create\discretionary {-}{}{}Automate Class Reference}{17}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Constructor \& Destructor Documentation}{18}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Create\discretionary {-}{}{}Automate}{18}{subsubsection.5.3.1.1}
+\contentsline {subsection}{\numberline {5.3.2}Member Function Documentation}{18}{subsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.2.1}ajout\discretionary {-}{}{}Etat}{18}{subsubsection.5.3.2.1}
+\contentsline {subsubsection}{\numberline {5.3.2.2}change\discretionary {-}{}{}State}{18}{subsubsection.5.3.2.2}
+\contentsline {subsubsection}{\numberline {5.3.2.3}display\discretionary {-}{}{}Right}{18}{subsubsection.5.3.2.3}
+\contentsline {subsubsection}{\numberline {5.3.2.4}supprime\discretionary {-}{}{}Etat}{18}{subsubsection.5.3.2.4}
+\contentsline {subsection}{\numberline {5.3.3}Member Data Documentation}{19}{subsection.5.3.3}
+\contentsline {subsubsection}{\numberline {5.3.3.1}a}{19}{subsubsection.5.3.3.1}
+\contentsline {subsubsection}{\numberline {5.3.3.2}left}{19}{subsubsection.5.3.3.2}
+\contentsline {subsubsection}{\numberline {5.3.3.3}ma\discretionary {-}{}{}Vue}{19}{subsubsection.5.3.3.3}
+\contentsline {subsubsection}{\numberline {5.3.3.4}right}{19}{subsubsection.5.3.3.4}
+\contentsline {section}{\numberline {5.4}etat Class Reference}{19}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Constructor \& Destructor Documentation}{20}{subsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.1.1}etat}{20}{subsubsection.5.4.1.1}
+\contentsline {subsubsection}{\numberline {5.4.1.2}etat}{20}{subsubsection.5.4.1.2}
+\contentsline {subsubsection}{\numberline {5.4.1.3}etat}{20}{subsubsection.5.4.1.3}
+\contentsline {subsection}{\numberline {5.4.2}Member Function Documentation}{21}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}ajout\discretionary {-}{}{}Transition}{21}{subsubsection.5.4.2.1}
+\contentsline {subsubsection}{\numberline {5.4.2.2}est\discretionary {-}{}{}Dans\discretionary {-}{}{}List}{21}{subsubsection.5.4.2.2}
+\contentsline {subsubsection}{\numberline {5.4.2.3}find\discretionary {-}{}{}\_\discretionary {-}{}{}transition}{21}{subsubsection.5.4.2.3}
+\contentsline {subsubsection}{\numberline {5.4.2.4}find\discretionary {-}{}{}\_\discretionary {-}{}{}transition}{21}{subsubsection.5.4.2.4}
+\contentsline {subsubsection}{\numberline {5.4.2.5}get\discretionary {-}{}{}Name}{22}{subsubsection.5.4.2.5}
+\contentsline {subsubsection}{\numberline {5.4.2.6}get\discretionary {-}{}{}Name\discretionary {-}{}{}F}{22}{subsubsection.5.4.2.6}
+\contentsline {subsubsection}{\numberline {5.4.2.7}get\discretionary {-}{}{}Number}{22}{subsubsection.5.4.2.7}
+\contentsline {subsubsection}{\numberline {5.4.2.8}get\discretionary {-}{}{}Transitions}{22}{subsubsection.5.4.2.8}
+\contentsline {subsubsection}{\numberline {5.4.2.9}is\discretionary {-}{}{}Final}{22}{subsubsection.5.4.2.9}
+\contentsline {subsubsection}{\numberline {5.4.2.10}is\discretionary {-}{}{}Initial}{22}{subsubsection.5.4.2.10}
+\contentsline {subsubsection}{\numberline {5.4.2.11}operator!=}{23}{subsubsection.5.4.2.11}
+\contentsline {subsubsection}{\numberline {5.4.2.12}operator==}{23}{subsubsection.5.4.2.12}
+\contentsline {subsubsection}{\numberline {5.4.2.13}rename\discretionary {-}{}{}Transition}{23}{subsubsection.5.4.2.13}
+\contentsline {subsubsection}{\numberline {5.4.2.14}set\discretionary {-}{}{}Final}{23}{subsubsection.5.4.2.14}
+\contentsline {subsubsection}{\numberline {5.4.2.15}set\discretionary {-}{}{}Initial}{23}{subsubsection.5.4.2.15}
+\contentsline {subsubsection}{\numberline {5.4.2.16}set\discretionary {-}{}{}Name}{24}{subsubsection.5.4.2.16}
+\contentsline {subsubsection}{\numberline {5.4.2.17}set\discretionary {-}{}{}Number}{24}{subsubsection.5.4.2.17}
+\contentsline {subsubsection}{\numberline {5.4.2.18}supprime\discretionary {-}{}{}Transition}{24}{subsubsection.5.4.2.18}
+\contentsline {subsection}{\numberline {5.4.3}Member Data Documentation}{24}{subsection.5.4.3}
+\contentsline {subsubsection}{\numberline {5.4.3.1}numero}{24}{subsubsection.5.4.3.1}
+\contentsline {section}{\numberline {5.5}etat\discretionary {-}{}{}Left Class Reference}{24}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Constructor \& Destructor Documentation}{25}{subsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.1.1}etat\discretionary {-}{}{}Left}{25}{subsubsection.5.5.1.1}
+\contentsline {subsection}{\numberline {5.5.2}Member Data Documentation}{25}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}numero}{25}{subsubsection.5.5.2.1}
+\contentsline {section}{\numberline {5.6}etat\discretionary {-}{}{}Right Class Reference}{26}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Constructor \& Destructor Documentation}{26}{subsection.5.6.1}
+\contentsline {subsubsection}{\numberline {5.6.1.1}etat\discretionary {-}{}{}Right}{26}{subsubsection.5.6.1.1}
+\contentsline {subsection}{\numberline {5.6.2}Member Function Documentation}{27}{subsection.5.6.2}
+\contentsline {subsubsection}{\numberline {5.6.2.1}add\discretionary {-}{}{}Transition}{27}{subsubsection.5.6.2.1}
+\contentsline {subsubsection}{\numberline {5.6.2.2}erase\discretionary {-}{}{}Transition}{27}{subsubsection.5.6.2.2}
+\contentsline {subsection}{\numberline {5.6.3}Member Data Documentation}{27}{subsection.5.6.3}
+\contentsline {subsubsection}{\numberline {5.6.3.1}a}{27}{subsubsection.5.6.3.1}
+\contentsline {subsubsection}{\numberline {5.6.3.2}add\discretionary {-}{}{}Trans}{27}{subsubsection.5.6.3.2}
+\contentsline {subsubsection}{\numberline {5.6.3.3}numero}{27}{subsubsection.5.6.3.3}
+\contentsline {section}{\numberline {5.7}Main\discretionary {-}{}{}Window Class Reference}{27}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Constructor \& Destructor Documentation}{28}{subsection.5.7.1}
+\contentsline {subsubsection}{\numberline {5.7.1.1}Main\discretionary {-}{}{}Window}{28}{subsubsection.5.7.1.1}
+\contentsline {subsubsection}{\numberline {5.7.1.2}$\sim $\discretionary {-}{}{}Main\discretionary {-}{}{}Window}{29}{subsubsection.5.7.1.2}
+\contentsline {subsection}{\numberline {5.7.2}Member Function Documentation}{29}{subsection.5.7.2}
+\contentsline {subsubsection}{\numberline {5.7.2.1}creer\discretionary {-}{}{}Auto}{29}{subsubsection.5.7.2.1}
+\contentsline {subsubsection}{\numberline {5.7.2.2}get\discretionary {-}{}{}Determin}{29}{subsubsection.5.7.2.2}
+\contentsline {subsubsection}{\numberline {5.7.2.3}get\discretionary {-}{}{}Minimisation}{29}{subsubsection.5.7.2.3}
+\contentsline {subsubsection}{\numberline {5.7.2.4}get\discretionary {-}{}{}Precedent}{29}{subsubsection.5.7.2.4}
+\contentsline {subsubsection}{\numberline {5.7.2.5}get\discretionary {-}{}{}Produit}{29}{subsubsection.5.7.2.5}
+\contentsline {subsubsection}{\numberline {5.7.2.6}get\discretionary {-}{}{}Standard}{29}{subsubsection.5.7.2.6}
+\contentsline {subsubsection}{\numberline {5.7.2.7}get\discretionary {-}{}{}Suivant}{29}{subsubsection.5.7.2.7}
+\contentsline {subsubsection}{\numberline {5.7.2.8}info}{30}{subsubsection.5.7.2.8}
+\contentsline {subsubsection}{\numberline {5.7.2.9}open\discretionary {-}{}{}File}{30}{subsubsection.5.7.2.9}
+\contentsline {subsubsection}{\numberline {5.7.2.10}reset\discretionary {-}{}{}Ui}{30}{subsubsection.5.7.2.10}
+\contentsline {section}{\numberline {5.8}Transition Class Reference}{30}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Constructor \& Destructor Documentation}{31}{subsection.5.8.1}
+\contentsline {subsubsection}{\numberline {5.8.1.1}Transition}{31}{subsubsection.5.8.1.1}
+\contentsline {subsubsection}{\numberline {5.8.1.2}$\sim $\discretionary {-}{}{}Transition}{31}{subsubsection.5.8.1.2}
+\contentsline {subsection}{\numberline {5.8.2}Member Data Documentation}{31}{subsection.5.8.2}
+\contentsline {subsubsection}{\numberline {5.8.2.1}cible}{31}{subsubsection.5.8.2.1}
+\contentsline {subsubsection}{\numberline {5.8.2.2}vocab}{31}{subsubsection.5.8.2.2}
+\contentsline {chapter}{\numberline {6}File Documentation}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}/home/aaiiighht/\discretionary {-}{}{}Bureau/projet\discretionary {-}{}{}T\discretionary {-}{}{}L/automate-\/project/automate.h File Reference}{33}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{33}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Function Documentation}{33}{subsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.2.1}equal}{33}{subsubsection.6.1.2.1}
+\contentsline {subsubsection}{\numberline {6.1.2.2}is\discretionary {-}{}{}Final}{34}{subsubsection.6.1.2.2}
+\contentsline {section}{\numberline {6.2}/home/aaiiighht/\discretionary {-}{}{}Bureau/projet\discretionary {-}{}{}T\discretionary {-}{}{}L/automate-\/project/choixpointe.h File Reference}{34}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{34}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}/home/aaiiighht/\discretionary {-}{}{}Bureau/projet\discretionary {-}{}{}T\discretionary {-}{}{}L/automate-\/project/createautomate.h File Reference}{34}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{35}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.4}/home/aaiiighht/\discretionary {-}{}{}Bureau/projet\discretionary {-}{}{}T\discretionary {-}{}{}L/automate-\/project/etatleft.h File Reference}{35}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{35}{subsection.6.4.1}
+\contentsline {section}{\numberline {6.5}/home/aaiiighht/\discretionary {-}{}{}Bureau/projet\discretionary {-}{}{}T\discretionary {-}{}{}L/automate-\/project/etatright.h File Reference}{35}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{35}{subsection.6.5.1}
+\contentsline {section}{\numberline {6.6}/home/aaiiighht/\discretionary {-}{}{}Bureau/projet\discretionary {-}{}{}T\discretionary {-}{}{}L/automate-\/project/mainwindow.h File Reference}{35}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{36}{subsection.6.6.1}
+\contentsline {section}{\numberline {6.7}/home/aaiiighht/\discretionary {-}{}{}Bureau/projet\discretionary {-}{}{}T\discretionary {-}{}{}L/automate-\/project/transition.h File Reference}{36}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{36}{subsection.6.7.1}
+\contentsline {chapter}{Index}{37}{section*.41}

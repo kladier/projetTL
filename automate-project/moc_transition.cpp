@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Transition_t {
-    QByteArrayData data[4];
-    char stringdata[27];
+    QByteArrayData data[6];
+    char stringdata[36];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,9 +32,11 @@ static const qt_meta_stringdata_Transition_t qt_meta_stringdata_Transition = {
 QT_MOC_LITERAL(0, 0, 10),
 QT_MOC_LITERAL(1, 11, 6),
 QT_MOC_LITERAL(2, 18, 0),
-QT_MOC_LITERAL(3, 19, 6)
+QT_MOC_LITERAL(3, 19, 2),
+QT_MOC_LITERAL(4, 22, 5),
+QT_MOC_LITERAL(5, 28, 6)
     },
-    "Transition\0eraser\0\0getOff\0"
+    "Transition\0eraser\0\0to\0vocab\0getOff\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -55,10 +57,10 @@ static const uint qt_meta_data_Transition[] = {
        1,    2,   24,    2, 0x06,
 
  // slots: name, argc, parameters, tag, flags
-       3,    0,   29,    2, 0x0a,
+       5,    0,   29,    2, 0x0a,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    2,    2,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    4,
 
  // slots: parameters
     QMetaType::Void,

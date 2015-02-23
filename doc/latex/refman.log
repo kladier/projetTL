@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.23)  8 FEB 2015 22:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.23)  17 FEB 2015 16:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1040,20 +1040,16 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
  [3
 
 ]
-Underfull \vbox (badness 1968) has occurred while \output is active []
-
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 70.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 71.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 70.
- [4])
+(Font)              scaled to size 6.29996pt on input line 71.
+ [4] [5])
 \tf@toc=\write5
 \openout5 = `refman.toc'.
 
 
-[5] [6
-
-]
+[6]
 Package hyperref Info: Option `pageanchor' set `true' on input line 130.
 
 Chapter 1.
@@ -1099,6 +1095,7 @@ comptes rendus 2010 et 2015.
 
 [1
 
+
 ]) [2]
 Chapter 2.
 (./hierarchy.tex) [3
@@ -1113,50 +1110,7 @@ Chapter 3.
 Chapter 4.
 (./files.tex
 
-LaTeX Warning: Reference `choixpointe_8h' on page 7 undefined on input line 4.
-
-
-LaTeX Warning: Reference `createautomate_8h' on page 7 undefined on input line 
-5.
-
-
 LaTeX Warning: Reference `etat_8h' on page 7 undefined on input line 6.
-
-
-LaTeX Warning: Reference `etatleft_8h' on page 7 undefined on input line 7.
-
-
-LaTeX Warning: Reference `etatright_8h' on page 7 undefined on input line 8.
-
-
-LaTeX Warning: Reference `mainwindow_8h' on page 7 undefined on input line 9.
-
-
-LaTeX Warning: Reference `transition_8h' on page 7 undefined on input line 10.
-
-
-LaTeX Warning: Reference `ui__choixpointe_8h' on page 7 undefined on input line
- 11.
-
-
-LaTeX Warning: Reference `ui__createautomate_8h' on page 7 undefined on input l
-ine 12.
-
-
-LaTeX Warning: Reference `ui__etatleft_8h' on page 7 undefined on input line 13
-.
-
-
-LaTeX Warning: Reference `ui__etatright_8h' on page 7 undefined on input line 1
-4.
-
-
-LaTeX Warning: Reference `ui__mainwindow_8h' on page 7 undefined on input line 
-15.
-
-
-LaTeX Warning: Reference `ui__transition_8h' on page 7 undefined on input line 
-16.
 
 ) [7] [8
 
@@ -1169,16 +1123,195 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 8.
  [9]
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 61.
+(Font)              scaled to size 8.99994pt on input line 63.
 LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <10> not available
-(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 72.
+(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 74.
 LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
-(Font)              scaled to size 8.99994pt on input line 72.
+(Font)              scaled to size 8.99994pt on input line 74.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 81.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 83.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 81.
+(Font)              scaled to size 8.99994pt on input line 83.
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 92.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 92.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 92.
+
+[10] [11]
+Underfull \hbox (badness 10000) detected at line 163
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 179
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 195
+[][][]
+ []
+
+[12]
+Underfull \hbox (badness 10000) detected at line 216
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 230
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 246
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 262
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 278
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 294
+[][][]
+ []
+
+[13]
+Underfull \hbox (badness 10000) detected at line 310
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 331
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 347
+[][][]
+ []
+
+[14]
+Underfull \hbox (badness 10000) detected at line 420
+[][][]
+ []
+
+) (./classchoix_pointe.tex
+<classchoix_pointe.pdf, id=959, 501.875pt x 472.3547pt>
+File: classchoix_pointe.pdf Graphic file (type pdf)
+
+<use classchoix_pointe.pdf>
+Package pdftex.def Info: classchoix_pointe.pdf used on input line 7.
+(pdftex.def)             Requested size: 60.4598pt x 56.9055pt.
+ [15 <./classchoix_pointe.pdf>]
+
+LaTeX Font Warning: Font shape `T1/pcr/bc/it' undefined
+(Font)              using `T1/pcr/m/n' instead on input line 45.
+
+
+LaTeX Font Warning: Font shape `T1/pcr/bc/n' undefined
+(Font)              using `T1/pcr/m/n' instead on input line 59.
+
+[16]) (./class_create_automate.tex
+<class_create_automate.pdf, id=991, 501.875pt x 365.00366pt>
+File: class_create_automate.pdf Graphic file (type pdf)
+
+<use class_create_automate.pdf>
+Package pdftex.def Info: class_create_automate.pdf used on input line 7.
+(pdftex.def)             Requested size: 78.24164pt x 56.9055pt.
+ [17 <./class_create_automate.pdf>] [18])
+(./classetat.tex [19] [20]
+Underfull \hbox (badness 10000) detected at line 155
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 179
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 200
+[][][]
+ []
+
+[21]
+Underfull \hbox (badness 10000) detected at line 216
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 232
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 248
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 264
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 280
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 296
+[][][]
+ []
+
+[22]
+Underfull \hbox (badness 10000) detected at line 317
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 338
+[][][]
+ []
+
+[23]) (./classetat_left.tex
+<classetat_left.pdf, id=1130, 501.875pt x 590.44589pt>
+File: classetat_left.pdf Graphic file (type pdf)
+
+<use classetat_left.pdf>
+Package pdftex.def Info: classetat_left.pdf used on input line 7.
+(pdftex.def)             Requested size: 48.36783pt x 56.9055pt.
+ [24 <./classetat_left.pdf>]) (./classetat_right.tex
+<classetat_right.pdf, id=1146, 501.875pt x 590.44589pt>
+File: classetat_right.pdf Graphic file (type pdf)
+
+<use classetat_right.pdf>
+Package pdftex.def Info: classetat_right.pdf used on input line 7.
+(pdftex.def)             Requested size: 48.36783pt x 56.9055pt.
+ [25] [26 <./classetat_right.pdf>])
+(./class_main_window.tex
+<class_main_window.pdf, id=1209, 501.875pt x 393.6306pt>
+File: class_main_window.pdf Graphic file (type pdf)
+
+<use class_main_window.pdf>
+Package pdftex.def Info: class_main_window.pdf used on input line 7.
+(pdftex.def)             Requested size: 72.55176pt x 56.9055pt.
+ [27 <./class_main_window.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 90.
@@ -1191,210 +1324,27 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 90.
 
-[10]
-Underfull \hbox (badness 10000) detected at line 161
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 177
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 193
-[][][]
- []
-
-[11]
-Underfull \hbox (badness 10000) detected at line 214
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 228
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 244
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 260
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 276
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 292
-[][][]
- []
-
-[12]
-Underfull \hbox (badness 10000) detected at line 313
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 329
-[][][]
- []
-
-[13]
-Underfull \hbox (badness 10000) detected at line 402
-[][][]
- []
-
-) (./classchoix_pointe.tex
-<classchoix_pointe.pdf, id=650, 501.875pt x 472.3547pt>
-File: classchoix_pointe.pdf Graphic file (type pdf)
-
-<use classchoix_pointe.pdf>
-Package pdftex.def Info: classchoix_pointe.pdf used on input line 7.
-(pdftex.def)             Requested size: 60.4598pt x 56.9055pt.
- [14 <./classchoix_pointe.pdf>])
-(./class_ui_1_1choix_pointe.tex
-<class_ui_1_1choix_pointe.pdf, id=668, 501.875pt x 389.80632pt>
-File: class_ui_1_1choix_pointe.pdf Graphic file (type pdf)
-
-<use class_ui_1_1choix_pointe.pdf>
-Package pdftex.def Info: class_ui_1_1choix_pointe.pdf used on input line 7.
-(pdftex.def)             Requested size: 73.26395pt x 56.9055pt.
-) (./class_ui_1_1_create_automate.tex
-<class_ui_1_1_create_automate.pdf, id=669, 501.875pt x 313.67188pt>
-File: class_ui_1_1_create_automate.pdf Graphic file (type pdf)
-
-<use class_ui_1_1_create_automate.pdf>
-Package pdftex.def Info: class_ui_1_1_create_automate.pdf used on input line 7.
-
-(pdftex.def)             Requested size: 91.04579pt x 56.9055pt.
-) (./class_create_automate.tex
-<class_create_automate.pdf, id=670, 501.875pt x 365.00366pt>
-File: class_create_automate.pdf Graphic file (type pdf)
-
-<use class_create_automate.pdf>
-Package pdftex.def Info: class_create_automate.pdf used on input line 7.
-(pdftex.def)             Requested size: 78.24164pt x 56.9055pt.
- [15 <./class_ui_1_1choix_pointe.pdf> <./class_ui_1_1_create_automate.pdf>]) (.
-/classetat.tex [16 <./class_create_automate.pdf>]) (./classetat_left.tex <class
-etat_left.pdf, id=741, 501.875pt x 590.44589pt>
-File: classetat_left.pdf Graphic file (type pdf)
-
-<use classetat_left.pdf>
-Package pdftex.def Info: classetat_left.pdf used on input line 7.
-(pdftex.def)             Requested size: 48.36783pt x 56.9055pt.
- [17 <./classetat_left.pdf>])
-(./class_ui_1_1etat_left.tex
-<class_ui_1_1etat_left.pdf, id=777, 501.875pt x 508.22873pt>
-File: class_ui_1_1etat_left.pdf Graphic file (type pdf)
-
-<use class_ui_1_1etat_left.pdf>
-Package pdftex.def Info: class_ui_1_1etat_left.pdf used on input line 7.
-(pdftex.def)             Requested size: 56.18663pt x 56.9055pt.
-) (./class_ui_1_1etat_right.tex
-<class_ui_1_1etat_right.pdf, id=778, 501.875pt x 466.8642pt>
-File: class_ui_1_1etat_right.pdf Graphic file (type pdf)
-
-<use class_ui_1_1etat_right.pdf>
-Package pdftex.def Info: class_ui_1_1etat_right.pdf used on input line 7.
-(pdftex.def)             Requested size: 61.17198pt x 56.9055pt.
-) (./classetat_right.tex
-<classetat_right.pdf, id=779, 501.875pt x 590.44589pt>
-File: classetat_right.pdf Graphic file (type pdf)
-
-<use classetat_right.pdf>
-Package pdftex.def Info: classetat_right.pdf used on input line 7.
-(pdftex.def)             Requested size: 48.36783pt x 56.9055pt.
- [18 <./class_ui_1_1etat_left.pdf> <./class_ui_1_1etat_right.pdf>]) (./class_ui
-_1_1_main_window.tex
-<class_ui_1_1_main_window.pdf, id=801, 501.875pt x 365.00366pt>
-File: class_ui_1_1_main_window.pdf Graphic file (type pdf)
-
-<use class_ui_1_1_main_window.pdf>
-Package pdftex.def Info: class_ui_1_1_main_window.pdf used on input line 7.
-(pdftex.def)             Requested size: 78.24164pt x 56.9055pt.
- [19 <./classetat_right.pdf> <./class_ui_1_1_main_window.pdf>]) (./class_main_w
-indow.tex
-<class_main_window.pdf, id=835, 501.875pt x 393.6306pt>
-File: class_main_window.pdf Graphic file (type pdf)
-
-<use class_main_window.pdf>
-Package pdftex.def Info: class_main_window.pdf used on input line 7.
-(pdftex.def)             Requested size: 72.55176pt x 56.9055pt.
-) (./structqt__meta__stringdata__choix_pointe__t.tex [20 <./class_main_window.p
-df>])
-(./structqt__meta__stringdata___create_automate__t.tex)
-(./structqt__meta__stringdata__etat_left__t.tex)
-(./structqt__meta__stringdata__etat_right__t.tex)
-(./structqt__meta__stringdata___main_window__t.tex [21])
-(./structqt__meta__stringdata___transition__t.tex)
-(./class_ui_1_1_transition.tex
-<class_ui_1_1_transition.pdf, id=889, 501.875pt x 431.7229pt>
-File: class_ui_1_1_transition.pdf Graphic file (type pdf)
-
-<use class_ui_1_1_transition.pdf>
-Package pdftex.def Info: class_ui_1_1_transition.pdf used on input line 7.
-(pdftex.def)             Requested size: 66.14967pt x 56.9055pt.
-) (./class_transition.tex
-<class_transition.pdf, id=890, 501.875pt x 535.33pt>
+[28] [29]) (./class_transition.tex
+<class_transition.pdf, id=1267, 501.875pt x 535.33pt>
 File: class_transition.pdf Graphic file (type pdf)
 
 <use class_transition.pdf>
 Package pdftex.def Info: class_transition.pdf used on input line 7.
 (pdftex.def)             Requested size: 53.34552pt x 56.9055pt.
- [22 <./class_ui_1_1_transition.pdf> <./class_transition.pdf>]) (./class_ui__ch
-oix_pointe.tex
-<class_ui__choix_pointe.pdf, id=912, 501.875pt x 389.80632pt>
-File: class_ui__choix_pointe.pdf Graphic file (type pdf)
+ [30 <./class_transition.pdf>]
 
-<use class_ui__choix_pointe.pdf>
-Package pdftex.def Info: class_ui__choix_pointe.pdf used on input line 7.
-(pdftex.def)             Requested size: 73.26395pt x 56.9055pt.
-) (./class_ui___create_automate.tex
-<class_ui___create_automate.pdf, id=915, 501.875pt x 313.67188pt>
-File: class_ui___create_automate.pdf Graphic file (type pdf)
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 73.
 
-<use class_ui___create_automate.pdf>
-Package pdftex.def Info: class_ui___create_automate.pdf used on input line 7.
-(pdftex.def)             Requested size: 91.04579pt x 56.9055pt.
- [23 <./class_ui__choix_pointe.pdf>])
-(./class_ui__etat_left.tex
-<class_ui__etat_left.pdf, id=948, 501.875pt x 508.22873pt>
-File: class_ui__etat_left.pdf Graphic file (type pdf)
 
-<use class_ui__etat_left.pdf>
-Package pdftex.def Info: class_ui__etat_left.pdf used on input line 7.
-(pdftex.def)             Requested size: 56.18663pt x 56.9055pt.
- [24 <./class_ui___create_automate.pdf> <./class_ui__etat_left.pdf>]) (./class_
-ui__etat_right.tex
-<class_ui__etat_right.pdf, id=989, 501.875pt x 466.8642pt>
-File: class_ui__etat_right.pdf Graphic file (type pdf)
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sim' on input line 73.
 
-<use class_ui__etat_right.pdf>
-Package pdftex.def Info: class_ui__etat_right.pdf used on input line 7.
-(pdftex.def)             Requested size: 61.17198pt x 56.9055pt.
-) (./class_ui___main_window.tex
-<class_ui___main_window.pdf, id=992, 501.875pt x 365.00366pt>
-File: class_ui___main_window.pdf Graphic file (type pdf)
 
-<use class_ui___main_window.pdf>
-Package pdftex.def Info: class_ui___main_window.pdf used on input line 7.
-(pdftex.def)             Requested size: 78.24164pt x 56.9055pt.
- [25 <./class_ui__etat_right.pdf>])
-(./class_ui___transition.tex
-<class_ui___transition.pdf, id=1032, 501.875pt x 431.7229pt>
-File: class_ui___transition.pdf Graphic file (type pdf)
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 73.
 
-<use class_ui___transition.pdf>
-Package pdftex.def Info: class_ui___transition.pdf used on input line 7.
-(pdftex.def)             Requested size: 66.14967pt x 56.9055pt.
- [26 <./class_ui___main_window.pdf>]) [27 <./class_ui___transition.pdf>] [28
+) [31] [32
 
 ]
 Chapter 6.
@@ -1403,7 +1353,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--18
 
  []
 
-[29]
+[33]
 Underfull \hbox (badness 10000) detected at line 50
 [][][]
  []
@@ -1413,36 +1363,101 @@ Underfull \hbox (badness 10000) detected at line 71
 [][][]
  []
 
-) [30] (./refman.ind
-Overfull \hbox (20.84975pt too wide) in paragraph at lines 5--7
+) (./choixpointe_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+
+ []
+
+) (./createautomate_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--16
+
+ []
+
+) (./etatleft_8h.tex [34]
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+) (./etatright_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+
+ []
+
+) (./mainwindow_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--18
+
+ []
+
+[35]) (./transition_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+) [36] (./refman.ind
+Overfull \hbox (20.84975pt too wide) in paragraph at lines 9--11
 []\T1/phv/m/n/10 /home/aaiiighht/-Bureau/projet-T-L/automate-project/automate.-
 
  []
 
-[31
+
+Overfull \hbox (28.85071pt too wide) in paragraph at lines 11--13
+[]\T1/phv/m/n/10 /home/aaiiighht/-Bureau/projet-T-L/automate-project/choixpoint
+e.-
+ []
+
+
+Overfull \hbox (45.86026pt too wide) in paragraph at lines 13--15
+[]\T1/phv/m/n/10 /home/aaiiighht/-Bureau/projet-T-L/automate-project/createauto
+mate.-
+ []
+
+
+Overfull \hbox (16.11554pt too wide) in paragraph at lines 17--19
+[]\T1/phv/m/n/10 /home/aaiiighht/-Bureau/projet-T-L/automate-project/etatright.
+-
+ []
+
+
+Overfull \hbox (32.29773pt too wide) in paragraph at lines 19--21
+[]\T1/phv/m/n/10 /home/aaiiighht/-Bureau/projet-T-L/automate-project/mainwindow
+.-
+ []
+
+
+Overfull \hbox (19.88667pt too wide) in paragraph at lines 21--23
+[]\T1/phv/m/n/10 /home/aaiiighht/-Bureau/projet-T-L/automate-project/transition
+.-
+ []
+
+[37
+
+] [38] [39
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
  (./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 178.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 178.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 8254AB3715BEDFD9337F73402424AA47;13604.
+(rerunfilecheck)             Checksum: E1FC186FC2F67A50E0B475DAEED1D6EB;23867.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 178.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
  ) 
 Here is how much of TeX's memory you used:
- 13011 strings out of 493304
- 199333 string characters out of 6139871
- 266802 words of memory out of 5000000
- 15791 multiletter control sequences out of 15000+600000
+ 12873 strings out of 493304
+ 187411 string characters out of 6139871
+ 264144 words of memory out of 5000000
+ 15723 multiletter control sequences out of 15000+600000
  69694 words of font info for 84 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 48i,12n,43p,470b,514s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,13n,43p,501b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
@@ -1451,10 +1466,10 @@ urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 /uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (37 pages, 194636 bytes).
+Output written on refman.pdf (45 pages, 196346 bytes).
 PDF statistics:
- 1311 PDF objects out of 1440 (max. 8388607)
- 1215 compressed objects within 13 object streams
- 418 named destinations out of 1000 (max. 500000)
- 691 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1637 PDF objects out of 1728 (max. 8388607)
+ 1554 compressed objects within 16 object streams
+ 372 named destinations out of 1000 (max. 500000)
+ 1199 words of extra memory for PDF output out of 10000 (max. 10000000)
 

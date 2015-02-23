@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_etatRight_t {
-    QByteArrayData data[7];
-    char stringdata[79];
+    QByteArrayData data[9];
+    char stringdata[88];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,11 +34,14 @@ QT_MOC_LITERAL(1, 10, 13),
 QT_MOC_LITERAL(2, 24, 0),
 QT_MOC_LITERAL(3, 25, 11),
 QT_MOC_LITERAL(4, 37, 13),
-QT_MOC_LITERAL(5, 51, 15),
-QT_MOC_LITERAL(6, 67, 10)
+QT_MOC_LITERAL(5, 51, 2),
+QT_MOC_LITERAL(6, 54, 5),
+QT_MOC_LITERAL(7, 60, 15),
+QT_MOC_LITERAL(8, 76, 10)
     },
     "etatRight\0refreshNeeded\0\0etatChanges\0"
-    "addTransition\0eraseTransition\0etatChange\0"
+    "addTransition\0to\0vocab\0eraseTransition\0"
+    "etatChange\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -61,16 +64,16 @@ static const uint qt_meta_data_etatRight[] = {
 
  // slots: name, argc, parameters, tag, flags
        4,    2,   49,    2, 0x0a,
-       5,    2,   54,    2, 0x0a,
-       6,    0,   59,    2, 0x0a,
+       7,    2,   54,    2, 0x0a,
+       8,    0,   59,    2, 0x0a,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int,    2,
     QMetaType::Void, QMetaType::Int, QMetaType::Bool, QMetaType::Bool,    2,    2,    2,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    2,    2,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    2,    2,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    5,    6,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    5,    6,
     QMetaType::Void,
 
        0        // eod
