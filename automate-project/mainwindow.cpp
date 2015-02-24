@@ -20,6 +20,8 @@ MainWindow::MainWindow(QWidget *parent) :
     maVue2 = new QSvgWidget(ui->vue2);
     maVue = new QSvgWidget(ui->vueTomate);
 
+    ui->menuBar->setVisible(true);
+
     ui->boutonSuiv->hide();
     ui->boutonPrec->hide();
     ui->scrollArea_2->hide();
