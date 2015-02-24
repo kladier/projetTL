@@ -128,34 +128,45 @@ void MainWindow::getMinimisation() {
     }
     else {
 
-    //on recupere le vecteur de standardisation
+        if (!a.isComplet()) {
+            string resMinimise="L'automate n'est pas complet, or la minimisation d'automates déterministes non complets n'est pas pour l'instant pris en charge par le logiciel.";
 
-        monVectorMinimise  = a.minimise();
+            //On affiche ensuite l'aide à droite
+            ui->label->clear();
+            ui->label->show();
+            ui->label->insertPlainText(QString().fromStdString(resMinimise));
+        }
+        else {
 
-        //On affiche le premier element en bas
+        //on recupere le vecteur de standardisation
 
-        ProcessT.close();
+            monVectorMinimise  = a.minimise();
 
-        QFile tmp2("./tmp.dot");
-        tmp2.open(QFile::WriteOnly);
+            //On affiche le premier element en bas
 
-        QTextStream out2(&tmp2);
-        out2 << QString().fromStdString(monVectorMinimise[0].first.toDot());
-        tmp2.close();
+            ProcessT.close();
 
-        ProcessT.start("dot",procargs);
-        ProcessT.waitForFinished();
+            QFile tmp2("./tmp.dot");
+            tmp2.open(QFile::WriteOnly);
 
-        maVue->load(ProcessT.readAll());
-        maVue->show();
-        ui->boutonPrec->show();
-        ui->boutonSuiv->show();
+            QTextStream out2(&tmp2);
+            out2 << QString().fromStdString(monVectorMinimise[0].first.toDot());
+            tmp2.close();
+
+            ProcessT.start("dot",procargs);
+            ProcessT.waitForFinished();
+
+            maVue->load(ProcessT.readAll());
+            maVue->show();
+            ui->boutonPrec->show();
+            ui->boutonSuiv->show();
 
 
-        //On affiche ensuite l'aide à droite
-        ui->label->clear();
-        ui->label->show();
-        ui->label->insertPlainText(QString().fromStdString(""));
+            //On affiche ensuite l'aide à droite
+            ui->label->clear();
+            ui->label->show();
+            ui->label->insertPlainText(QString().fromStdString(""));
+        }
     }
         adjust();
 

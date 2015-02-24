@@ -154,7 +154,6 @@ public:
         QIcon icon12;
         icon12.addFile(QStringLiteral(":/new/prefix1/Images/next.png"), QSize(), QIcon::Normal, QIcon::Off);
         boutonSuiv->setIcon(icon12);
-        boutonSuiv->setIconSize(QSize(16, 16));
 
         TopLayout->addWidget(boutonSuiv);
 

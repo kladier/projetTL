@@ -18,6 +18,8 @@ Automate::Automate(const Automate &a){
     etats=a.etats;
 }
 
+
+
 void Automate::ajoutEtat(etat cible){
     vector<etat>::iterator it;
 
@@ -61,6 +63,20 @@ int Automate::getNbTransition() {
     res=temp.size();
     return res;*/
 }
+
+
+bool Automate::isComplet() {
+    int nbTrans=getTabTransitions().size();
+    for (int i=1;i<nbTrans+1;i++) {
+        for (unsigned int j=0;j<etats.size();j++) {
+            if (cible_transition(j,i)==-1) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
 
 bool Automate::isDeterministe () {
     //on vérifie déjà qu'il n'y est qu'un seul etat initial
@@ -274,7 +290,7 @@ void Automate::supprimerEtatsNonAccessibles(Automate * a) {
     for (unsigned int i=0;i<a->etats.size();i++) {
         if (a->etats[i].isInitial()==false) {
             bool continuer=true;
-            int j=0;
+            unsigned int j=0;
             while (continuer&&j<a->etats.size()) {
                //les transitions allant vers lui même ne compte pas
                 if (j!=i) {
@@ -438,8 +454,12 @@ int trouverIndiceColonne(vector< vector<int> > tabMinimisation,int numEtat) {
     return -1;
 }
 
-string toStringTabMini(vector< vector<int> > tabMinimisation) {
+string Automate::toStringTabMini(vector< vector<int> > tabMinimisation) {
     string affichageTableau;
+    for (unsigned int k=0;k<etats.size();k++) {
+        affichageTableau+="  E"+etats[k].getName()+" |";
+    }
+    affichageTableau+="\n";
     for (unsigned int i=0;i<tabMinimisation[0].size();i++) {
         for (unsigned int j=0;j<tabMinimisation.size();j++) {
             affichageTableau=affichageTableau+"  "+convertIntToString(tabMinimisation[j][i])+"   |";

@@ -80,6 +80,16 @@ public:
     bool isDeterministe();
 
     /*!
+     *  \brief Test si un automate est déterministe
+     *
+     *  Permet de tester si un automate est déterministe (voir définition d'un automate déterministe).
+     *
+     *  \return true si l'automate est déterministe,
+     *  false sinon
+     */
+    bool isComplet();
+
+    /*!
      *  \brief Test si un automate est standard
      *
      *  Permet de tester si un automate est standard (voir définition d'un automate standard).
@@ -224,6 +234,10 @@ public:
      * \return le vecteur servant pour la minimisation
      */
     vector <  pair< Automate , string > > minimise();
+
+
+    string toStringTabMini(vector< vector<int> > tabMinimisation);
+
 
     /*!
      *  \brief Renvoit le nombre de transition portant une étiquette différente

@@ -61,12 +61,6 @@
            <iconset resource="Images.qrc">
             <normaloff>:/new/prefix1/Images/next.png</normaloff>:/new/prefix1/Images/next.png</iconset>
           </property>
-          <property name="iconSize">
-           <size>
-            <width>16</width>
-            <height>16</height>
-           </size>
-          </property>
           <property name="shortcut">
            <string>Right</string>
           </property>
