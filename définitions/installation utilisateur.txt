@@ -1,0 +1,3 @@
+	Windows : l'installation requiert que vous possédiez QTCreator (téléchargable http://www.qt.io/download/) et Graphviz (http://www.graphviz.org/Download..php). Il vous suffit ensuite de lancer le setup autoroute_setup.exe et de suivre l'installation. 
+
+	Linux : Il faut télécharger QTCreator (téléchargable http://www.qt.io/download/). Il faut ensuite ouvrir le fichier autoroute.pro dans QT (automate-project/autoroute.pro). Enfin cliquer sur la flèche verte en bas à gauche et le programme se lancera
