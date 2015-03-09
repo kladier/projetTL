@@ -10,7 +10,7 @@
  *
  * \section install_sec Installation du logiciel pour les utilisateurs
  *
- * Bla Bla Bla
+ *
  *
  * \section dev_sec Pour les développeurs
  *
