@@ -1,3 +1,0 @@
-
-	En informatique théorique, et plus particulièrement en théorie des automates, la minimisation d'un automate fini déterministe est l'opération qui consiste à transformer un automate fini déterministe donné en un automate fini déterministe ayant le nombre minimal d'états et qui reconnaît le même langage rationnel.
-	En clair pour minimiser un automate, il est nécessaire qu'il soit déterministe. La minimisation permet de reduire le nombre d'états d'un automate sans changer le langage qu'il reconnait.

@@ -1,1 +1,0 @@
-	Un automate est dit standard lorsqu'il ne possède qu'un seul état initial, et qu'aucune transition n'arrive sur cet état.

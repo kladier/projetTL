@@ -1,3 +1,0 @@
-
-	La déterminisation permet d'éliminer les redondances dans les transitions d'un automate. Cette opération transforme un automate fini en un automate reconnaissant le même langage, qui pour chaque lettre du langage propose au plus une transition utilisant cette lettre.
-	Il est toujours possible, à partir d'un automate fini non déterministe A, de construire un automate fini déterministe A' reconnaissant le même langage.
