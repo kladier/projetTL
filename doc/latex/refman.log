@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.23)  17 FEB 2015 16:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.23)  11 MAR 2015 23:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1049,7 +1049,9 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 \openout5 = `refman.toc'.
 
 
-[6]
+[6] [7] [8
+
+]
 Package hyperref Info: Option `pageanchor' set `true' on input line 130.
 
 Chapter 1.
@@ -1069,34 +1071,34 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 6.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 6.
+(Font)              scaled to size 10.79993pt on input line 5.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 10.79993pt on input line 6.
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 9.
+(Font)              scaled to size 10.79993pt on input line 5.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 11.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 9.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 22.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 22.
+(Font)              scaled to size 8.99994pt on input line 11.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+[1
+
+]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 24.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 24.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (360.75641pt too wide) in paragraph at lines 22--22
+Overfull \hbox (360.75641pt too wide) in paragraph at lines 24--24
 []   \T1/pcr/m/n/8 - doc/ : vous trouverez ici deux dossiers (html et latex) co
 rrespondant à deux formats de la documentation. Il y aussi dans ce dossier les 
 comptes rendus 2010 et 2015. 
  []
 
-[1
-
-
-]) [2]
+) [2]
 Chapter 2.
 (./hierarchy.tex) [3
 
@@ -1123,75 +1125,75 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 8.
  [9]
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 63.
+(Font)              scaled to size 8.99994pt on input line 68.
 LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <10> not available
-(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 74.
+(Font)              Font shape `T1/phv/bc/sl' tried instead on input line 79.
 LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
-(Font)              scaled to size 8.99994pt on input line 74.
+(Font)              scaled to size 8.99994pt on input line 79.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 83.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 88.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 83.
+(Font)              scaled to size 8.99994pt on input line 88.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 92.
+(hyperref)                removing `math shift' on input line 97.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sim' on input line 92.
+(hyperref)                removing `\sim' on input line 97.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 92.
+(hyperref)                removing `math shift' on input line 97.
 
-[10] [11]
-Underfull \hbox (badness 10000) detected at line 163
+[10]
+Underfull \hbox (badness 10000) detected at line 168
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 179
+Underfull \hbox (badness 10000) detected at line 184
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 195
+Underfull \hbox (badness 10000) detected at line 200
+[][][]
+ []
+
+[11]
+Underfull \hbox (badness 10000) detected at line 221
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 235
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 251
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 267
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 283
 [][][]
  []
 
 [12]
-Underfull \hbox (badness 10000) detected at line 216
+Underfull \hbox (badness 10000) detected at line 299
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 230
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 246
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 262
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 278
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 294
-[][][]
- []
-
-[13]
-Underfull \hbox (badness 10000) detected at line 310
+Underfull \hbox (badness 10000) detected at line 315
 [][][]
  []
 
@@ -1201,23 +1203,28 @@ Underfull \hbox (badness 10000) detected at line 331
  []
 
 
-Underfull \hbox (badness 10000) detected at line 347
+Underfull \hbox (badness 10000) detected at line 352
 [][][]
  []
 
-[14]
-Underfull \hbox (badness 10000) detected at line 420
+
+Underfull \hbox (badness 10000) detected at line 368
+[][][]
+ []
+
+[13]
+Underfull \hbox (badness 10000) detected at line 441
 [][][]
  []
 
 ) (./classchoix_pointe.tex
-<classchoix_pointe.pdf, id=959, 501.875pt x 472.3547pt>
+<classchoix_pointe.pdf, id=981, 501.875pt x 472.3547pt>
 File: classchoix_pointe.pdf Graphic file (type pdf)
 
 <use classchoix_pointe.pdf>
 Package pdftex.def Info: classchoix_pointe.pdf used on input line 7.
 (pdftex.def)             Requested size: 60.4598pt x 56.9055pt.
- [15 <./classchoix_pointe.pdf>]
+ [14]
 
 LaTeX Font Warning: Font shape `T1/pcr/bc/it' undefined
 (Font)              using `T1/pcr/m/n' instead on input line 45.
@@ -1226,20 +1233,20 @@ LaTeX Font Warning: Font shape `T1/pcr/bc/it' undefined
 LaTeX Font Warning: Font shape `T1/pcr/bc/n' undefined
 (Font)              using `T1/pcr/m/n' instead on input line 59.
 
-[16]) (./class_create_automate.tex
-<class_create_automate.pdf, id=991, 501.875pt x 365.00366pt>
+[15 <./classchoix_pointe.pdf>]) (./class_create_automate.tex
+<class_create_automate.pdf, id=1014, 501.875pt x 365.00366pt>
 File: class_create_automate.pdf Graphic file (type pdf)
 
 <use class_create_automate.pdf>
 Package pdftex.def Info: class_create_automate.pdf used on input line 7.
 (pdftex.def)             Requested size: 78.24164pt x 56.9055pt.
- [17 <./class_create_automate.pdf>] [18])
-(./classetat.tex [19] [20]
+ [16 <./class_create_automate.pdf>] [17])
+(./classetat.tex [18] [19]
 Underfull \hbox (badness 10000) detected at line 155
 [][][]
  []
 
-
+[20]
 Underfull \hbox (badness 10000) detected at line 179
 [][][]
  []
@@ -1249,7 +1256,7 @@ Underfull \hbox (badness 10000) detected at line 200
 [][][]
  []
 
-[21]
+
 Underfull \hbox (badness 10000) detected at line 216
 [][][]
  []
@@ -1264,7 +1271,7 @@ Underfull \hbox (badness 10000) detected at line 248
 [][][]
  []
 
-
+[21]
 Underfull \hbox (badness 10000) detected at line 264
 [][][]
  []
@@ -1279,7 +1286,7 @@ Underfull \hbox (badness 10000) detected at line 296
 [][][]
  []
 
-[22]
+
 Underfull \hbox (badness 10000) detected at line 317
 [][][]
  []
@@ -1289,23 +1296,23 @@ Underfull \hbox (badness 10000) detected at line 338
 [][][]
  []
 
-[23]) (./classetat_left.tex
-<classetat_left.pdf, id=1130, 501.875pt x 590.44589pt>
+[22] [23]) (./classetat_left.tex
+<classetat_left.pdf, id=1157, 501.875pt x 590.44589pt>
 File: classetat_left.pdf Graphic file (type pdf)
 
 <use classetat_left.pdf>
 Package pdftex.def Info: classetat_left.pdf used on input line 7.
 (pdftex.def)             Requested size: 48.36783pt x 56.9055pt.
  [24 <./classetat_left.pdf>]) (./classetat_right.tex
-<classetat_right.pdf, id=1146, 501.875pt x 590.44589pt>
+<classetat_right.pdf, id=1185, 501.875pt x 590.44589pt>
 File: classetat_right.pdf Graphic file (type pdf)
 
 <use classetat_right.pdf>
 Package pdftex.def Info: classetat_right.pdf used on input line 7.
 (pdftex.def)             Requested size: 48.36783pt x 56.9055pt.
- [25] [26 <./classetat_right.pdf>])
+ [25 <./classetat_right.pdf>] [26])
 (./class_main_window.tex
-<class_main_window.pdf, id=1209, 501.875pt x 393.6306pt>
+<class_main_window.pdf, id=1235, 501.875pt x 393.6306pt>
 File: class_main_window.pdf Graphic file (type pdf)
 
 <use class_main_window.pdf>
@@ -1324,14 +1331,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 90.
 
-[28] [29]) (./class_transition.tex
-<class_transition.pdf, id=1267, 501.875pt x 535.33pt>
+[28]) (./class_transition.tex
+<class_transition.pdf, id=1289, 501.875pt x 535.33pt>
 File: class_transition.pdf Graphic file (type pdf)
 
 <use class_transition.pdf>
 Package pdftex.def Info: class_transition.pdf used on input line 7.
 (pdftex.def)             Requested size: 53.34552pt x 56.9055pt.
- [30 <./class_transition.pdf>]
+ [29]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 73.
@@ -1344,7 +1351,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 73.
 
-) [31] [32
+[30 <./class_transition.pdf>]) [31] [32
 
 ]
 Chapter 6.
@@ -1440,7 +1447,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: E1FC186FC2F67A50E0B475DAEED1D6EB;23867.
+(rerunfilecheck)             Checksum: 02D3D3E263B19098B6B335B7C47B238F;24198.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1451,13 +1458,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
  ) 
 Here is how much of TeX's memory you used:
- 12873 strings out of 493304
- 187411 string characters out of 6139871
- 264144 words of memory out of 5000000
- 15723 multiletter control sequences out of 15000+600000
- 69694 words of font info for 84 fonts, out of 8000000 for 9000
+ 12891 strings out of 493304
+ 187795 string characters out of 6139871
+ 264334 words of memory out of 5000000
+ 15730 multiletter control sequences out of 15000+600000
+ 71524 words of font info for 88 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 48i,13n,43p,501b,524s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,12n,43p,501b,532s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
@@ -1466,10 +1473,10 @@ urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 /uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (45 pages, 196346 bytes).
+Output written on refman.pdf (47 pages, 199440 bytes).
 PDF statistics:
- 1637 PDF objects out of 1728 (max. 8388607)
- 1554 compressed objects within 16 object streams
- 372 named destinations out of 1000 (max. 500000)
- 1199 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1672 PDF objects out of 1728 (max. 8388607)
+ 1587 compressed objects within 16 object streams
+ 379 named destinations out of 1000 (max. 500000)
+ 1223 words of extra memory for PDF output out of 10000 (max. 10000000)
 

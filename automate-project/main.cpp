@@ -10,7 +10,13 @@
  *
  * \section install_sec Installation du logiciel pour les utilisateurs
  *
+ * \subsection windows Windows :
+ * Installer qt5, graphviz puis le setup d'autoroute que vous trouverez dans le dossier exe.
  *
+ * \subsection linux Linux :
+ * Installer qt5 et graphviz.
+ * Lancer qt5 et ouvrez un projet, sélectionnez le fichier autoroute.pro dans le dossier automate-project.
+ * Cliquez ensuite sur la flèche verte (Run) en bas à gauche de la fenêtre.
  *
  * \section dev_sec Pour les développeurs
  *
@@ -52,9 +58,28 @@
  *  \section definitions Définitions
  *
  * \subsection minimisation Minimisation d'un automate
+ *
+ * La minimisation d'un automate fini déterministe est l'opération qui consiste à transformer
+ * un automate fini déterministe donné en un automate fini déterministe ayant le nombre minimal d'états et
+ * qui reconnaît le même langage rationnel.
+ *
  * \subsection standardisation Standardisation d'un automate
+ *
+ * Un automate fini est dit standard si aucune transition n'arrive sur son seul état initial.
+ *
+ *
  * \subsection produit Produit de deux automates
+ *
+ * On veut calculer un automate qui reconnaisse le langage L1^L2,
+ * c'est-à-dire le langage des mots qui sont reconnus à la fois par A1 et A2.
+ * On construit pour cela le produit de deux automates.
+ *
  * \subsection determinisation Déterminisation de deux automates
+ *
+ * En informatique, le déterminisme est le fait de ne pas avoir le choix entre plusieurs exécutions.
+ * Pour les automates finis, cela correspond à avoir, pour chaque état et pour une étiquette (de transition) donnée,
+ * au plus une seule transition portant cette étiquette et partant de cet état.
+ *
  */
 
 

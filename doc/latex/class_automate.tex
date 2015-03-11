@@ -16,6 +16,8 @@ vector$<$ int $>$ \hyperlink{class_automate_a3f8def92c8e75035516d9e67dcb244d9}{g
 \begin{DoxyCompactList}\small\item\em Liste les différentes transitions de l'automate. \end{DoxyCompactList}\item 
 bool \hyperlink{class_automate_a6b63a438c3e8af81e2cdf8493a949232}{is\-Deterministe} ()
 \begin{DoxyCompactList}\small\item\em Test si un automate est déterministe. \end{DoxyCompactList}\item 
+bool \hyperlink{class_automate_aabb8bc1401cb3d3738a195126e029e2d}{is\-Complet} ()
+\begin{DoxyCompactList}\small\item\em Test si un automate est déterministe. \end{DoxyCompactList}\item 
 bool \hyperlink{class_automate_a763c4f441c8e0740a5ed0fbe16360a73}{is\-Standard} ()
 \begin{DoxyCompactList}\small\item\em Test si un automate est standard. \end{DoxyCompactList}\item 
 \hyperlink{classetat}{etat} $\ast$ \hyperlink{class_automate_a62ebaf51904bf539f74e87db01826999}{get\-Etat} (int number)
@@ -44,6 +46,9 @@ vector$<$ pair$<$ \hyperlink{class_automate}{Automate}, string $>$ $>$ \hyperlin
 \begin{DoxyCompactList}\small\item\em Réalise la standardisation de l'automate. \end{DoxyCompactList}\item 
 vector$<$ pair$<$ \hyperlink{class_automate}{Automate}, string $>$ $>$ \hyperlink{class_automate_af8297f77add39ea70a0877f85dedcf28}{minimise} ()
 \begin{DoxyCompactList}\small\item\em Réalise la minimisation de l'automate. \end{DoxyCompactList}\item 
+\hypertarget{class_automate_ab7fe6fb99d5587425e22f6ab0f680f5c}{string {\bfseries to\-String\-Tab\-Mini} (vector$<$ vector$<$ int $>$ $>$ tab\-Minimisation)}\label{class_automate_ab7fe6fb99d5587425e22f6ab0f680f5c}
+
+\item 
 int \hyperlink{class_automate_aa2070cd084587f8999e3d9cd847f5c1d}{get\-Nb\-Transition} ()
 \begin{DoxyCompactList}\small\item\em Renvoit le nombre de transition portant une étiquette différente. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
@@ -261,6 +266,22 @@ Methode permettant de lister dans un vector d'int, les différentes transitions.
 
 \begin{DoxyReturn}{Returns}
 un vecteur, chaque entier du vecteur représentant un type de transition 
+\end{DoxyReturn}
+\hypertarget{class_automate_aabb8bc1401cb3d3738a195126e029e2d}{\index{Automate@{Automate}!is\-Complet@{is\-Complet}}
+\index{is\-Complet@{is\-Complet}!Automate@{Automate}}
+\subsubsection[{is\-Complet}]{\setlength{\rightskip}{0pt plus 5cm}bool Automate\-::is\-Complet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_automate_aabb8bc1401cb3d3738a195126e029e2d}
+
+
+Test si un automate est déterministe. 
+
+Permet de tester si un automate est déterministe (voir définition d'un automate déterministe).
+
+\begin{DoxyReturn}{Returns}
+true si l'automate est déterministe, false sinon 
 \end{DoxyReturn}
 \hypertarget{class_automate_a6b63a438c3e8af81e2cdf8493a949232}{\index{Automate@{Automate}!is\-Deterministe@{is\-Deterministe}}
 \index{is\-Deterministe@{is\-Deterministe}!Automate@{Automate}}

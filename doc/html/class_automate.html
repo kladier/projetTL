@@ -112,6 +112,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6b63a438c3e8af81e2cdf8493a949232"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automate.html#a6b63a438c3e8af81e2cdf8493a949232">isDeterministe</a> ()</td></tr>
 <tr class="memdesc:a6b63a438c3e8af81e2cdf8493a949232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test si un automate est déterministe.  <a href="#a6b63a438c3e8af81e2cdf8493a949232">More...</a><br/></td></tr>
 <tr class="separator:a6b63a438c3e8af81e2cdf8493a949232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb8bc1401cb3d3738a195126e029e2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automate.html#aabb8bc1401cb3d3738a195126e029e2d">isComplet</a> ()</td></tr>
+<tr class="memdesc:aabb8bc1401cb3d3738a195126e029e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test si un automate est déterministe.  <a href="#aabb8bc1401cb3d3738a195126e029e2d">More...</a><br/></td></tr>
+<tr class="separator:aabb8bc1401cb3d3738a195126e029e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a763c4f441c8e0740a5ed0fbe16360a73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automate.html#a763c4f441c8e0740a5ed0fbe16360a73">isStandard</a> ()</td></tr>
 <tr class="memdesc:a763c4f441c8e0740a5ed0fbe16360a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test si un automate est standard.  <a href="#a763c4f441c8e0740a5ed0fbe16360a73">More...</a><br/></td></tr>
 <tr class="separator:a763c4f441c8e0740a5ed0fbe16360a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,6 +157,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af8297f77add39ea70a0877f85dedcf28"><td class="memItemLeft" align="right" valign="top">vector&lt; pair&lt; <a class="el" href="class_automate.html">Automate</a>, string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automate.html#af8297f77add39ea70a0877f85dedcf28">minimise</a> ()</td></tr>
 <tr class="memdesc:af8297f77add39ea70a0877f85dedcf28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Réalise la minimisation de l'automate.  <a href="#af8297f77add39ea70a0877f85dedcf28">More...</a><br/></td></tr>
 <tr class="separator:af8297f77add39ea70a0877f85dedcf28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7fe6fb99d5587425e22f6ab0f680f5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7fe6fb99d5587425e22f6ab0f680f5c"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>toStringTabMini</b> (vector&lt; vector&lt; int &gt; &gt; tabMinimisation)</td></tr>
+<tr class="separator:ab7fe6fb99d5587425e22f6ab0f680f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2070cd084587f8999e3d9cd847f5c1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_automate.html#aa2070cd084587f8999e3d9cd847f5c1d">getNbTransition</a> ()</td></tr>
 <tr class="memdesc:aa2070cd084587f8999e3d9cd847f5c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoit le nombre de transition portant une étiquette différente.  <a href="#aa2070cd084587f8999e3d9cd847f5c1d">More...</a><br/></td></tr>
 <tr class="separator:aa2070cd084587f8999e3d9cd847f5c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -451,6 +457,25 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aabb8bc1401cb3d3738a195126e029e2d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Automate::isComplet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test si un automate est déterministe. </p>
+<p>Permet de tester si un automate est déterministe (voir définition d'un automate déterministe).</p>
+<dl class="section return"><dt>Returns</dt><dd>true si l'automate est déterministe, false sinon </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a6b63a438c3e8af81e2cdf8493a949232"></a>
 <div class="memitem">
 <div class="memproto">
@@ -679,7 +704,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 12 2015 16:56:22 for Autoroute by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 11 2015 23:46:13 for Autoroute by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

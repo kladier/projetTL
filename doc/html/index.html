@@ -85,7 +85,12 @@ Introduction</h1>
 <p>Dans cette page principale, nous verrons comment exécuter le logiciel Autoroute, prendre en main les sources, l'arborescence du projet ainsi que des définitions relatives à la théorie des langages et aux automates.</p>
 <h1><a class="anchor" id="install_sec"></a>
 Installation du logiciel pour les utilisateurs</h1>
-<p></p>
+<h2><a class="anchor" id="windows"></a>
+Windows :</h2>
+<p>Installer qt5, graphviz puis le setup d'autoroute que vous trouverez dans le dossier exe.</p>
+<h2><a class="anchor" id="linux"></a>
+Linux :</h2>
+<p>Installer qt5 et graphviz. Lancer qt5 et ouvrez un projet, sélectionnez le fichier autoroute.pro dans le dossier automate-project. Cliquez ensuite sur la flèche verte (Run) en bas à gauche de la fenêtre.</p>
 <h1><a class="anchor" id="dev_sec"></a>
 Pour les développeurs</h1>
 <h2><a class="anchor" id="etape1"></a>
@@ -114,16 +119,20 @@ Etape 2 : Arborescence du projet</h2>
 Définitions</h1>
 <h2><a class="anchor" id="minimisation"></a>
 Minimisation d'un automate</h2>
+<p>La minimisation d'un automate fini déterministe est l'opération qui consiste à transformer un automate fini déterministe donné en un automate fini déterministe ayant le nombre minimal d'états et qui reconnaît le même langage rationnel.</p>
 <h2><a class="anchor" id="standardisation"></a>
 Standardisation d'un automate</h2>
+<p>Un automate fini est dit standard si aucune transition n'arrive sur son seul état initial.</p>
 <h2><a class="anchor" id="produit"></a>
 Produit de deux automates</h2>
+<p>On veut calculer un automate qui reconnaisse le langage L1^L2, c'est-à-dire le langage des mots qui sont reconnus à la fois par A1 et A2. On construit pour cela le produit de deux automates.</p>
 <h2><a class="anchor" id="determinisation"></a>
 Déterminisation de deux automates</h2>
+<p>En informatique, le déterminisme est le fait de ne pas avoir le choix entre plusieurs exécutions. Pour les automates finis, cela correspond à avoir, pour chaque état et pour une étiquette (de transition) donnée, au plus une seule transition portant cette étiquette et partant de cet état. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 12 2015 16:56:24 for Autoroute by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 11 2015 23:46:14 for Autoroute by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

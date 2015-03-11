@@ -2,7 +2,9 @@
 En allant dans la section Classes, vous aurait accès à la documentation de l'ensemble des classes. A partir de là, vous pourrez trouvez de la doc concernant les attributs et méthodes des classes.
 
 Dans cette page principale, nous verrons comment exécuter le logiciel Autoroute, prendre en main les sources, l'arborescence du projet ainsi que des définitions relatives à la théorie des langages et aux automates.\hypertarget{index_install_sec}{}\section{Installation du logiciel pour les utilisateurs}\label{index_install_sec}
-Bla Bla Bla\hypertarget{index_dev_sec}{}\section{Pour les développeurs}\label{index_dev_sec}
+\hypertarget{index_windows}{}\subsection{Windows \-:}\label{index_windows}
+Installer qt5, graphviz puis le setup d'autoroute que vous trouverez dans le dossier exe.\hypertarget{index_linux}{}\subsection{Linux \-:}\label{index_linux}
+Installer qt5 et graphviz. Lancer qt5 et ouvrez un projet, sélectionnez le fichier autoroute.\-pro dans le dossier automate-\/project. Cliquez ensuite sur la flèche verte (Run) en bas à gauche de la fenêtre.\hypertarget{index_dev_sec}{}\section{Pour les développeurs}\label{index_dev_sec}
 \hypertarget{index_etape1}{}\subsection{Etape 1 \-: Prise en main des sources et execution}\label{index_etape1}
 Ce logiciel est développé en C++, avec le framework Q\-T5. La manière la plus simple d'accéder aux sources, d'exécuter le programme et de modifier ce logiciel est la suivante \-:
 \begin{DoxyItemize}
@@ -29,6 +31,7 @@ N\-B \-: Vous aurez peut-\/être un problème de version si vous avez une versio
 \end{DoxyVerb}
 \hypertarget{index_definitions}{}\section{Définitions}\label{index_definitions}
 \hypertarget{index_minimisation}{}\subsection{Minimisation d'un automate}\label{index_minimisation}
-\hypertarget{index_standardisation}{}\subsection{Standardisation d'un automate}\label{index_standardisation}
-\hypertarget{index_produit}{}\subsection{Produit de deux automates}\label{index_produit}
-\hypertarget{index_determinisation}{}\subsection{Déterminisation de deux automates}\label{index_determinisation}
+La minimisation d'un automate fini déterministe est l'opération qui consiste à transformer un automate fini déterministe donné en un automate fini déterministe ayant le nombre minimal d'états et qui reconnaît le même langage rationnel.\hypertarget{index_standardisation}{}\subsection{Standardisation d'un automate}\label{index_standardisation}
+Un automate fini est dit standard si aucune transition n'arrive sur son seul état initial.\hypertarget{index_produit}{}\subsection{Produit de deux automates}\label{index_produit}
+On veut calculer un automate qui reconnaisse le langage L1$^\wedge$\-L2, c'est-\/à-\/dire le langage des mots qui sont reconnus à la fois par A1 et A2. On construit pour cela le produit de deux automates.\hypertarget{index_determinisation}{}\subsection{Déterminisation de deux automates}\label{index_determinisation}
+En informatique, le déterminisme est le fait de ne pas avoir le choix entre plusieurs exécutions. Pour les automates finis, cela correspond à avoir, pour chaque état et pour une étiquette (de transition) donnée, au plus une seule transition portant cette étiquette et partant de cet état. 

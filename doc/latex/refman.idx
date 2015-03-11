@@ -7,113 +7,115 @@
 \indexentry{$\sim $\discretionary {-}{}{}Automate@{$\sim $\discretionary {-}{}{}Automate}!Automate@{Automate}|hyperpage}{10}
 \indexentry{Automate@{Automate}!ajout\discretionary {-}{}{}Etat@{ajout\discretionary {-}{}{}Etat}|hyperpage}{10}
 \indexentry{ajout\discretionary {-}{}{}Etat@{ajout\discretionary {-}{}{}Etat}!Automate@{Automate}|hyperpage}{10}
-\indexentry{Automate@{Automate}!ajout\discretionary {-}{}{}Transition@{ajout\discretionary {-}{}{}Transition}|hyperpage}{10}
-\indexentry{ajout\discretionary {-}{}{}Transition@{ajout\discretionary {-}{}{}Transition}!Automate@{Automate}|hyperpage}{10}
-\indexentry{Automate@{Automate}!cible\discretionary {-}{}{}\_\discretionary {-}{}{}transition@{cible\discretionary {-}{}{}\_\discretionary {-}{}{}transition}|hyperpage}{12}
-\indexentry{cible\discretionary {-}{}{}\_\discretionary {-}{}{}transition@{cible\discretionary {-}{}{}\_\discretionary {-}{}{}transition}!Automate@{Automate}|hyperpage}{12}
-\indexentry{Automate@{Automate}!determinise@{determinise}|hyperpage}{12}
-\indexentry{determinise@{determinise}!Automate@{Automate}|hyperpage}{12}
-\indexentry{Automate@{Automate}!get\discretionary {-}{}{}Alpha@{get\discretionary {-}{}{}Alpha}|hyperpage}{12}
-\indexentry{get\discretionary {-}{}{}Alpha@{get\discretionary {-}{}{}Alpha}!Automate@{Automate}|hyperpage}{12}
-\indexentry{Automate@{Automate}!get\discretionary {-}{}{}Etat@{get\discretionary {-}{}{}Etat}|hyperpage}{12}
-\indexentry{get\discretionary {-}{}{}Etat@{get\discretionary {-}{}{}Etat}!Automate@{Automate}|hyperpage}{12}
-\indexentry{Automate@{Automate}!get\discretionary {-}{}{}Etats@{get\discretionary {-}{}{}Etats}|hyperpage}{13}
-\indexentry{get\discretionary {-}{}{}Etats@{get\discretionary {-}{}{}Etats}!Automate@{Automate}|hyperpage}{13}
-\indexentry{Automate@{Automate}!get\discretionary {-}{}{}Nb\discretionary {-}{}{}Transition@{get\discretionary {-}{}{}Nb\discretionary {-}{}{}Transition}|hyperpage}{13}
-\indexentry{get\discretionary {-}{}{}Nb\discretionary {-}{}{}Transition@{get\discretionary {-}{}{}Nb\discretionary {-}{}{}Transition}!Automate@{Automate}|hyperpage}{13}
-\indexentry{Automate@{Automate}!get\discretionary {-}{}{}Tab\discretionary {-}{}{}Transitions@{get\discretionary {-}{}{}Tab\discretionary {-}{}{}Transitions}|hyperpage}{13}
-\indexentry{get\discretionary {-}{}{}Tab\discretionary {-}{}{}Transitions@{get\discretionary {-}{}{}Tab\discretionary {-}{}{}Transitions}!Automate@{Automate}|hyperpage}{13}
-\indexentry{Automate@{Automate}!is\discretionary {-}{}{}Deterministe@{is\discretionary {-}{}{}Deterministe}|hyperpage}{13}
-\indexentry{is\discretionary {-}{}{}Deterministe@{is\discretionary {-}{}{}Deterministe}!Automate@{Automate}|hyperpage}{13}
+\indexentry{Automate@{Automate}!ajout\discretionary {-}{}{}Transition@{ajout\discretionary {-}{}{}Transition}|hyperpage}{11}
+\indexentry{ajout\discretionary {-}{}{}Transition@{ajout\discretionary {-}{}{}Transition}!Automate@{Automate}|hyperpage}{11}
+\indexentry{Automate@{Automate}!cible\discretionary {-}{}{}\_\discretionary {-}{}{}transition@{cible\discretionary {-}{}{}\_\discretionary {-}{}{}transition}|hyperpage}{11}
+\indexentry{cible\discretionary {-}{}{}\_\discretionary {-}{}{}transition@{cible\discretionary {-}{}{}\_\discretionary {-}{}{}transition}!Automate@{Automate}|hyperpage}{11}
+\indexentry{Automate@{Automate}!determinise@{determinise}|hyperpage}{11}
+\indexentry{determinise@{determinise}!Automate@{Automate}|hyperpage}{11}
+\indexentry{Automate@{Automate}!get\discretionary {-}{}{}Alpha@{get\discretionary {-}{}{}Alpha}|hyperpage}{11}
+\indexentry{get\discretionary {-}{}{}Alpha@{get\discretionary {-}{}{}Alpha}!Automate@{Automate}|hyperpage}{11}
+\indexentry{Automate@{Automate}!get\discretionary {-}{}{}Etat@{get\discretionary {-}{}{}Etat}|hyperpage}{11}
+\indexentry{get\discretionary {-}{}{}Etat@{get\discretionary {-}{}{}Etat}!Automate@{Automate}|hyperpage}{11}
+\indexentry{Automate@{Automate}!get\discretionary {-}{}{}Etats@{get\discretionary {-}{}{}Etats}|hyperpage}{12}
+\indexentry{get\discretionary {-}{}{}Etats@{get\discretionary {-}{}{}Etats}!Automate@{Automate}|hyperpage}{12}
+\indexentry{Automate@{Automate}!get\discretionary {-}{}{}Nb\discretionary {-}{}{}Transition@{get\discretionary {-}{}{}Nb\discretionary {-}{}{}Transition}|hyperpage}{12}
+\indexentry{get\discretionary {-}{}{}Nb\discretionary {-}{}{}Transition@{get\discretionary {-}{}{}Nb\discretionary {-}{}{}Transition}!Automate@{Automate}|hyperpage}{12}
+\indexentry{Automate@{Automate}!get\discretionary {-}{}{}Tab\discretionary {-}{}{}Transitions@{get\discretionary {-}{}{}Tab\discretionary {-}{}{}Transitions}|hyperpage}{12}
+\indexentry{get\discretionary {-}{}{}Tab\discretionary {-}{}{}Transitions@{get\discretionary {-}{}{}Tab\discretionary {-}{}{}Transitions}!Automate@{Automate}|hyperpage}{12}
+\indexentry{Automate@{Automate}!is\discretionary {-}{}{}Complet@{is\discretionary {-}{}{}Complet}|hyperpage}{12}
+\indexentry{is\discretionary {-}{}{}Complet@{is\discretionary {-}{}{}Complet}!Automate@{Automate}|hyperpage}{12}
+\indexentry{Automate@{Automate}!is\discretionary {-}{}{}Deterministe@{is\discretionary {-}{}{}Deterministe}|hyperpage}{12}
+\indexentry{is\discretionary {-}{}{}Deterministe@{is\discretionary {-}{}{}Deterministe}!Automate@{Automate}|hyperpage}{12}
 \indexentry{Automate@{Automate}!is\discretionary {-}{}{}Standard@{is\discretionary {-}{}{}Standard}|hyperpage}{13}
 \indexentry{is\discretionary {-}{}{}Standard@{is\discretionary {-}{}{}Standard}!Automate@{Automate}|hyperpage}{13}
 \indexentry{Automate@{Automate}!minimise@{minimise}|hyperpage}{13}
 \indexentry{minimise@{minimise}!Automate@{Automate}|hyperpage}{13}
-\indexentry{Automate@{Automate}!produit@{produit}|hyperpage}{14}
-\indexentry{produit@{produit}!Automate@{Automate}|hyperpage}{14}
-\indexentry{Automate@{Automate}!standardise@{standardise}|hyperpage}{14}
-\indexentry{standardise@{standardise}!Automate@{Automate}|hyperpage}{14}
+\indexentry{Automate@{Automate}!produit@{produit}|hyperpage}{13}
+\indexentry{produit@{produit}!Automate@{Automate}|hyperpage}{13}
+\indexentry{Automate@{Automate}!standardise@{standardise}|hyperpage}{13}
+\indexentry{standardise@{standardise}!Automate@{Automate}|hyperpage}{13}
+\indexentry{Automate@{Automate}!supprime\discretionary {-}{}{}Etat@{supprime\discretionary {-}{}{}Etat}|hyperpage}{13}
+\indexentry{supprime\discretionary {-}{}{}Etat@{supprime\discretionary {-}{}{}Etat}!Automate@{Automate}|hyperpage}{13}
 \indexentry{Automate@{Automate}!supprime\discretionary {-}{}{}Etat@{supprime\discretionary {-}{}{}Etat}|hyperpage}{14}
 \indexentry{supprime\discretionary {-}{}{}Etat@{supprime\discretionary {-}{}{}Etat}!Automate@{Automate}|hyperpage}{14}
-\indexentry{Automate@{Automate}!supprime\discretionary {-}{}{}Etat@{supprime\discretionary {-}{}{}Etat}|hyperpage}{14}
-\indexentry{supprime\discretionary {-}{}{}Etat@{supprime\discretionary {-}{}{}Etat}!Automate@{Automate}|hyperpage}{14}
-\indexentry{Automate@{Automate}!supprimer\discretionary {-}{}{}Etats\discretionary {-}{}{}Non\discretionary {-}{}{}Accessibles@{supprimer\discretionary {-}{}{}Etats\discretionary {-}{}{}Non\discretionary {-}{}{}Accessibles}|hyperpage}{15}
-\indexentry{supprimer\discretionary {-}{}{}Etats\discretionary {-}{}{}Non\discretionary {-}{}{}Accessibles@{supprimer\discretionary {-}{}{}Etats\discretionary {-}{}{}Non\discretionary {-}{}{}Accessibles}!Automate@{Automate}|hyperpage}{15}
-\indexentry{Automate@{Automate}!to\discretionary {-}{}{}Dot@{to\discretionary {-}{}{}Dot}|hyperpage}{15}
-\indexentry{to\discretionary {-}{}{}Dot@{to\discretionary {-}{}{}Dot}!Automate@{Automate}|hyperpage}{15}
-\indexentry{Automate@{Automate}!etats@{etats}|hyperpage}{15}
-\indexentry{etats@{etats}!Automate@{Automate}|hyperpage}{15}
-\indexentry{choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}|hyperpage}{15}
-\indexentry{choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}!choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}|hyperpage}{16}
-\indexentry{choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}!choixPointe@{choix\discretionary {-}{}{}Pointe}|hyperpage}{16}
-\indexentry{choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}!change\discretionary {-}{}{}Event@{change\discretionary {-}{}{}Event}|hyperpage}{16}
-\indexentry{change\discretionary {-}{}{}Event@{change\discretionary {-}{}{}Event}!choixPointe@{choix\discretionary {-}{}{}Pointe}|hyperpage}{16}
-\indexentry{choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}!reset\discretionary {-}{}{}Affichage@{reset\discretionary {-}{}{}Affichage}|hyperpage}{16}
-\indexentry{reset\discretionary {-}{}{}Affichage@{reset\discretionary {-}{}{}Affichage}!choixPointe@{choix\discretionary {-}{}{}Pointe}|hyperpage}{16}
+\indexentry{Automate@{Automate}!supprimer\discretionary {-}{}{}Etats\discretionary {-}{}{}Non\discretionary {-}{}{}Accessibles@{supprimer\discretionary {-}{}{}Etats\discretionary {-}{}{}Non\discretionary {-}{}{}Accessibles}|hyperpage}{14}
+\indexentry{supprimer\discretionary {-}{}{}Etats\discretionary {-}{}{}Non\discretionary {-}{}{}Accessibles@{supprimer\discretionary {-}{}{}Etats\discretionary {-}{}{}Non\discretionary {-}{}{}Accessibles}!Automate@{Automate}|hyperpage}{14}
+\indexentry{Automate@{Automate}!to\discretionary {-}{}{}Dot@{to\discretionary {-}{}{}Dot}|hyperpage}{14}
+\indexentry{to\discretionary {-}{}{}Dot@{to\discretionary {-}{}{}Dot}!Automate@{Automate}|hyperpage}{14}
+\indexentry{Automate@{Automate}!etats@{etats}|hyperpage}{14}
+\indexentry{etats@{etats}!Automate@{Automate}|hyperpage}{14}
+\indexentry{choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}|hyperpage}{14}
+\indexentry{choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}!choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}|hyperpage}{15}
+\indexentry{choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}!choixPointe@{choix\discretionary {-}{}{}Pointe}|hyperpage}{15}
+\indexentry{choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}!change\discretionary {-}{}{}Event@{change\discretionary {-}{}{}Event}|hyperpage}{15}
+\indexentry{change\discretionary {-}{}{}Event@{change\discretionary {-}{}{}Event}!choixPointe@{choix\discretionary {-}{}{}Pointe}|hyperpage}{15}
+\indexentry{choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}!reset\discretionary {-}{}{}Affichage@{reset\discretionary {-}{}{}Affichage}|hyperpage}{15}
+\indexentry{reset\discretionary {-}{}{}Affichage@{reset\discretionary {-}{}{}Affichage}!choixPointe@{choix\discretionary {-}{}{}Pointe}|hyperpage}{15}
 \indexentry{choix\discretionary {-}{}{}Pointe@{choix\discretionary {-}{}{}Pointe}!send\discretionary {-}{}{}Dad@{send\discretionary {-}{}{}Dad}|hyperpage}{16}
 \indexentry{send\discretionary {-}{}{}Dad@{send\discretionary {-}{}{}Dad}!choixPointe@{choix\discretionary {-}{}{}Pointe}|hyperpage}{16}
-\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}|hyperpage}{17}
-\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}|hyperpage}{18}
-\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{18}
-\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!ajout\discretionary {-}{}{}Etat@{ajout\discretionary {-}{}{}Etat}|hyperpage}{18}
-\indexentry{ajout\discretionary {-}{}{}Etat@{ajout\discretionary {-}{}{}Etat}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{18}
-\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!change\discretionary {-}{}{}State@{change\discretionary {-}{}{}State}|hyperpage}{18}
-\indexentry{change\discretionary {-}{}{}State@{change\discretionary {-}{}{}State}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{18}
+\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}|hyperpage}{16}
+\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}|hyperpage}{17}
+\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{17}
+\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!ajout\discretionary {-}{}{}Etat@{ajout\discretionary {-}{}{}Etat}|hyperpage}{17}
+\indexentry{ajout\discretionary {-}{}{}Etat@{ajout\discretionary {-}{}{}Etat}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{17}
+\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!change\discretionary {-}{}{}State@{change\discretionary {-}{}{}State}|hyperpage}{17}
+\indexentry{change\discretionary {-}{}{}State@{change\discretionary {-}{}{}State}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{17}
 \indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!display\discretionary {-}{}{}Right@{display\discretionary {-}{}{}Right}|hyperpage}{18}
 \indexentry{display\discretionary {-}{}{}Right@{display\discretionary {-}{}{}Right}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{18}
 \indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!supprime\discretionary {-}{}{}Etat@{supprime\discretionary {-}{}{}Etat}|hyperpage}{18}
 \indexentry{supprime\discretionary {-}{}{}Etat@{supprime\discretionary {-}{}{}Etat}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{18}
-\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!a@{a}|hyperpage}{19}
-\indexentry{a@{a}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{19}
-\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!left@{left}|hyperpage}{19}
-\indexentry{left@{left}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{19}
-\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!ma\discretionary {-}{}{}Vue@{ma\discretionary {-}{}{}Vue}|hyperpage}{19}
-\indexentry{ma\discretionary {-}{}{}Vue@{ma\discretionary {-}{}{}Vue}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{19}
-\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!right@{right}|hyperpage}{19}
-\indexentry{right@{right}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{19}
-\indexentry{etat@{etat}|hyperpage}{19}
+\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!a@{a}|hyperpage}{18}
+\indexentry{a@{a}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{18}
+\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!left@{left}|hyperpage}{18}
+\indexentry{left@{left}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{18}
+\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!ma\discretionary {-}{}{}Vue@{ma\discretionary {-}{}{}Vue}|hyperpage}{18}
+\indexentry{ma\discretionary {-}{}{}Vue@{ma\discretionary {-}{}{}Vue}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{18}
+\indexentry{Create\discretionary {-}{}{}Automate@{Create\discretionary {-}{}{}Automate}!right@{right}|hyperpage}{18}
+\indexentry{right@{right}!CreateAutomate@{Create\discretionary {-}{}{}Automate}|hyperpage}{18}
+\indexentry{etat@{etat}|hyperpage}{18}
+\indexentry{etat@{etat}!etat@{etat}|hyperpage}{19}
+\indexentry{etat@{etat}!etat@{etat}|hyperpage}{19}
 \indexentry{etat@{etat}!etat@{etat}|hyperpage}{20}
 \indexentry{etat@{etat}!etat@{etat}|hyperpage}{20}
 \indexentry{etat@{etat}!etat@{etat}|hyperpage}{20}
 \indexentry{etat@{etat}!etat@{etat}|hyperpage}{20}
-\indexentry{etat@{etat}!etat@{etat}|hyperpage}{20}
-\indexentry{etat@{etat}!etat@{etat}|hyperpage}{20}
-\indexentry{etat@{etat}!ajout\discretionary {-}{}{}Transition@{ajout\discretionary {-}{}{}Transition}|hyperpage}{21}
-\indexentry{ajout\discretionary {-}{}{}Transition@{ajout\discretionary {-}{}{}Transition}!etat@{etat}|hyperpage}{21}
-\indexentry{etat@{etat}!est\discretionary {-}{}{}Dans\discretionary {-}{}{}List@{est\discretionary {-}{}{}Dans\discretionary {-}{}{}List}|hyperpage}{21}
-\indexentry{est\discretionary {-}{}{}Dans\discretionary {-}{}{}List@{est\discretionary {-}{}{}Dans\discretionary {-}{}{}List}!etat@{etat}|hyperpage}{21}
-\indexentry{etat@{etat}!find\discretionary {-}{}{}\_\discretionary {-}{}{}transition@{find\discretionary {-}{}{}\_\discretionary {-}{}{}transition}|hyperpage}{21}
-\indexentry{find\discretionary {-}{}{}\_\discretionary {-}{}{}transition@{find\discretionary {-}{}{}\_\discretionary {-}{}{}transition}!etat@{etat}|hyperpage}{21}
+\indexentry{etat@{etat}!ajout\discretionary {-}{}{}Transition@{ajout\discretionary {-}{}{}Transition}|hyperpage}{20}
+\indexentry{ajout\discretionary {-}{}{}Transition@{ajout\discretionary {-}{}{}Transition}!etat@{etat}|hyperpage}{20}
+\indexentry{etat@{etat}!est\discretionary {-}{}{}Dans\discretionary {-}{}{}List@{est\discretionary {-}{}{}Dans\discretionary {-}{}{}List}|hyperpage}{20}
+\indexentry{est\discretionary {-}{}{}Dans\discretionary {-}{}{}List@{est\discretionary {-}{}{}Dans\discretionary {-}{}{}List}!etat@{etat}|hyperpage}{20}
+\indexentry{etat@{etat}!find\discretionary {-}{}{}\_\discretionary {-}{}{}transition@{find\discretionary {-}{}{}\_\discretionary {-}{}{}transition}|hyperpage}{20}
+\indexentry{find\discretionary {-}{}{}\_\discretionary {-}{}{}transition@{find\discretionary {-}{}{}\_\discretionary {-}{}{}transition}!etat@{etat}|hyperpage}{20}
 \indexentry{etat@{etat}!find\discretionary {-}{}{}\_\discretionary {-}{}{}transition@{find\discretionary {-}{}{}\_\discretionary {-}{}{}transition}|hyperpage}{21}
 \indexentry{find\discretionary {-}{}{}\_\discretionary {-}{}{}transition@{find\discretionary {-}{}{}\_\discretionary {-}{}{}transition}!etat@{etat}|hyperpage}{21}
 \indexentry{etat@{etat}!get\discretionary {-}{}{}Name@{get\discretionary {-}{}{}Name}|hyperpage}{21}
 \indexentry{get\discretionary {-}{}{}Name@{get\discretionary {-}{}{}Name}!etat@{etat}|hyperpage}{21}
-\indexentry{etat@{etat}!get\discretionary {-}{}{}Name\discretionary {-}{}{}F@{get\discretionary {-}{}{}Name\discretionary {-}{}{}F}|hyperpage}{22}
-\indexentry{get\discretionary {-}{}{}Name\discretionary {-}{}{}F@{get\discretionary {-}{}{}Name\discretionary {-}{}{}F}!etat@{etat}|hyperpage}{22}
-\indexentry{etat@{etat}!get\discretionary {-}{}{}Number@{get\discretionary {-}{}{}Number}|hyperpage}{22}
-\indexentry{get\discretionary {-}{}{}Number@{get\discretionary {-}{}{}Number}!etat@{etat}|hyperpage}{22}
-\indexentry{etat@{etat}!get\discretionary {-}{}{}Transitions@{get\discretionary {-}{}{}Transitions}|hyperpage}{22}
-\indexentry{get\discretionary {-}{}{}Transitions@{get\discretionary {-}{}{}Transitions}!etat@{etat}|hyperpage}{22}
+\indexentry{etat@{etat}!get\discretionary {-}{}{}Name\discretionary {-}{}{}F@{get\discretionary {-}{}{}Name\discretionary {-}{}{}F}|hyperpage}{21}
+\indexentry{get\discretionary {-}{}{}Name\discretionary {-}{}{}F@{get\discretionary {-}{}{}Name\discretionary {-}{}{}F}!etat@{etat}|hyperpage}{21}
+\indexentry{etat@{etat}!get\discretionary {-}{}{}Number@{get\discretionary {-}{}{}Number}|hyperpage}{21}
+\indexentry{get\discretionary {-}{}{}Number@{get\discretionary {-}{}{}Number}!etat@{etat}|hyperpage}{21}
+\indexentry{etat@{etat}!get\discretionary {-}{}{}Transitions@{get\discretionary {-}{}{}Transitions}|hyperpage}{21}
+\indexentry{get\discretionary {-}{}{}Transitions@{get\discretionary {-}{}{}Transitions}!etat@{etat}|hyperpage}{21}
 \indexentry{etat@{etat}!is\discretionary {-}{}{}Final@{is\discretionary {-}{}{}Final}|hyperpage}{22}
 \indexentry{is\discretionary {-}{}{}Final@{is\discretionary {-}{}{}Final}!etat@{etat}|hyperpage}{22}
 \indexentry{etat@{etat}!is\discretionary {-}{}{}Initial@{is\discretionary {-}{}{}Initial}|hyperpage}{22}
 \indexentry{is\discretionary {-}{}{}Initial@{is\discretionary {-}{}{}Initial}!etat@{etat}|hyperpage}{22}
 \indexentry{etat@{etat}!operator!=@{operator!=}|hyperpage}{22}
 \indexentry{operator!=@{operator!=}!etat@{etat}|hyperpage}{22}
-\indexentry{etat@{etat}!operator==@{operator==}|hyperpage}{23}
-\indexentry{operator==@{operator==}!etat@{etat}|hyperpage}{23}
-\indexentry{etat@{etat}!rename\discretionary {-}{}{}Transition@{rename\discretionary {-}{}{}Transition}|hyperpage}{23}
-\indexentry{rename\discretionary {-}{}{}Transition@{rename\discretionary {-}{}{}Transition}!etat@{etat}|hyperpage}{23}
+\indexentry{etat@{etat}!operator==@{operator==}|hyperpage}{22}
+\indexentry{operator==@{operator==}!etat@{etat}|hyperpage}{22}
+\indexentry{etat@{etat}!rename\discretionary {-}{}{}Transition@{rename\discretionary {-}{}{}Transition}|hyperpage}{22}
+\indexentry{rename\discretionary {-}{}{}Transition@{rename\discretionary {-}{}{}Transition}!etat@{etat}|hyperpage}{22}
 \indexentry{etat@{etat}!set\discretionary {-}{}{}Final@{set\discretionary {-}{}{}Final}|hyperpage}{23}
 \indexentry{set\discretionary {-}{}{}Final@{set\discretionary {-}{}{}Final}!etat@{etat}|hyperpage}{23}
 \indexentry{etat@{etat}!set\discretionary {-}{}{}Initial@{set\discretionary {-}{}{}Initial}|hyperpage}{23}
 \indexentry{set\discretionary {-}{}{}Initial@{set\discretionary {-}{}{}Initial}!etat@{etat}|hyperpage}{23}
-\indexentry{etat@{etat}!set\discretionary {-}{}{}Name@{set\discretionary {-}{}{}Name}|hyperpage}{24}
-\indexentry{set\discretionary {-}{}{}Name@{set\discretionary {-}{}{}Name}!etat@{etat}|hyperpage}{24}
-\indexentry{etat@{etat}!set\discretionary {-}{}{}Number@{set\discretionary {-}{}{}Number}|hyperpage}{24}
-\indexentry{set\discretionary {-}{}{}Number@{set\discretionary {-}{}{}Number}!etat@{etat}|hyperpage}{24}
-\indexentry{etat@{etat}!supprime\discretionary {-}{}{}Transition@{supprime\discretionary {-}{}{}Transition}|hyperpage}{24}
-\indexentry{supprime\discretionary {-}{}{}Transition@{supprime\discretionary {-}{}{}Transition}!etat@{etat}|hyperpage}{24}
+\indexentry{etat@{etat}!set\discretionary {-}{}{}Name@{set\discretionary {-}{}{}Name}|hyperpage}{23}
+\indexentry{set\discretionary {-}{}{}Name@{set\discretionary {-}{}{}Name}!etat@{etat}|hyperpage}{23}
+\indexentry{etat@{etat}!set\discretionary {-}{}{}Number@{set\discretionary {-}{}{}Number}|hyperpage}{23}
+\indexentry{set\discretionary {-}{}{}Number@{set\discretionary {-}{}{}Number}!etat@{etat}|hyperpage}{23}
+\indexentry{etat@{etat}!supprime\discretionary {-}{}{}Transition@{supprime\discretionary {-}{}{}Transition}|hyperpage}{23}
+\indexentry{supprime\discretionary {-}{}{}Transition@{supprime\discretionary {-}{}{}Transition}!etat@{etat}|hyperpage}{23}
 \indexentry{etat@{etat}!numero@{numero}|hyperpage}{24}
 \indexentry{numero@{numero}!etat@{etat}|hyperpage}{24}
 \indexentry{etat\discretionary {-}{}{}Left@{etat\discretionary {-}{}{}Left}|hyperpage}{24}
@@ -121,17 +123,17 @@
 \indexentry{etat\discretionary {-}{}{}Left@{etat\discretionary {-}{}{}Left}!etatLeft@{etat\discretionary {-}{}{}Left}|hyperpage}{25}
 \indexentry{etat\discretionary {-}{}{}Left@{etat\discretionary {-}{}{}Left}!numero@{numero}|hyperpage}{25}
 \indexentry{numero@{numero}!etatLeft@{etat\discretionary {-}{}{}Left}|hyperpage}{25}
-\indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}|hyperpage}{26}
+\indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}|hyperpage}{25}
 \indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}!etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}|hyperpage}{26}
 \indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}!etatRight@{etat\discretionary {-}{}{}Right}|hyperpage}{26}
-\indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}!add\discretionary {-}{}{}Transition@{add\discretionary {-}{}{}Transition}|hyperpage}{27}
-\indexentry{add\discretionary {-}{}{}Transition@{add\discretionary {-}{}{}Transition}!etatRight@{etat\discretionary {-}{}{}Right}|hyperpage}{27}
-\indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}!erase\discretionary {-}{}{}Transition@{erase\discretionary {-}{}{}Transition}|hyperpage}{27}
-\indexentry{erase\discretionary {-}{}{}Transition@{erase\discretionary {-}{}{}Transition}!etatRight@{etat\discretionary {-}{}{}Right}|hyperpage}{27}
-\indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}!a@{a}|hyperpage}{27}
-\indexentry{a@{a}!etatRight@{etat\discretionary {-}{}{}Right}|hyperpage}{27}
-\indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}!add\discretionary {-}{}{}Trans@{add\discretionary {-}{}{}Trans}|hyperpage}{27}
-\indexentry{add\discretionary {-}{}{}Trans@{add\discretionary {-}{}{}Trans}!etatRight@{etat\discretionary {-}{}{}Right}|hyperpage}{27}
+\indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}!add\discretionary {-}{}{}Transition@{add\discretionary {-}{}{}Transition}|hyperpage}{26}
+\indexentry{add\discretionary {-}{}{}Transition@{add\discretionary {-}{}{}Transition}!etatRight@{etat\discretionary {-}{}{}Right}|hyperpage}{26}
+\indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}!erase\discretionary {-}{}{}Transition@{erase\discretionary {-}{}{}Transition}|hyperpage}{26}
+\indexentry{erase\discretionary {-}{}{}Transition@{erase\discretionary {-}{}{}Transition}!etatRight@{etat\discretionary {-}{}{}Right}|hyperpage}{26}
+\indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}!a@{a}|hyperpage}{26}
+\indexentry{a@{a}!etatRight@{etat\discretionary {-}{}{}Right}|hyperpage}{26}
+\indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}!add\discretionary {-}{}{}Trans@{add\discretionary {-}{}{}Trans}|hyperpage}{26}
+\indexentry{add\discretionary {-}{}{}Trans@{add\discretionary {-}{}{}Trans}!etatRight@{etat\discretionary {-}{}{}Right}|hyperpage}{26}
 \indexentry{etat\discretionary {-}{}{}Right@{etat\discretionary {-}{}{}Right}!numero@{numero}|hyperpage}{27}
 \indexentry{numero@{numero}!etatRight@{etat\discretionary {-}{}{}Right}|hyperpage}{27}
 \indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}|hyperpage}{27}
@@ -139,14 +141,14 @@
 \indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{28}
 \indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!$\sim $\discretionary {-}{}{}Main\discretionary {-}{}{}Window@{$\sim $\discretionary {-}{}{}Main\discretionary {-}{}{}Window}|hyperpage}{28}
 \indexentry{$\sim $\discretionary {-}{}{}Main\discretionary {-}{}{}Window@{$\sim $\discretionary {-}{}{}Main\discretionary {-}{}{}Window}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{28}
-\indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!creer\discretionary {-}{}{}Auto@{creer\discretionary {-}{}{}Auto}|hyperpage}{29}
-\indexentry{creer\discretionary {-}{}{}Auto@{creer\discretionary {-}{}{}Auto}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{29}
-\indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!get\discretionary {-}{}{}Determin@{get\discretionary {-}{}{}Determin}|hyperpage}{29}
-\indexentry{get\discretionary {-}{}{}Determin@{get\discretionary {-}{}{}Determin}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{29}
-\indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!get\discretionary {-}{}{}Minimisation@{get\discretionary {-}{}{}Minimisation}|hyperpage}{29}
-\indexentry{get\discretionary {-}{}{}Minimisation@{get\discretionary {-}{}{}Minimisation}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{29}
-\indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!get\discretionary {-}{}{}Precedent@{get\discretionary {-}{}{}Precedent}|hyperpage}{29}
-\indexentry{get\discretionary {-}{}{}Precedent@{get\discretionary {-}{}{}Precedent}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{29}
+\indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!creer\discretionary {-}{}{}Auto@{creer\discretionary {-}{}{}Auto}|hyperpage}{28}
+\indexentry{creer\discretionary {-}{}{}Auto@{creer\discretionary {-}{}{}Auto}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{28}
+\indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!get\discretionary {-}{}{}Determin@{get\discretionary {-}{}{}Determin}|hyperpage}{28}
+\indexentry{get\discretionary {-}{}{}Determin@{get\discretionary {-}{}{}Determin}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{28}
+\indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!get\discretionary {-}{}{}Minimisation@{get\discretionary {-}{}{}Minimisation}|hyperpage}{28}
+\indexentry{get\discretionary {-}{}{}Minimisation@{get\discretionary {-}{}{}Minimisation}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{28}
+\indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!get\discretionary {-}{}{}Precedent@{get\discretionary {-}{}{}Precedent}|hyperpage}{28}
+\indexentry{get\discretionary {-}{}{}Precedent@{get\discretionary {-}{}{}Precedent}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{28}
 \indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!get\discretionary {-}{}{}Produit@{get\discretionary {-}{}{}Produit}|hyperpage}{29}
 \indexentry{get\discretionary {-}{}{}Produit@{get\discretionary {-}{}{}Produit}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{29}
 \indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!get\discretionary {-}{}{}Standard@{get\discretionary {-}{}{}Standard}|hyperpage}{29}
@@ -155,15 +157,15 @@
 \indexentry{get\discretionary {-}{}{}Suivant@{get\discretionary {-}{}{}Suivant}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{29}
 \indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!info@{info}|hyperpage}{29}
 \indexentry{info@{info}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{29}
-\indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!open\discretionary {-}{}{}File@{open\discretionary {-}{}{}File}|hyperpage}{30}
-\indexentry{open\discretionary {-}{}{}File@{open\discretionary {-}{}{}File}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{30}
-\indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!reset\discretionary {-}{}{}Ui@{reset\discretionary {-}{}{}Ui}|hyperpage}{30}
-\indexentry{reset\discretionary {-}{}{}Ui@{reset\discretionary {-}{}{}Ui}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{30}
-\indexentry{Transition@{Transition}|hyperpage}{30}
-\indexentry{Transition@{Transition}!Transition@{Transition}|hyperpage}{31}
-\indexentry{Transition@{Transition}!Transition@{Transition}|hyperpage}{31}
-\indexentry{Transition@{Transition}!$\sim $\discretionary {-}{}{}Transition@{$\sim $\discretionary {-}{}{}Transition}|hyperpage}{31}
-\indexentry{$\sim $\discretionary {-}{}{}Transition@{$\sim $\discretionary {-}{}{}Transition}!Transition@{Transition}|hyperpage}{31}
+\indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!open\discretionary {-}{}{}File@{open\discretionary {-}{}{}File}|hyperpage}{29}
+\indexentry{open\discretionary {-}{}{}File@{open\discretionary {-}{}{}File}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{29}
+\indexentry{Main\discretionary {-}{}{}Window@{Main\discretionary {-}{}{}Window}!reset\discretionary {-}{}{}Ui@{reset\discretionary {-}{}{}Ui}|hyperpage}{29}
+\indexentry{reset\discretionary {-}{}{}Ui@{reset\discretionary {-}{}{}Ui}!MainWindow@{Main\discretionary {-}{}{}Window}|hyperpage}{29}
+\indexentry{Transition@{Transition}|hyperpage}{29}
+\indexentry{Transition@{Transition}!Transition@{Transition}|hyperpage}{30}
+\indexentry{Transition@{Transition}!Transition@{Transition}|hyperpage}{30}
+\indexentry{Transition@{Transition}!$\sim $\discretionary {-}{}{}Transition@{$\sim $\discretionary {-}{}{}Transition}|hyperpage}{30}
+\indexentry{$\sim $\discretionary {-}{}{}Transition@{$\sim $\discretionary {-}{}{}Transition}!Transition@{Transition}|hyperpage}{30}
 \indexentry{Transition@{Transition}!cible@{cible}|hyperpage}{31}
 \indexentry{cible@{cible}!Transition@{Transition}|hyperpage}{31}
 \indexentry{Transition@{Transition}!vocab@{vocab}|hyperpage}{31}
