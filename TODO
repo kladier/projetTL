@@ -1,7 +1,7 @@
 
 Liste d'idées pour les futurs versions :
 
-- faire une fonctionnalité permettant de compléter, la fonction isComplet() étant déjà faites.
+- faire une fonctionnalité permettant de compléter un automate, la fonction isComplet() étant déjà faites.
 
 - dans l'idéal il faudrait revoir un peu l'UI. Par exemple : faire 2 grosses colonnes pour l'automate initial (à gauche par exemple) et l'automate minimisé ou déterminisé à droite. Faire un bloc qui prend toute la longueur de la page en bas et permettant d'afficher le texte. 
 D'une manière générale, réfléchir à ce que l'affichage soit mieux fait : on voit rarement correctement l'automate initial quand on fait une opération
