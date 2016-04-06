@@ -56,7 +56,7 @@ private:
 
     Ui::MainWindow *ui;
 
-    QSvgWidget *maVue; /*!< Correspond à la partie inférieur de la fenêtre mais aussi à la partie centrale lorsqu'on ouvre un automate*/
+    QSvgWidget *maVue; /*!< Correspond à la partie inférieure de la fenêtre mais aussi à la partie centrale lorsqu'on ouvre un automate*/
     QSvgWidget *maVue1; /*!< Correspond à la partie supérieure droite de la fenêtre*/
     QSvgWidget *maVue2; /*!< Correspond à la partie supérieure gauche de la fenêtre*/
     QString dotFileName;
@@ -73,10 +73,10 @@ private:
 
 public slots:
     /*!
-       *  \brief Permet d'ouvrir un automate, stocké dans un fichier .dot
+       *  \brief Permet d'ouvrir un automate stocké dans un fichier .dot
        *
        *  Listener du bouton ouvrir un automate, propose une fenetre pour sélectionner un fichier .dot correspondant à un automate.
-       * Cet automate sera ensuite afficher dans maVue
+       * Cet automate sera ensuite affiché dans maVue
        */
     void openFile();
 
@@ -107,10 +107,10 @@ public slots:
     void getDetermin();
 
     /*!
-       *  \brief Permet de passer à l'étape suivant pour une des opérations
+       *  \brief Permet de passer à l'étape suivante pour une des opérations
        *
        *  Listener du bouton suivant.
-       * L'étape suivante, s'il y en a une, d'une des opérations (standardisation, produit etc) sera affichée au lieu de l'actuel.
+       * L'étape suivante d'une des opérations (standardisation, produit etc), s'il y en a une, sera affichée à la place de l'étape actuelle.
        */
     void getSuivant();
 
@@ -118,7 +118,7 @@ public slots:
        *  \brief Permet de passer à l'étape précédente pour une des opérations
        *
        *  Listener du bouton précédent.
-       * L'étape précédente, s'il y en a une, d'une des opérations (standardisation, produit etc) sera affichée au lieu de l'actuel.
+       * L'étape précédente d'une des opérations (standardisation, produit etc), s'il y en a une, sera affichée à la place de l'étape actuelle.
        */
     void getPrecedent();
 
@@ -144,7 +144,7 @@ public slots:
        *  \brief Permet de nettoyer la fenetre
        *
        *  Listener du bouton nettoyer l'interface.
-       * Vide la fenetre et la ramène à un état comme au démarrage de l'application
+       * Vide la fenetre et affiche la fenêtre de démarrage de l'application
        */
     void resetUi();
     void test();

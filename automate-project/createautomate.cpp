@@ -40,7 +40,7 @@ void CreateAutomate::changeEvent(QEvent *e)
 
 void CreateAutomate::ajoutEtat(bool ini, bool fina){
    if(a.getEtats().size()>9){
-       QMessageBox::critical( this, tr( "Erreur" ), tr( "Vous ne pouvez pas créer un automates de plus de 10 états" ));
+       QMessageBox::critical( this, tr( "Erreur" ), tr( "Vous ne pouvez pas créer un automate de plus de 10 états" ));
        return;
    }
 

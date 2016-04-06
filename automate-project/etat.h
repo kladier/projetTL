@@ -14,7 +14,7 @@ public:
      /*!
           *  \brief Constructeur
           *
-          *  Construit l'état passé avec le numéro number, peux être initial et/ou final
+          *  Construit l'état passé avec le numéro number, peut être initial et/ou final
           *
           *  \param number : numéro de l'état
           * \param ini : par défaut false, true si l'état est initial
@@ -60,7 +60,7 @@ public:
     /*!
      *  \brief Test si l'état est un état final
      *
-     *  Renvoit un booléen en fonction de si l'état est final ou non
+     *  renvoie un booléen en fonction de si l'état est final ou non
      *
      *  \return true si l'état est final, false sinon
      */
@@ -78,7 +78,7 @@ public:
     /*!
      *  \brief Test si l'état est un état initial
      *
-     *  Renvoit un booléen en fonction de si l'état est initial ou non
+     *  renvoie un booléen en fonction de si l'état est initial ou non
      *
      *  \return true si l'état est initial, false sinon
      */
@@ -98,7 +98,7 @@ public:
      *
      *  Ajoute une transition allant vers l'état cible et portant l'étiquette vocab.
      *
-     *  \param cible : l'état vers laquelle la transition arrive
+     *  \param cible : l'état d'arrivée de la transition
      *  \param vocab : l'étiquette de la transition
      */
     void ajoutTransition(etat cible,int vocab);
@@ -108,7 +108,7 @@ public:
      *
      *  Supprime la transition allant vers l'état cible et portant l'étiquette vocab.
      *
-     *  \param cible : l'état vers laquelle la transition arrive
+     *  \param cible : l'état d'arrivée de la transition
      *  \param vocab : l'étiquette de la transition
      */
     void supprimeTransition(etat cible,int vocab);
@@ -118,7 +118,7 @@ public:
      *
      *  Renomme la transition allant vers l'état cible et portant l'étiquette vocab.
      *
-     *  \param cible : l'état vers laquelle la transition arrive
+     *  \param cible : l'état d'arrivée de la transition
      *  \param vocab : l'étiquette de la transition
      */
     void renameTransition(etat cible);
@@ -154,7 +154,7 @@ public:
     bool operator!=(etat &e)const;
 
     /*!
-     *  \brief Test l'existence d'une transition
+     *  \brief Teste l'existence d'une transition
      *
      *  Teste si la transition allant vers l'état e et portant l'étiquette etiq existe.
      *
@@ -165,7 +165,7 @@ public:
     bool find_transition(int etiq, etat e);
 
     /*!
-     *  \brief Test l'existence d'une transition
+     *  \brief Teste l'existence d'une transition
      *
      *  Teste si la transition allant vers l'état e existe.
      *
@@ -175,7 +175,7 @@ public:
     bool find_transition(etat e);
 
     /*!
-     *  \brief Test l'état est dans une liste
+     *  \brief Teste si l'état est dans une liste
      *
      *  Teste si l'état est dans la liste passée en paramètre. Se base sur l'opérateur d'égalité entre deux états.
      *
@@ -185,7 +185,7 @@ public:
     bool estDansList(list<etat> liste);
 
     /*!
-     *  \brief Attribuer un nom à l'état
+     *  \brief Attribue un nom à l'état
      *
      *  Setter sur l'attribut name.
      *
@@ -194,20 +194,20 @@ public:
     void setName(string rename);
 
     /*!
-     *  \brief Renvois le nom de l'état
+     *  \brief renvoie le nom de l'état
      *
-     *  Renvoit le nom de l'état. Si aucun nom n'a été attribué, cela renvoit le numéro.
+     *  renvoie le nom de l'état. Si aucun nom n'a été attribué, cela renvoie le numéro.
      *
      *  \return le nom de l'état
      */
     string getName();
 
     /*!
-     *  \brief Renvois le nom de l'état
+     *  \brief renvoie le nom de l'état
      *
      *  Fonctionne comme getName() mais en ajoutant un F avant le nom de l'état.
      *
-     *  \return le nom de l'état, précèdé d'un F
+     *  \return le nom de l'état, précédé d'un F
      */
     string getNameF();
 

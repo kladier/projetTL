@@ -370,7 +370,7 @@ void MainWindow::getProduit(){
     ui->label->insertPlainText("On nomme chaque état de la façon suivante: etat p du premier automate, etat q du second automate.\n");
     ui->label->insertPlainText("Ensuite, une transition existe entre p1,q1 et p2,q2 si et seulement si");
     ui->label->insertPlainText(" il existe une transition entre p1  et p2  par i dans le premier automate ET une transition entre q1 et q2 par i également dans le second automate.\n");
-    ui->label->insertPlainText("Enfin, un état est initial si les état p et q sont initiaux. De même pour les états finaux.");
+    ui->label->insertPlainText("Enfin, un état est initial si les états p et q sont initiaux. De même pour les états finaux.");
     ui->label->show();
     ui->actionFaireProduit->setVisible(false);
     ui->actionDeterminiser->setVisible(true);

@@ -35,7 +35,7 @@ void Automate::ajoutEtat(etat cible){
     etats.push_back(cible);
 }
 
-//renvoit le nombre de transition portant une étiquette différente dans un automate
+//renvoie le nombre de transition portant une étiquette différente dans un automate
 int Automate::getNbTransition() {
     vector<int> temp;
     vector<etat>::iterator it;
@@ -344,8 +344,8 @@ string convertIntToString(int i) {
     return numstr;
 }
 
-//cette fonction renvoit le numero de l'état qui est ciblé par la transition partant de l'etat this et portant l'etiquette etiq.
-//renvoit -1 sinon
+//cette fonction renvoie le numero de l'état qui est ciblé par la transition partant de l'etat this et portant l'etiquette etiq.
+//renvoie -1 sinon
 int Automate::cible_transition(int etatDepart, int etiq) {
     multimap<int,etat>::iterator it2;
     multimap<int,etat> tabTransitions=etats[etatDepart].getTransitions();
@@ -376,7 +376,7 @@ vector<int> Automate::getTabTransitions() {
 
 
 //Fonction utilisée uniquement pour la minimisation
-//cette fonction renvoit le numero de l'etat en fonction de son bilan precedent et de ces lignes pour les transitions
+//cette fonction renvoie le numero de l'etat en fonction de son bilan precedent et de ces lignes pour les transitions
 //elle sert en fait pour définir un nouveau bilan
 //si l'etat n'existe pas déjà, il l'ajoute
 int existInTabBilan(int numEtat, vector < pair< vector<int> , int > > * tabBilan, vector< vector<int> > tabMinimisation, int nbTransitions, int iBilanCourant) {
@@ -443,8 +443,8 @@ vector<int> renvoyerTabTransition(vector< vector<int> > tabMinimisation,int nbTr
     return res;
 }
 
-//utilisé seulement pour la minimisation, renvoit l'indice de la colonne de l'état
-//renvoit -1 s'il ne trouve pas
+//utilisé seulement pour la minimisation, renvoie l'indice de la colonne de l'état
+//renvoie -1 s'il ne trouve pas
 int trouverIndiceColonne(vector< vector<int> > tabMinimisation,int numEtat) {
     for (unsigned int i=0;i<tabMinimisation.size();i++) {
         if (numEtat==tabMinimisation[i][tabMinimisation[0].size()-1]) {
@@ -528,7 +528,7 @@ vector <  pair< Automate , string > > Automate::minimise() {
     }
     iBilanCourant=iBilanCourant+nbTransDiff+1;
 
-    commentaire+="\n\n"+toStringTabMini(tabMinimisation)+"\nOn compare désormais les bilans, pour chaque état, on doit avoir le même chiffre, si c'est le cas les bilans sont égaux et le tableau de minimisation est terminée.\n";
+    commentaire+="\n\n"+toStringTabMini(tabMinimisation)+"\nOn compare désormais les bilans, pour chaque état, on doit avoir le même chiffre, si c'est le cas les bilans sont égaux et le tableau de minimisation est terminé.\n";
 
     //on compare le bilan 0 au bilan 1
     if (compareBilans(iBilanCourant,iBilanCourant-nbTransDiff-1,tabMinimisation)) {
@@ -604,7 +604,7 @@ vector <  pair< Automate , string > > Automate::minimise() {
 
 
     commentaire="\nA partir du dernier bilan et des dernières lignes concernant les transitions, nous allons construire l'automate minimisé.\n";
-    commentaire+="\n On s'occupe de créer tout les états. S'ils étaient initiaux et/ou finaux, il le reste.\n";
+    commentaire+="\n On s'occupe de créer tout les états. S'ils étaient initiaux et/ou finaux, ils le restent.\n";
 
     //on associe ici l'indice du num de colonne dans tabMinimisation a un nouvel état : l'état 1 va correspondre à la colonne 0 par exemple
     int nbEtatsDansBilan = compteNbEtatsDansBilan(tabMinimisation);
@@ -685,7 +685,7 @@ vector <  pair< Automate , string > > Automate::standardise() {
        e->setName(it->getName());
        temp->ajoutEtat(*e);
     }
-    res.push_back(pair< Automate , string >(*temp,"On crée tout les autres états sans aucune transition (y compris les anciens états initial).\n"));
+    res.push_back(pair< Automate , string >(*temp,"On créé tout les autres états sans aucune transition (y compris les anciens états initiaux).\n"));
 
     // 3) on s'occupe des cas particuliers (voir ci-dessous)
     //Cas particulier : quand un ancien état initial a une transition allant vers lui-même.
@@ -742,7 +742,7 @@ vector <  pair< Automate , string > > Automate::standardise() {
     //Il faut modifier la fonction supprimerEtatsNonAccessibles()
     // 6) on supprime désormais tout les etats non accessibles
    supprimerEtatsNonAccessibles(temp);
-    res.push_back(pair< Automate , string >(*temp,"On supprime désormais tout les états non accessibles, c'est-à-dire tout les états non initiaux vers lesquelles aucune transition ne pointe.\n L'automate est maintenant standardiser.\n"));
+    res.push_back(pair< Automate , string >(*temp,"On supprime désormais tout les états non accessibles, c'est-à-dire tout les états non initiaux vers lesquels aucune transition ne pointe.\n L'automate est maintenant standardisé.\n"));
 
     return res;
 }

@@ -1,5 +1,0 @@
-digraph a { 
-"F0,1"[shape=point] ;
-"F0,1"->"0,1" ;
-
- }

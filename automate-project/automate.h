@@ -80,11 +80,11 @@ public:
     bool isDeterministe();
 
     /*!
-     *  \brief Test si un automate est déterministe
+     *  \brief Test si un automate est complet
      *
-     *  Permet de tester si un automate est déterministe (voir définition d'un automate déterministe).
+     *  Permet de tester si un automate est complet(voir définition d'un automate complet).
      *
-     *  \return true si l'automate est déterministe,
+     *  \return true si l'automate est complet,
      *  false sinon
      */
     bool isComplet();
@@ -123,7 +123,7 @@ public:
      *  Ajoute une transition à l'état from en direction de l'état to et portant l'étiquette vocab.
      *
      *  \param from : l'état de départ de la transition
-     *  \param to : l'état d'arrivée de la transition
+     *  \param to : l'état d'arrivé de la transition
      *  \param vocab : le numéro de la transition, son étiquette.
 
      */
@@ -141,7 +141,7 @@ public:
     /*!
      *  \brief Retourne l'état ciblé par une transition.
      *
-     *  Renvoit le numéro de l'état ciblé par la transition partant de etatDepart et portant l'étiquette etiq.
+     *  renvoie le numéro de l'état ciblé par la transition partant de etatDepart et portant l'étiquette etiq.
      *  Cette fonction ne fonctionne que si l'automate est déterministe, elle est utilisée seulement dans la minimisation
      *
      *  \param etatDepart : le numéro de l'état d'où part la transition
@@ -153,7 +153,7 @@ public:
     /*!
      *  \brief Supprime un état de l'automate passé en paramètre
      *
-     *  Supprime l'état cible de l'automate dont le pointeur a est passé en paramètre.
+     *  Supprime l'état cible de l'automate dont le pointeur "a" est passé en paramètre.
      *
      *  \param cible : l'état à supprimer
      *  \param a : pointeur vers l'automate
@@ -161,7 +161,7 @@ public:
     void supprimeEtat(etat cible, Automate * a);
 
     /*!
-     *  \brief Supprime les états non accessibles de l'automate passé en paramètre
+     *  \brief Supprime les états non accessibles de l'automate passés en paramètre
      *
      *  Supprime les états non accessibles de l'automate dont le pointeur est passé en paramètre
      *
@@ -182,7 +182,7 @@ public:
     /*!
      *  \brief Réalise le produit de deux automates
      *
-     *  Réalise le produit de deux automates (this et A), et renvoit un vecteur d'automates.
+     *  Réalise le produit de deux automates (this et A), et renvoie un vecteur d'automates.
      * Dans ce vecteur, chaque élément correspond à une étape du processus de produit de 2 automates.
      *
      *  \param A : le produit est réalisé avec cet automate A, passé en paramètre
@@ -202,8 +202,8 @@ public:
     /*!
      *  \brief Réalise la déterminisation de l'automate
      *
-     *  Réalise la déterminisation de l'automate, et renvoit un vecteur.
-     * Dans ce vecteur, chaque élément correspond à une pair : un automate et une chaine.
+     *  Réalise la déterminisation de l'automate, et renvoie un vecteur.
+     * Dans ce vecteur, chaque élément correspond à une paire : un automate et une chaine.
      * Chaque élément pair représente en fait une étape dans le processus de déterminisation.
      * La chaine est le texte correspondant aux explications et l'automate est l'automate à afficher pendant cette étape.
      *
@@ -214,8 +214,8 @@ public:
     /*!
      *  \brief Réalise la standardisation de l'automate
      *
-     *  Réalise la standardisation de l'automate, et renvoit un vecteur.
-     * Dans ce vecteur, chaque élément correspond à une pair : un automate et une chaine.
+     *  Réalise la standardisation de l'automate, et renvoie un vecteur.
+     * Dans ce vecteur, chaque élément correspond à une paire : un automate et une chaine.
      * Chaque élément pair représente en fait une étape dans le processus de standardisation.
      * La chaine est le texte correspondant aux explications et l'automate est l'automate à afficher pendant cette étape.
      *
@@ -226,8 +226,8 @@ public:
     /*!
      *  \brief Réalise la minimisation de l'automate
      *
-     *  Réalise la minimisation de l'automate, et renvoit un vecteur.
-     * Dans ce vecteur, chaque élément correspond à une pair : un automate et une chaine.
+     *  Réalise la minimisation de l'automate, et renvoie un vecteur.
+     * Dans ce vecteur, chaque élément correspond à une paire : un automate et une chaine.
      * Chaque élément pair représente en fait une étape dans le processus de minimisation.
      * La chaine est le texte correspondant aux explications et l'automate est l'automate à afficher pendant cette étape.
      *
@@ -240,7 +240,7 @@ public:
 
 
     /*!
-     *  \brief Renvoit le nombre de transition portant une étiquette différente
+     *  \brief renvoie le nombre de transitions portant une étiquette différente
      *
      * Fonction utilisée dans la minimisation
      *

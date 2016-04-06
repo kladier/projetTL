@@ -39,7 +39,7 @@ public:
     QSvgWidget *maVue; /*!< Partie inférieure droite de la fenetre, où l'automate est affiché*/
     int actuel;
     vector<etatLeft*> left; /*!< Vecteur représentant les états déjà construits*/
-    vector<etatRight*> right; /*!< Vecteur dont chaque élément représente une transition a modifié éventuellement pour un état*/
+    vector<etatRight*> right; /*!< Vecteur dont chaque élément représente une transition à modifier éventuellement pour un état*/
 
     /*!
          *  \brief Remet à jour la liste des états de droite
@@ -57,7 +57,7 @@ public slots:
     /*!
          *  \brief Ajoute un état à la fenetre
          *
-         *  Construit un etat left et right associé à ce nouvel état.
+         *  Construit un etat left et un etat right associés à ce nouvel état.
          *
          *  \param ini : true si l'état est initial
          *  \param fina : true si l'état est final

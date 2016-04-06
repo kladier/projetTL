@@ -54,7 +54,7 @@ public slots:
     void addTransition(int to,int vocab);
 
     /*!
-       *  \brief Suppresion d'une transition
+       *  \brief Suppression d'une transition
        *
        * \param to : numero de l'état cible
        * \param vocab : etiquette de la transition

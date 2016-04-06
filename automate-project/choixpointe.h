@@ -4,7 +4,7 @@
 /*!
  * \file choixpointe.h
  * \brief Utilisé pour la création d'un automate.
- * Sert à définir les transitions en demandant à l'utilisateur de saisir vers quel état la transition va et quel étiquette porte cette transition.
+ * Sert à définir les transitions en demandant à l'utilisateur de saisir vers quel état la transition va et quelle étiquette porte cette transition.
  */
 
 #include <QWidget>
