@@ -1,6 +1,6 @@
 Pour le déploiement, j'ai suivi ce tutoriel : https://bhavyanshu.me/how-to-make-debian-packages-for-qt-c-based-applications/11/10/2014
 
-Le .deb généré n'est valable que pour les distributions Debian-like (Debian, Ubuntu, Mint etc).
+Le .deb généré n'est valable que pour les distributions Debian-like (Debian, Ubuntu, Mint etc) 64 bits.
 
 Ce paquet a besoin d'une dépendance : graphviz
 
