@@ -1,0 +1,13 @@
+Attention : ce paquet n'est valable que pour les distributions Debian ou issues de Debian (Ubuntu, Mint etc) 64 bits.
+
+Installation du paquet autoroute_1.0.0-1_amd64.deb : 
+
+Avec gdebi :
+
+sudo gdebi autoroute_1.0.0-1_amd64.deb (il vous faudra peut-être installer gdebi si vous ne l'avez pas déjà : sudo apt-get install gdebi)
+
+
+Sans gdebi :
+
+sudo dpkg -i autoroute_1.0.0-1_amd64.deb
+sudo apt-get -f install
