@@ -1,8 +1,0 @@
-L'automate résultat du produit a une taille de m*n (m taille du premier automate, n taille du second). On nomme chaque état de la façon suivante: etat p du premier automate, etat q du second automate.
-Ensuite, une transition existe entre p1,q1 et p2,q2 ssi il existe une transition entre p1  et p2  par i dans le premier automate ET une transition entre q1 et q2 par i également.
-Enfin, un état est initial si les état p et q sont initiaux. De même pour les états finaux.
-
-
-On fusionne les états initiaux de l'automate de départ pour obtenir l'état initial de l'automate déterminisé. Ensuite, pour chaque états de l'automate de départ constituant l'état déterminisé, on regarde quels états sont atteignables par la transition i puis on fusionne les états atteignables en un nouvel état et on ajoute la transition correspondante. Ainsi de suite jusqu'à ce qu'il soit impossible de créer un nouvel état déterministe et que toute les transitions ont créé.
-Un état déterminisé est final si au moins un état de l'automate de départ le constituant est final. 
-

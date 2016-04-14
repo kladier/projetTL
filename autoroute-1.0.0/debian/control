@@ -1,0 +1,13 @@
+Source: autoroute
+Section: editors
+Priority: optional
+Maintainer: LADIER Kévin Coursier Pierre <kevin.ladier@gmail.com>
+Build-Depends: debhelper (>= 9), qtbase5-dev, qtbase5-dev-tools, qt5-qmake, libqt5svg5, libqt5svg5-dev
+Standards-Version: 3.9.6
+Homepage: https://github.com/kladier/projetTL
+
+Package: autoroute
+Architecture: any
+Depends: libqt5gui5, libqt5widgets5, libqt5core5a, graphviz, ${misc:Depends}, ${shlibs:Depends}
+Description: autoroute is a software for students to help them understanding programmable machine
+ Autoroute is a software based on Qt and C++.

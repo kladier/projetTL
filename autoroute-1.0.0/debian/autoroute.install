@@ -1,0 +1,3 @@
+bin/autoroute usr/bin
+autoroute.desktop usr/share/applications
+src/autoroute.ico usr/share/autoroute

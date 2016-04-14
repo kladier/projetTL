@@ -1,0 +1,4 @@
+?package(autoroute):needs="x11" \
+      section="Applications/Editors" \
+      title="Autoroute" \
+      command="/usr/bin/autoroute"
