@@ -21,7 +21,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="Images.qrc">
-    <normaloff>:/new/prefix1/myAppIco.ico</normaloff>:/new/prefix1/myAppIco.ico</iconset>
+    <normaloff>:/new/prefix1/Images/myAppIco.ico</normaloff>:/new/prefix1/Images/myAppIco.ico</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>true</bool>
@@ -183,7 +183,7 @@
      <x>0</x>
      <y>0</y>
      <width>912</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
    <property name="autoFillBackground">
@@ -296,7 +296,7 @@
   </action>
   <action name="actionTest">
    <property name="icon">
-    <iconset resource="Images.qrc">
+    <iconset>
      <normaloff>:/new/prefix1/Images/icon.jpg</normaloff>:/new/prefix1/Images/icon.jpg</iconset>
    </property>
    <property name="text">
