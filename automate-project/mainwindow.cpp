@@ -422,7 +422,7 @@ bool MainWindow::lireDot(){
                     //Le mot precedent ; est MotPrec
                     //Si il n'est pas null
                     if(!MotPrec.isNull()){
-                        int Etat;
+                        int Etat=0;
                         //Et si son premier char est un int
 
                         if(MotPrec.at(0).digitValue()!=-1){
@@ -497,7 +497,7 @@ bool MainWindow::lireDotB(){
                     //Le mot precedent ; est MotPrec
                     //Si il n'est pas null
                     if(!MotPrec.isNull()){
-                        int Etat;
+                        int Etat=0;
                         //Et si son premier char est un int
 
                         if(MotPrec.at(0).digitValue()!=-1){

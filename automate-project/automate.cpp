@@ -616,7 +616,7 @@ vector <  pair< Automate , string > > Automate::minimise() {
     //une fois cette association réalisée, il est facile de s'occuper des états
     //lorsqu'on ajoute un état, on vérifie s'il est initial ou non grace à l'indice associée, correspondant au numéro de l'état actuel
     for (int i=1;i<nbEtatsDansBilan+1;i++) {
-        int j;
+        int j=0;
         for (unsigned int k=0;k<assoEtatIndiceTabMini.size();k++) {
             if (assoEtatIndiceTabMini[k].first==i) {
                 j=assoEtatIndiceTabMini[k].second;
@@ -630,7 +630,7 @@ vector <  pair< Automate , string > > Automate::minimise() {
     commentaire="\nOn s'occupe maintenant des transitions, pour chaque nouvel état, on va voir vers quel état vont chaque transition et on les dessine.\n";
     //cela simplifie aussi le travail pour les transitions
     for (int i=1;i<nbEtatsDansBilan+1;i++) {
-        int j;
+        int j=0;
         for (unsigned int k=0;k<assoEtatIndiceTabMini.size();k++) {
             if (assoEtatIndiceTabMini[k].first==i) {
                 j=assoEtatIndiceTabMini[k].second;
